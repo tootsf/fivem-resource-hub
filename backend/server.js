@@ -177,19 +177,34 @@ app.get('/search', (req, res) => {
 // Health check with optional database setup
 app.get('/health', async (req, res) => {
   try {
+    // Test basic database connection
     await pool.query('SELECT 1');
     
-    // Check if we have resources data
-    const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
-    const userCount = await pool.query('SELECT COUNT(*) FROM users');
+    let resourceCount = 0;
+    let userCount = 0;
+    let tablesExist = true;
+    
+    try {
+      // Check if tables exist and count records
+      const resourceResult = await pool.query('SELECT COUNT(*) FROM resources');
+      const userResult = await pool.query('SELECT COUNT(*) FROM users');
+      resourceCount = parseInt(resourceResult.rows[0].count);
+      userCount = parseInt(userResult.rows[0].count);
+    } catch (tableError) {
+      // Tables don't exist yet
+      tablesExist = false;
+      console.log('Database tables not yet created:', tableError.message);
+    }
     
     res.json({ 
       status: 'healthy', 
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV,
       database: 'connected',
-      resources: parseInt(resourceCount.rows[0].count),
-      users: parseInt(userCount.rows[0].count)
+      tablesExist: tablesExist,
+      resources: resourceCount,
+      users: userCount,
+      setupRequired: !tablesExist
     });
   } catch (error) {
     res.status(500).json({ 
