@@ -247,6 +247,36 @@ app.get('/setup-database', async (req, res) => {
   }
 });
 
+// Convert and import pre-entries to database
+app.get('/convert-import', async (req, res) => {
+  try {
+    console.log('🔄 Starting pre-entries conversion...');
+    
+    // Import the conversion function
+    const { convertAndInsertResources } = require('./scripts/convert-and-import');
+    
+    await convertAndInsertResources();
+    
+    // Check results
+    const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
+    
+    res.json({
+      success: true,
+      message: 'Pre-entries conversion completed successfully!',
+      timestamp: new Date().toISOString(),
+      resources_imported: parseInt(resourceCount.rows[0].count),
+      data_source: 'pre-entries.json'
+    });
+  } catch (error) {
+    console.error('Pre-entries conversion failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      message: 'Pre-entries conversion failed. Check logs for details.'
+    });
+  }
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err);

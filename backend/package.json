@@ -2,12 +2,12 @@
   "name": "fivem-resource-hub-backend",
   "version": "1.0.0",
   "description": "Backend API for FiveM Resource Hub - Production Ready",
-  "main": "server.js",
-  "scripts": {
+  "main": "server.js",  "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
     "setup-db": "node scripts/setup-database.js",
     "setup-production": "node scripts/setup-production-db.js",
+    "convert-import": "node scripts/convert-and-import.js",
     "migrate": "node scripts/migrate-data.js"
   },
   "dependencies": {
