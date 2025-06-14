@@ -134,28 +134,34 @@ app.get('/api/resources', async (req, res) => {
 });
 
 // Keep your existing search endpoint for backwards compatibility
-app.get('/search', (req, res) => {
+app.get('/search', async (req, res) => {
   try {
     const { q = '', page = 1 } = req.query;
     const pageSize = 100;
     const pageNum = Math.max(1, parseInt(page));
+    const offset = (pageNum - 1) * pageSize;
 
-    // Perform case-insensitive search across multiple fields
-    const filteredData = data.filter(entry => {
-      const searchTerm = q.toLowerCase();
-      return (
-        (entry.name && entry.name.toLowerCase().includes(searchTerm)) ||
-        (entry.description && entry.description.toLowerCase().includes(searchTerm)) ||
-        (entry.language && entry.language.toLowerCase().includes(searchTerm))
-      );
-    });
+    let query = 'SELECT * FROM resources';
+    let countQuery = 'SELECT COUNT(*) FROM resources';
+    let params = [];
+    
+    if (q) {
+      query += ` WHERE name ILIKE $1 OR description ILIKE $1 OR language ILIKE $1`;
+      countQuery += ` WHERE name ILIKE $1 OR description ILIKE $1 OR language ILIKE $1`;
+      params = [`%${q}%`];
+    }
+    
+    query += ` ORDER BY rank ASC LIMIT ${pageSize} OFFSET ${offset}`;
 
-    // Calculate pagination
-    const totalMatches = filteredData.length;
+    // Get total count for pagination
+    const countResult = await pool.query(countQuery, params);
+    const totalMatches = parseInt(countResult.rows[0].count);
+    
+    // Get results
+    const result = await pool.query(query, params);
+    const results = result.rows;
+
     const totalPages = Math.ceil(totalMatches / pageSize);
-    const startIndex = (pageNum - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-    const results = filteredData.slice(startIndex, endIndex);
 
     res.json({
       results,
