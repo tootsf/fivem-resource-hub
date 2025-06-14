@@ -8,26 +8,27 @@ const { authenticateUser } = require('../middleware/auth');
 
 const router = express.Router();
 
-// Configure GitHub OAuth Strategy
-passport.use(new GitHubStrategy({
-  clientID: process.env.GITHUB_CLIENT_ID,
-  clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: "/auth/github/callback"
-}, async (accessToken, refreshToken, profile, done) => {
-  try {
-    console.log('GitHub OAuth callback received for user:', profile.username);
-    
-    // Check if user exists
-    let user = await User.findByGithubId(profile.id);
-    
-    const userData = {
-      github_id: profile.id,
-      username: profile.username,
-      display_name: profile.displayName || profile.username,
-      email: profile.emails?.[0]?.value || null,
-      avatar_url: profile.photos?.[0]?.value || null,
-      github_url: profile.profileUrl
-    };
+// Configure GitHub OAuth Strategy - only if credentials are provided
+if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
+  passport.use(new GitHubStrategy({
+    clientID: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    callbackURL: "/auth/github/callback"
+  }, async (accessToken, refreshToken, profile, done) => {
+    try {
+      console.log('GitHub OAuth callback received for user:', profile.username);
+      
+      // Check if user exists
+      let user = await User.findByGithubId(profile.id);
+      
+      const userData = {
+        github_id: profile.id,
+        username: profile.username,
+        display_name: profile.displayName || profile.username,
+        email: profile.emails?.[0]?.value || null,
+        avatar_url: profile.photos?.[0]?.value || null,
+        github_url: profile.profileUrl
+      };
 
     if (user) {
       // Update existing user with latest GitHub data
@@ -53,6 +54,9 @@ passport.use(new GitHubStrategy({
     return done(error, null);
   }
 }));
+} else {
+  console.log('GitHub OAuth not configured - CLIENT_ID and CLIENT_SECRET required');
+}
 
 // Initialize passport
 passport.serializeUser((user, done) => {
@@ -70,50 +74,68 @@ passport.deserializeUser(async (id, done) => {
 
 // Routes
 
-// Start GitHub OAuth flow
-router.get('/github', (req, res, next) => {
-  console.log('Starting GitHub OAuth flow');
-  passport.authenticate('github', { 
-    scope: ['user:email', 'public_repo', 'read:user'] 
-  })(req, res, next);
-});
+// GitHub OAuth routes - only if configured
+if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
+  // Start GitHub OAuth flow
+  router.get('/github', (req, res, next) => {
+    console.log('Starting GitHub OAuth flow');
+    passport.authenticate('github', { 
+      scope: ['user:email', 'public_repo', 'read:user'] 
+    })(req, res, next);
+  });
 
-// GitHub OAuth callback
-router.get('/github/callback', 
-  passport.authenticate('github', { session: false }),
-  (req, res) => {
-    try {
-      console.log('GitHub OAuth successful for user:', req.user.username);
-      
-      // Generate JWT token
-      const token = jwt.sign(
-        { 
-          userId: req.user.id, 
-          username: req.user.username 
-        },
-        process.env.JWT_SECRET,
-        { expiresIn: '30d' }
-      );
+  // GitHub OAuth callback
+  router.get('/github/callback', 
+    passport.authenticate('github', { session: false }),
+    (req, res) => {
+      try {
+        console.log('GitHub OAuth successful for user:', req.user.username);
+        
+        // Generate JWT token
+        const token = jwt.sign(
+          { 
+            userId: req.user.id, 
+            username: req.user.username 
+          },
+          process.env.JWT_SECRET,
+          { expiresIn: '30d' }
+        );
 
-      // Set HTTP-only cookie
-      res.cookie('auth_token', token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-        path: '/'
-      });
+        // Set HTTP-only cookie
+        res.cookie('auth_token', token, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'lax',
+          maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+          path: '/'
+        });
 
-      // Redirect to frontend dashboard
-      const redirectUrl = `${process.env.FRONTEND_URL}/dashboard?login=success`;
-      console.log('Redirecting to:', redirectUrl);
-      res.redirect(redirectUrl);
-    } catch (error) {
-      console.error('OAuth callback error:', error);
-      res.redirect(`${process.env.FRONTEND_URL}?error=auth_failed`);
+        // Redirect to frontend dashboard
+        const redirectUrl = `${process.env.FRONTEND_URL}/dashboard?login=success`;
+        console.log('Redirecting to:', redirectUrl);
+        res.redirect(redirectUrl);
+      } catch (error) {
+        console.error('OAuth callback error:', error);
+        res.redirect(`${process.env.FRONTEND_URL}?error=auth_failed`);
+      }
     }
-  }
-);
+  );
+} else {
+  // Fallback routes when GitHub OAuth is not configured
+  router.get('/github', (req, res) => {
+    res.status(503).json({ 
+      error: 'GitHub OAuth not configured',
+      message: 'GitHub authentication is not available. Please configure GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.'
+    });
+  });
+
+  router.get('/github/callback', (req, res) => {
+    res.status(503).json({ 
+      error: 'GitHub OAuth not configured',
+      message: 'GitHub authentication is not available.'
+    });
+  });
+}
 
 // Get current user profile
 router.get('/me', authenticateUser, async (req, res) => {
