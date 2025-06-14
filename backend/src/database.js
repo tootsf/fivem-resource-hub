@@ -1,27 +1,36 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-// Create PostgreSQL connection pool
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-  max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
-});
+// Create PostgreSQL connection pool - only if DATABASE_URL is provided
+let pool = null;
 
-// Test database connection
-pool.on('connect', () => {
-  console.log('Connected to PostgreSQL database');
-});
+if (process.env.DATABASE_URL) {
+  pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    max: 20,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
+  });
+  // Test database connection
+  pool.on('connect', () => {
+    console.log('Connected to PostgreSQL database');
+  });
 
-pool.on('error', (err) => {
-  console.error('Unexpected error on idle client', err);
-  process.exit(-1);
-});
+  pool.on('error', (err) => {
+    console.error('Unexpected error on idle client', err);
+    process.exit(-1);
+  });
+} else {
+  console.log('DATABASE_URL not provided - using mock data mode');
+}
 
 // Helper function to execute queries
 const query = async (text, params) => {
+  if (!pool) {
+    throw new Error('Database not configured - please set DATABASE_URL environment variable');
+  }
+  
   const start = Date.now();
   try {
     const res = await pool.query(text, params);
@@ -36,6 +45,10 @@ const query = async (text, params) => {
 
 // Helper function to get a client for transactions
 const getClient = async () => {
+  if (!pool) {
+    throw new Error('Database not configured - please set DATABASE_URL environment variable');
+  }
+  
   const client = await pool.connect();
   const query = client.query;
   const release = client.release;
