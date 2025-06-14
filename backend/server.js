@@ -86,6 +86,53 @@ function loadData() {
 app.use('/auth', authLimiter, authRoutes);
 app.use('/api/users', userRoutes);
 
+// Simple resources API for testing
+app.get('/api/resources', async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 20;
+    const offset = (page - 1) * limit;
+    const search = req.query.q || '';
+
+    let query = 'SELECT * FROM resources';
+    let params = [];
+    
+    if (search) {
+      query += ' WHERE name ILIKE $1 OR description ILIKE $1';
+      params.push(`%${search}%`);
+    }
+    
+    query += ` ORDER BY stars DESC LIMIT $${params.length + 1} OFFSET $${params.length + 2}`;
+    params.push(limit, offset);
+
+    const result = await pool.query(query, params);
+    
+    // Get total count
+    let countQuery = 'SELECT COUNT(*) FROM resources';
+    let countParams = [];
+    if (search) {
+      countQuery += ' WHERE name ILIKE $1 OR description ILIKE $1';
+      countParams.push(`%${search}%`);
+    }
+    
+    const countResult = await pool.query(countQuery, countParams);
+    const total = parseInt(countResult.rows[0].count);
+
+    res.json({
+      resources: result.rows,
+      pagination: {
+        page,
+        limit,
+        total,
+        pages: Math.ceil(total / limit)
+      }
+    });
+  } catch (error) {
+    console.error('Resources API error:', error);
+    res.status(500).json({ error: 'Failed to fetch resources' });
+  }
+});
+
 // Keep your existing search endpoint for backwards compatibility
 app.get('/search', (req, res) => {
   try {
@@ -127,25 +174,50 @@ app.get('/search', (req, res) => {
   }
 });
 
-// Health check endpoint
+// Health check with optional database setup
 app.get('/health', async (req, res) => {
   try {
-    // Test database connection
-    const dbResult = await pool.query('SELECT NOW()');
+    await pool.query('SELECT 1');
+    
+    // Check if we have resources data
+    const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
+    const userCount = await pool.query('SELECT COUNT(*) FROM users');
     
     res.json({ 
-      status: 'OK',
+      status: 'healthy', 
       timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV,
       database: 'connected',
-      dataLoaded: data.length > 0,
-      totalEntries: data.length,
-      environment: process.env.NODE_ENV || 'development'
+      resources: parseInt(resourceCount.rows[0].count),
+      users: parseInt(userCount.rows[0].count)
     });
   } catch (error) {
-    console.error('Health check failed:', error);
+    res.status(500).json({ 
+      status: 'unhealthy', 
+      error: error.message,
+      database: 'disconnected'
+    });
+  }
+});
+
+// Setup database endpoint (for production deployment)
+app.post('/setup-database', async (req, res) => {
+  try {
+    console.log('🚀 Starting database setup...');
+    const { setupProductionDatabase } = require('./scripts/setup-production-db');
+    await setupProductionDatabase();
+    
+    res.json({
+      status: 'success',
+      message: 'Database setup completed successfully',
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('Database setup failed:', error);
     res.status(500).json({
-      status: 'ERROR',
-      error: 'Database connection failed'
+      status: 'error',
+      message: 'Database setup failed',
+      error: error.message
     });
   }
 });
