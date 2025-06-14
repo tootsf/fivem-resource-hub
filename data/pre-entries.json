@@ -1,0 +1,5282 @@
+[
+  {
+    "resource_name": "marriagesystem",
+    "resource_data": {
+      "name": "marriagesystem",
+      "rank": 190055,
+      "players": 22,
+      "servers": 2,
+      "rankChange": 22870
+    },
+    "github_repo": {
+      "repo_name": "acer0032564/marriagesystem",
+      "author": "marriagesystem",
+      "html_url": "https://github.com/acer0032564/marriagesystem",
+      "description": "\u7d50\u5a5a\u7cfb\u7d71-\u4e2d\u6587\u7248-\u652f\u63f4ONESYNC-\u6709Discord-Log",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "3dme-html",
+    "resource_data": {
+      "name": "3dme-html",
+      "rank": 190213,
+      "players": 21,
+      "servers": 2,
+      "rankChange": 157051
+    },
+    "github_repo": {
+      "repo_name": "Frowmza/3dme-html",
+      "author": "3dme-html",
+      "html_url": "https://github.com/Frowmza/3dme-html",
+      "description": "No description",
+      "stars": 10,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "EV_hud",
+    "resource_data": {
+      "name": "EV_hud",
+      "rank": 191036,
+      "players": 20,
+      "servers": 2,
+      "rankChange": -46170
+    },
+    "github_repo": {
+      "repo_name": "sungjihun00/EV_HUD",
+      "author": "EV_HUD",
+      "html_url": "https://github.com/sungjihun00/EV_HUD",
+      "description": "FIVEM EV_HUD",
+      "stars": 0,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "stateBagTest",
+    "resource_data": {
+      "name": "stateBagTest",
+      "rank": 191379,
+      "players": 20,
+      "servers": 2,
+      "rankChange": -11046
+    },
+    "github_repo": {
+      "repo_name": "Nykatas/statebagTest",
+      "author": "statebagTest",
+      "html_url": "https://github.com/Nykatas/statebagTest",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "drez-notifycs2",
+    "resource_data": {
+      "name": "drez-notifycs2",
+      "rank": 191510,
+      "players": 19,
+      "servers": 2,
+      "rankChange": 86206
+    },
+    "github_repo": {
+      "repo_name": "Drezx/drez-notifycs2",
+      "author": "drez-notifycs2",
+      "html_url": "https://github.com/Drezx/drez-notifycs2",
+      "description": "No description",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "shark_cds",
+    "resource_data": {
+      "name": "shark_cds",
+      "rank": 191906,
+      "players": 19,
+      "servers": 2,
+      "rankChange": -15581
+    },
+    "github_repo": {
+      "repo_name": "Shark-Store/shark_cds",
+      "author": "shark_cds",
+      "html_url": "https://github.com/Shark-Store/shark_cds",
+      "description": "Script para pegar coordenadas facilmente, e salvar em um .txt de forma r\u00e1pida, script totalmente compat\u00edvel com todos scripts da Shark Store",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "gfx-points",
+    "resource_data": {
+      "name": "gfx-points",
+      "rank": 193129,
+      "players": 17,
+      "servers": 2,
+      "rankChange": 37705
+    },
+    "github_repo": {
+      "repo_name": "fivegfx/gfx-points",
+      "author": "gfx-points",
+      "html_url": "https://github.com/fivegfx/gfx-points",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Glock-43x",
+    "resource_data": {
+      "name": "Glock-43x",
+      "rank": 193132,
+      "players": 17,
+      "servers": 2,
+      "rankChange": 18610
+    },
+    "github_repo": {
+      "repo_name": "koolaash/Glock-43x",
+      "author": "Glock-43x",
+      "html_url": "https://github.com/koolaash/Glock-43x",
+      "description": "A fivem pistol",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ui-wrapper",
+    "resource_data": {
+      "name": "ui-wrapper",
+      "rank": 193630,
+      "players": 17,
+      "servers": 2,
+      "rankChange": -9710
+    },
+    "github_repo": {
+      "repo_name": "Solositeous/ui-wrapper",
+      "author": "ui-wrapper",
+      "html_url": "https://github.com/Solositeous/ui-wrapper",
+      "description": "UI Wrapper for FiveM",
+      "stars": 14,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Infinity_Jobs",
+    "resource_data": {
+      "name": "Infinity_Jobs",
+      "rank": 194009,
+      "players": 16,
+      "servers": 2,
+      "rankChange": 13389
+    },
+    "github_repo": {
+      "repo_name": "Infinity-Core/infinity_jobs",
+      "author": "infinity_jobs",
+      "html_url": "https://github.com/Infinity-Core/infinity_jobs",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "jb-speedometer",
+    "resource_data": {
+      "name": "jb-speedometer",
+      "rank": 194030,
+      "players": 16,
+      "servers": 2,
+      "rankChange": -13464
+    },
+    "github_repo": {
+      "repo_name": "Jaareet/jb-speedometer",
+      "author": "jb-speedometer",
+      "html_url": "https://github.com/Jaareet/jb-speedometer",
+      "description": "5M Speedometer",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "noted-blooddraw",
+    "resource_data": {
+      "name": "noted-blooddraw",
+      "rank": 194162,
+      "players": 16,
+      "servers": 2,
+      "rankChange": -2759
+    },
+    "github_repo": {
+      "repo_name": "NotedDevelopment/noted-blooddraw",
+      "author": "noted-blooddraw",
+      "html_url": "https://github.com/NotedDevelopment/noted-blooddraw",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "church-mlo",
+    "resource_data": {
+      "name": "church-mlo",
+      "rank": 194764,
+      "players": 15,
+      "servers": 2,
+      "rankChange": -51785
+    },
+    "github_repo": {
+      "repo_name": "KPPVIP/church-mlo",
+      "author": "church-mlo",
+      "html_url": "https://github.com/KPPVIP/church-mlo",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "cokerun",
+    "resource_data": {
+      "name": "cokerun",
+      "rank": 195708,
+      "players": 14,
+      "servers": 2,
+      "rankChange": -4225
+    },
+    "github_repo": {
+      "repo_name": "lTomyV/cokeRun",
+      "author": "cokeRun",
+      "html_url": "https://github.com/lTomyV/cokeRun",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "gx_notify",
+    "resource_data": {
+      "name": "gx_notify",
+      "rank": 276391,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -121184
+    },
+    "github_repo": {
+      "repo_name": "Nestor36/gx_notify",
+      "author": "gx_notify",
+      "html_url": "https://github.com/Nestor36/gx_notify",
+      "description": "notificaciones para FiveM",
+      "stars": 0,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "HX_Armory",
+    "resource_data": {
+      "name": "HX_Armory",
+      "rank": 278233,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7445
+    },
+    "github_repo": {
+      "repo_name": "Haxalott/hx_armory",
+      "author": "hx_armory",
+      "html_url": "https://github.com/Haxalott/hx_armory",
+      "description": "Armory script for FiveM using ox_lib",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "hx_record",
+    "resource_data": {
+      "name": "hx_record",
+      "rank": 278236,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -136917
+    },
+    "github_repo": {
+      "repo_name": "Haxalott/hx_record",
+      "author": "hx_record",
+      "html_url": "https://github.com/Haxalott/hx_record",
+      "description": "Rockstar Editor Recording menu for FiveM",
+      "stars": 2,
+      "language": "TypeScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "hyon_winecellar",
+    "resource_data": {
+      "name": "hyon_winecellar",
+      "rank": 278286,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7438
+    },
+    "github_repo": {
+      "repo_name": "HyonScript/hyon_winecellar",
+      "author": "hyon_winecellar",
+      "html_url": "https://github.com/HyonScript/hyon_winecellar",
+      "description": "No description",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "iBetting",
+    "resource_data": {
+      "name": "iBetting",
+      "rank": 278408,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7429
+    },
+    "github_repo": {
+      "repo_name": "vietgamingnetwork/iBetting",
+      "author": "iBetting",
+      "html_url": "https://github.com/vietgamingnetwork/iBetting",
+      "description": "FiveM: Sports betting system",
+      "stars": 7,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "id_card_ui",
+    "resource_data": {
+      "name": "id_card_ui",
+      "rank": 278477,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7442
+    },
+    "github_repo": {
+      "repo_name": "JacobTDev/id_card_ui",
+      "author": "id_card_ui",
+      "html_url": "https://github.com/JacobTDev/id_card_ui",
+      "description": "No description",
+      "stars": 0,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "id_warningnotification",
+    "resource_data": {
+      "name": "id_warningnotification",
+      "rank": 278479,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7444
+    },
+    "github_repo": {
+      "repo_name": "byserhatt/id_warningnotification",
+      "author": "id_warningnotification",
+      "html_url": "https://github.com/byserhatt/id_warningnotification",
+      "description": "Very simple but useful resource for sending important warning notifications to your server's players.",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ik-anticar",
+    "resource_data": {
+      "name": "ik-anticar",
+      "rank": 278671,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7349
+    },
+    "github_repo": {
+      "repo_name": "i-kulgu/ik-anticar",
+      "author": "ik-anticar",
+      "html_url": "https://github.com/i-kulgu/ik-anticar",
+      "description": "Fivem Anti Car system which removes the blacklisted cars in config.",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Image-Slideshow-Loading-Screen",
+    "resource_data": {
+      "name": "Image-Slideshow-Loading-Screen",
+      "rank": 278756,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7317
+    },
+    "github_repo": {
+      "repo_name": "WeponzTV/Image-Slideshow-Loading-Screen",
+      "author": "Image-Slideshow-Loading-Screen",
+      "html_url": "https://github.com/WeponzTV/Image-Slideshow-Loading-Screen",
+      "description": "No description",
+      "stars": 1,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "imperio_dances",
+    "resource_data": {
+      "name": "imperio_dances",
+      "rank": 278906,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7313
+    },
+    "github_repo": {
+      "repo_name": "Imperio-System/imperio_dances",
+      "author": "imperio_dances",
+      "html_url": "https://github.com/Imperio-System/imperio_dances",
+      "description": "ESX Dancing Contest Script integrated with cs-hall (https://tebex.criticalscripts.shop/package/4517971)",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "IntoxicantManager",
+    "resource_data": {
+      "name": "IntoxicantManager",
+      "rank": 279147,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61958
+    },
+    "github_repo": {
+      "repo_name": "krabinator/IntoxicantManager",
+      "author": "IntoxicantManager",
+      "html_url": "https://github.com/krabinator/IntoxicantManager",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "irp-fuel",
+    "resource_data": {
+      "name": "irp-fuel",
+      "rank": 279244,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7241
+    },
+    "github_repo": {
+      "repo_name": "ImpulseFPS/irp-fuel",
+      "author": "irp-fuel",
+      "html_url": "https://github.com/ImpulseFPS/irp-fuel",
+      "description": "NoPixel style legacyfuel",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "iski-hud",
+    "resource_data": {
+      "name": "iski-hud",
+      "rank": 279331,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7213
+    },
+    "github_repo": {
+      "repo_name": "theiski/iski-hud",
+      "author": "iski-hud",
+      "html_url": "https://github.com/theiski/iski-hud",
+      "description": "A qb-hud restyle made by TheiSKi to make it more stylish and modern.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ItemsOnBack",
+    "resource_data": {
+      "name": "ItemsOnBack",
+      "rank": 279372,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7206
+    },
+    "github_repo": {
+      "repo_name": "Areasus/ItemsOnBack",
+      "author": "ItemsOnBack",
+      "html_url": "https://github.com/Areasus/ItemsOnBack",
+      "description": "Items/Weapons on back for qb/pepe fivem servers",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "j_vehiclescrapping",
+    "resource_data": {
+      "name": "j_vehiclescrapping",
+      "rank": 279407,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -40043
+    },
+    "github_repo": {
+      "repo_name": "EinfachJustin/j_vehiclescrapping",
+      "author": "j_vehiclescrapping",
+      "html_url": "https://github.com/EinfachJustin/j_vehiclescrapping",
+      "description": "This FiveM script enhances the roleplaying experience by allowing players to scrap their vehicles directly in-game..",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "jack-thermite-minigame",
+    "resource_data": {
+      "name": "jack-thermite-minigame",
+      "rank": 279452,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -22052
+    },
+    "github_repo": {
+      "repo_name": "jackfmaxwell/jack-thermite-minigame",
+      "author": "jack-thermite-minigame",
+      "html_url": "https://github.com/jackfmaxwell/jack-thermite-minigame",
+      "description": "Simple match 3 minigame for thermite",
+      "stars": 1,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "jd_barralobby",
+    "resource_data": {
+      "name": "jd_barralobby",
+      "rank": 279609,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -116188
+    },
+    "github_repo": {
+      "repo_name": "Johnson6717/jd_barralobby",
+      "author": "jd_barralobby",
+      "html_url": "https://github.com/Johnson6717/jd_barralobby",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "jn-hud",
+    "resource_data": {
+      "name": "jn-hud",
+      "rank": 279831,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7098
+    },
+    "github_repo": {
+      "repo_name": "Nightt7/jn-hud",
+      "author": "jn-hud",
+      "html_url": "https://github.com/Nightt7/jn-hud",
+      "description": "FiveM ESX HUD by Nightt#8899 & Jaareet#0097",
+      "stars": 10,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "johnspolicerework",
+    "resource_data": {
+      "name": "johnspolicerework",
+      "rank": 279915,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -33738
+    },
+    "github_repo": {
+      "repo_name": "chickenlord01/johnspolicerework",
+      "author": "johnspolicerework",
+      "html_url": "https://github.com/chickenlord01/johnspolicerework",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "JP-CarMenu",
+    "resource_data": {
+      "name": "JP-CarMenu",
+      "rank": 279972,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -22430
+    },
+    "github_repo": {
+      "repo_name": "juanp15/JP-CarMenu",
+      "author": "JP-CarMenu",
+      "html_url": "https://github.com/juanp15/JP-CarMenu",
+      "description": "JP-CarMenu Standalone/ESX",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "js-dogmenu",
+    "resource_data": {
+      "name": "js-dogmenu",
+      "rank": 280015,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -56967
+    },
+    "github_repo": {
+      "repo_name": "Jesus088/js-dogmenu",
+      "author": "js-dogmenu",
+      "html_url": "https://github.com/Jesus088/js-dogmenu",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "js-windowtint",
+    "resource_data": {
+      "name": "js-windowtint",
+      "rank": 280017,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7083
+    },
+    "github_repo": {
+      "repo_name": "Jesus088/js-windowtint",
+      "author": "js-windowtint",
+      "html_url": "https://github.com/Jesus088/js-windowtint",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "js5m-fwens",
+    "resource_data": {
+      "name": "js5m-fwens",
+      "rank": 280019,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7083
+    },
+    "github_repo": {
+      "repo_name": "JoeSzymkowiczFiveM/js5m-fwens",
+      "author": "js5m-fwens",
+      "html_url": "https://github.com/JoeSzymkowiczFiveM/js5m-fwens",
+      "description": "Make fwens in Fivem",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ka-placeableitems",
+    "resource_data": {
+      "name": "ka-placeableitems",
+      "rank": 280210,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7029
+    },
+    "github_repo": {
+      "repo_name": "Khazadream/ka-placeableitems",
+      "author": "ka-placeableitems",
+      "html_url": "https://github.com/Khazadream/ka-placeableitems",
+      "description": "Uses items to place props anywhere",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ka-propmenu",
+    "resource_data": {
+      "name": "ka-propmenu",
+      "rank": 280211,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 7029
+    },
+    "github_repo": {
+      "repo_name": "Khazadream/ka-propmenu",
+      "author": "ka-propmenu",
+      "html_url": "https://github.com/Khazadream/ka-propmenu",
+      "description": "Prop menu list to buy props as item",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kaves_meth",
+    "resource_data": {
+      "name": "kaves_meth",
+      "rank": 280371,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6991
+    },
+    "github_repo": {
+      "repo_name": "Kaves47/kaves_meth",
+      "author": "kaves_meth",
+      "html_url": "https://github.com/Kaves47/kaves_meth",
+      "description": "meth script for fivem",
+      "stars": 6,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kedi_suspension",
+    "resource_data": {
+      "name": "kedi_suspension",
+      "rank": 280478,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6972
+    },
+    "github_repo": {
+      "repo_name": "HastH8/kedi_suspension",
+      "author": "kedi_suspension",
+      "html_url": "https://github.com/HastH8/kedi_suspension",
+      "description": "Advanced Suspension Script",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kibra-motel",
+    "resource_data": {
+      "name": "kibra-motel",
+      "rank": 280594,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6962
+    },
+    "github_repo": {
+      "repo_name": "kibradev/kibra-motel",
+      "author": "kibra-motel",
+      "html_url": "https://github.com/kibradev/kibra-motel",
+      "description": "FiveM Pinkcage Motel Cafe - Bar",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kn_carwash",
+    "resource_data": {
+      "name": "kn_carwash",
+      "rank": 280800,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6991
+    },
+    "github_repo": {
+      "repo_name": "known-001/kn_carwash",
+      "author": "kn_carwash",
+      "html_url": "https://github.com/known-001/kn_carwash",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kr_cc",
+    "resource_data": {
+      "name": "kr_cc",
+      "rank": 281007,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 391768
+    },
+    "github_repo": {
+      "repo_name": "Krilleren/kr_cc",
+      "author": "kr_cc",
+      "html_url": "https://github.com/Krilleren/kr_cc",
+      "description": "Simple fivem cruise control script",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "KR-inventory",
+    "resource_data": {
+      "name": "KR-inventory",
+      "rank": 281045,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -52463
+    },
+    "github_repo": {
+      "repo_name": "ISKinGeR/KR-Inventory",
+      "author": "KR-Inventory",
+      "html_url": "https://github.com/ISKinGeR/KR-Inventory",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "KRP-Car-Washer",
+    "resource_data": {
+      "name": "KRP-Car-Washer",
+      "rank": 281161,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6855
+    },
+    "github_repo": {
+      "repo_name": "Krupickas/KRP-Car-Washer",
+      "author": "KRP-Car-Washer",
+      "html_url": "https://github.com/Krupickas/KRP-Car-Washer",
+      "description": "Simple car wash for qtarget compatible with ox-target",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "krs-pizzajob",
+    "resource_data": {
+      "name": "krs-pizzajob",
+      "rank": 281171,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6853
+    },
+    "github_repo": {
+      "repo_name": "peleg-development/krs-pizzajob",
+      "author": "krs-pizzajob",
+      "html_url": "https://github.com/peleg-development/krs-pizzajob",
+      "description": "krs-pizzajob, delivery job script for FiveM, allowing players to take on the role of a pizza delivery driver in the game. This script will enhance the immersive experience on your FiveM server by introducing a realistic and interactive job for players.",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ks_jobchanger",
+    "resource_data": {
+      "name": "ks_jobchanger",
+      "rank": 281184,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6859
+    },
+    "github_repo": {
+      "repo_name": "Kxiox/ks_jobchanger",
+      "author": "ks_jobchanger",
+      "html_url": "https://github.com/Kxiox/ks_jobchanger",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kt-nobunnyhop",
+    "resource_data": {
+      "name": "kt-nobunnyhop",
+      "rank": 281245,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -49937
+    },
+    "github_repo": {
+      "repo_name": "Katania91/kt-nobunnyhop",
+      "author": "kt-nobunnyhop",
+      "html_url": "https://github.com/Katania91/kt-nobunnyhop",
+      "description": "This FiveM script limits the number of jumps a player can perform within a short period of time. If the player exceeds the configured number of jumps (default is 3) within a set time frame (10 seconds), the player will be knocked out with a ragdoll effect for a few seconds.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kuban_cityhall",
+    "resource_data": {
+      "name": "kuban_cityhall",
+      "rank": 281266,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6824
+    },
+    "github_repo": {
+      "repo_name": "kubanscripts/kuban_cityhall",
+      "author": "kuban_cityhall",
+      "html_url": "https://github.com/kubanscripts/kuban_cityhall",
+      "description": "A ox_lib city hall resource for FiveM QBCore",
+      "stars": 7,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kxi_3Did-v2",
+    "resource_data": {
+      "name": "kxi_3Did-v2",
+      "rank": 281378,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6830
+    },
+    "github_repo": {
+      "repo_name": "Khalleep/kxi_3Did-v2",
+      "author": "kxi_3Did-v2",
+      "html_url": "https://github.com/Khalleep/kxi_3Did-v2",
+      "description": "v2 of my ID script. In this version, you need to press the page up key once or use the /toggleid command. But in my first ID script, you need to hold down the page up key. The first version is here: https://github.com/Khalleep/kxi_3Did",
+      "stars": 5,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "kzo_garage",
+    "resource_data": {
+      "name": "kzo_garage",
+      "rank": 281394,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 393333
+    },
+    "github_repo": {
+      "repo_name": "Kaizet1/kzo_garage",
+      "author": "kzo_garage",
+      "html_url": "https://github.com/Kaizet1/kzo_garage",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "l4-notify",
+    "resource_data": {
+      "name": "l4-notify",
+      "rank": 281469,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6787
+    },
+    "github_repo": {
+      "repo_name": "Linux5Real/L4-notify",
+      "author": "L4-notify",
+      "html_url": "https://github.com/Linux5Real/L4-notify",
+      "description": "Modern notification system for FiveM",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "laot-core",
+    "resource_data": {
+      "name": "laot-core",
+      "rank": 281747,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -35120
+    },
+    "github_repo": {
+      "repo_name": "laot7490/laot-core",
+      "author": "laot-core",
+      "html_url": "https://github.com/laot7490/laot-core",
+      "description": "Bir Developer K\u0131sayol Altyap\u0131s\u0131",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "legacy_police",
+    "resource_data": {
+      "name": "legacy_police",
+      "rank": 282340,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 398010
+    },
+    "github_repo": {
+      "repo_name": "BurntJannings/legacy_police",
+      "author": "legacy_police",
+      "html_url": "https://github.com/BurntJannings/legacy_police",
+      "description": "A Complete Police Script for VORP Framework",
+      "stars": 12,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "LegionRoadCLosure",
+    "resource_data": {
+      "name": "LegionRoadCLosure",
+      "rank": 282422,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6554
+    },
+    "github_repo": {
+      "repo_name": "drkkkkkk/LegionRoadCLosure",
+      "author": "LegionRoadCLosure",
+      "html_url": "https://github.com/drkkkkkk/LegionRoadCLosure",
+      "description": "A road closure at legion square that assures the AI'S Do U-Turns to turn around instead of driving through.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "LightByCoord",
+    "resource_data": {
+      "name": "LightByCoord",
+      "rank": 282945,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -24691
+    },
+    "github_repo": {
+      "repo_name": "FiveMLuxe/LightByCoord",
+      "author": "LightByCoord",
+      "html_url": "https://github.com/FiveMLuxe/LightByCoord",
+      "description": "Allows you to define light sources at specific locations during a city blackout. ",
+      "stars": 5,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "livery-command",
+    "resource_data": {
+      "name": "livery-command",
+      "rank": 283041,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6398
+    },
+    "github_repo": {
+      "repo_name": "HardCoreScripts/Livery-Command",
+      "author": "Livery-Command",
+      "html_url": "https://github.com/HardCoreScripts/Livery-Command",
+      "description": "Script using to libery command",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "lj_pvphud",
+    "resource_data": {
+      "name": "lj_pvphud",
+      "rank": 283058,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6395
+    },
+    "github_repo": {
+      "repo_name": "Johnson6717/lj_pvphud",
+      "author": "lj_pvphud",
+      "html_url": "https://github.com/Johnson6717/lj_pvphud",
+      "description": "Hud para servidores de PVP de FiveM",
+      "stars": 3,
+      "language": "HTML",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "lnd-courier-job",
+    "resource_data": {
+      "name": "lnd-courier-job",
+      "rank": 283145,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6377
+    },
+    "github_repo": {
+      "repo_name": "actuallylnd/lnd-courier-job",
+      "author": "lnd-courier-job",
+      "html_url": "https://github.com/actuallylnd/lnd-courier-job",
+      "description": "simple script for courier work where the player has to deliver packages",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "lotus_smoking",
+    "resource_data": {
+      "name": "lotus_smoking",
+      "rank": 283452,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -25082
+    },
+    "github_repo": {
+      "repo_name": "kyrgrs/lotus_smoking",
+      "author": "lotus_smoking",
+      "html_url": "https://github.com/kyrgrs/lotus_smoking",
+      "description": "Improved smoking script",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "lucid-killcam",
+    "resource_data": {
+      "name": "lucid-killcam",
+      "rank": 284158,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6385
+    },
+    "github_repo": {
+      "repo_name": "LucidB1/lucid-killcam",
+      "author": "lucid-killcam",
+      "html_url": "https://github.com/LucidB1/lucid-killcam",
+      "description": "No description",
+      "stars": 9,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "lumen-jail",
+    "resource_data": {
+      "name": "lumen-jail",
+      "rank": 284289,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6371
+    },
+    "github_repo": {
+      "repo_name": "Lumen-Sudios/Lumen-Jail",
+      "author": "Lumen-Jail",
+      "html_url": "https://github.com/Lumen-Sudios/Lumen-Jail",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Lux_Input",
+    "resource_data": {
+      "name": "Lux_Input",
+      "rank": 284370,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61238
+    },
+    "github_repo": {
+      "repo_name": "LuxCodingFivem/Lux_Input",
+      "author": "Lux_Input",
+      "html_url": "https://github.com/LuxCodingFivem/Lux_Input",
+      "description": "No description",
+      "stars": 0,
+      "language": "CSS",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Lux_Progressbar",
+    "resource_data": {
+      "name": "Lux_Progressbar",
+      "rank": 284374,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61241
+    },
+    "github_repo": {
+      "repo_name": "LuxCodingFivem/Lux_Progressbar",
+      "author": "Lux_Progressbar",
+      "html_url": "https://github.com/LuxCodingFivem/Lux_Progressbar",
+      "description": "Simple Progressbar Script ",
+      "stars": 1,
+      "language": "HTML",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "M4_BusJob",
+    "resource_data": {
+      "name": "M4_BusJob",
+      "rank": 284661,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 409910
+    },
+    "github_repo": {
+      "repo_name": "mrghozzi/M4_BusJob",
+      "author": "M4_BusJob",
+      "html_url": "https://github.com/mrghozzi/M4_BusJob",
+      "description": "\ud83d\ude8d A QBCore bus job script with dynamic lines, GPS routing, and realistic depot interaction.",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Mansion_Vinedos",
+    "resource_data": {
+      "name": "Mansion_Vinedos",
+      "rank": 285035,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61889
+    },
+    "github_repo": {
+      "repo_name": "dfnetwork/Mansion_Vinedos",
+      "author": "Mansion_Vinedos",
+      "html_url": "https://github.com/dfnetwork/Mansion_Vinedos",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "masora_hud",
+    "resource_data": {
+      "name": "masora_hud",
+      "rank": 285498,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 6070
+    },
+    "github_repo": {
+      "repo_name": "m6tro/masora_hud",
+      "author": "masora_hud",
+      "html_url": "https://github.com/m6tro/masora_hud",
+      "description": "This resource includes a fully responsive and modern HUD for FiveM!.",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mb_notify",
+    "resource_data": {
+      "name": "mb_notify",
+      "rank": 285636,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 416008
+    },
+    "github_repo": {
+      "repo_name": "baguscodestudio/mb_notify",
+      "author": "mb_notify",
+      "html_url": "https://github.com/baguscodestudio/mb_notify",
+      "description": "FiveM Notification",
+      "stars": 5,
+      "language": "HTML",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "megaphone-item",
+    "resource_data": {
+      "name": "megaphone-item",
+      "rank": 286181,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61294
+    },
+    "github_repo": {
+      "repo_name": "Ddev-scripts/megaphone-item",
+      "author": "megaphone-item",
+      "html_url": "https://github.com/Ddev-scripts/megaphone-item",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "melons_blips",
+    "resource_data": {
+      "name": "melons_blips",
+      "rank": 286234,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5763
+    },
+    "github_repo": {
+      "repo_name": "IlMelons/melons_blips",
+      "author": "melons_blips",
+      "html_url": "https://github.com/IlMelons/melons_blips",
+      "description": "Blip management resource for FiveM",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Mercedes-A45",
+    "resource_data": {
+      "name": "Mercedes-A45",
+      "rank": 286325,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5740
+    },
+    "github_repo": {
+      "repo_name": "NaorNC/Mercedes-A45",
+      "author": "Mercedes-A45",
+      "html_url": "https://github.com/NaorNC/Mercedes-A45",
+      "description": "Mercedes A45 (Animated Car) - Ready for FiveM!",
+      "stars": 10,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mercy-drugtables",
+    "resource_data": {
+      "name": "mercy-drugtables",
+      "rank": 286388,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -51491
+    },
+    "github_repo": {
+      "repo_name": "Mercy-Collective/mercy-drugtables",
+      "author": "mercy-drugtables",
+      "html_url": "https://github.com/Mercy-Collective/mercy-drugtables",
+      "description": "FiveM Drugtables script using QBCore",
+      "stars": 11,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "metal_detector-master",
+    "resource_data": {
+      "name": "metal_detector-master",
+      "rank": 286443,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5726
+    },
+    "github_repo": {
+      "repo_name": "KPPVIP/metal_detector-master",
+      "author": "metal_detector-master",
+      "html_url": "https://github.com/KPPVIP/metal_detector-master",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mh-breakcuffs",
+    "resource_data": {
+      "name": "mh-breakcuffs",
+      "rank": 286596,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5655
+    },
+    "github_repo": {
+      "repo_name": "MaDHouSe79/mh-breakcuffs",
+      "author": "mh-breakcuffs",
+      "html_url": "https://github.com/MaDHouSe79/mh-breakcuffs",
+      "description": "No description",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mh-policetraining",
+    "resource_data": {
+      "name": "mh-policetraining",
+      "rank": 286600,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5654
+    },
+    "github_repo": {
+      "repo_name": "MH-Scripts/mh-policetraining",
+      "author": "mh-policetraining",
+      "html_url": "https://github.com/MH-Scripts/mh-policetraining",
+      "description": "Just a fun way to earn money and ranks for qb rp servers",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mh-rptrunks",
+    "resource_data": {
+      "name": "mh-rptrunks",
+      "rank": 286603,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 420499
+    },
+    "github_repo": {
+      "repo_name": "MaDHouSe79/mh-rptrunks",
+      "author": "mh-rptrunks",
+      "html_url": "https://github.com/MaDHouSe79/mh-rptrunks",
+      "description": "mh-rptrunks Created BY MaDHouSe79 ",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mh-sellbooze",
+    "resource_data": {
+      "name": "mh-sellbooze",
+      "rank": 286604,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -27450
+    },
+    "github_repo": {
+      "repo_name": "MaDHouSe79/mh-sellbooze",
+      "author": "mh-sellbooze",
+      "html_url": "https://github.com/MaDHouSe79/mh-sellbooze",
+      "description": "sell your useless booze :D",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ML187-HideInDumpster",
+    "resource_data": {
+      "name": "ML187-HideInDumpster",
+      "rank": 287005,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5544
+    },
+    "github_repo": {
+      "repo_name": "MichiganLove187/ML187-HideInDumpster",
+      "author": "ML187-HideInDumpster",
+      "html_url": "https://github.com/MichiganLove187/ML187-HideInDumpster",
+      "description": "qb/qbox hide in dumpsters script!",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ml187-kidnap",
+    "resource_data": {
+      "name": "ml187-kidnap",
+      "rank": 287006,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5544
+    },
+    "github_repo": {
+      "repo_name": "MichiganLove187/ML187-kidnap",
+      "author": "ML187-kidnap",
+      "html_url": "https://github.com/MichiganLove187/ML187-kidnap",
+      "description": "uhh kidnap?",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "monolith-factiongps",
+    "resource_data": {
+      "name": "monolith-factiongps",
+      "rank": 287367,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -28024
+    },
+    "github_repo": {
+      "repo_name": "monolith-vision/monolith-factiongps",
+      "author": "monolith-factiongps",
+      "html_url": "https://github.com/monolith-vision/monolith-factiongps",
+      "description": "No description",
+      "stars": 6,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "MP_FallenTree",
+    "resource_data": {
+      "name": "MP_FallenTree",
+      "rank": 287623,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5462
+    },
+    "github_repo": {
+      "repo_name": "drkkkkkk/MP_FallenTree",
+      "author": "MP_FallenTree",
+      "html_url": "https://github.com/drkkkkkk/MP_FallenTree",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mp_moneywash",
+    "resource_data": {
+      "name": "mp_moneywash",
+      "rank": 287633,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 426849
+    },
+    "github_repo": {
+      "repo_name": "MindlessPuppetz/mp_moneywash",
+      "author": "mp_moneywash",
+      "html_url": "https://github.com/MindlessPuppetz/mp_moneywash",
+      "description": "Free, open source money wash for FiveM",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mp-vape",
+    "resource_data": {
+      "name": "mp-vape",
+      "rank": 287645,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5460
+    },
+    "github_repo": {
+      "repo_name": "Morningstar-Productions/mp-vape",
+      "author": "mp-vape",
+      "html_url": "https://github.com/Morningstar-Productions/mp-vape",
+      "description": "Vape / Stress Reduce Resource for Overextended Resources",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mp-vehicleaudio",
+    "resource_data": {
+      "name": "mp-vehicleaudio",
+      "rank": 287646,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5460
+    },
+    "github_repo": {
+      "repo_name": "Morningstar-Productions/mp-vehicleaudio",
+      "author": "mp-vehicleaudio",
+      "html_url": "https://github.com/Morningstar-Productions/mp-vehicleaudio",
+      "description": "Audio Pack for mp-importvehicles",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mri_multimedia",
+    "resource_data": {
+      "name": "mri_multimedia",
+      "rank": 287779,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -28197
+    },
+    "github_repo": {
+      "repo_name": "mur4i/mri_multimedia",
+      "author": "mri_multimedia",
+      "html_url": "https://github.com/mur4i/mri_multimedia",
+      "description": "No description",
+      "stars": 0,
+      "language": "HTML",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "MRP_Banking",
+    "resource_data": {
+      "name": "MRP_Banking",
+      "rank": 287799,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5446
+    },
+    "github_repo": {
+      "repo_name": "mufty/mrp_banking",
+      "author": "mrp_banking",
+      "html_url": "https://github.com/mufty/mrp_banking",
+      "description": "No description",
+      "stars": 0,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "msk_rgbHeadlights",
+    "resource_data": {
+      "name": "msk_rgbHeadlights",
+      "rank": 287946,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5438
+    },
+    "github_repo": {
+      "repo_name": "MSK-Scripts/msk_rgbHeadlights",
+      "author": "msk_rgbHeadlights",
+      "html_url": "https://github.com/MSK-Scripts/msk_rgbHeadlights",
+      "description": "[ESX] Changeable Vehicle Headlights with an Item",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mVehicleshop",
+    "resource_data": {
+      "name": "mVehicleshop",
+      "rank": 288225,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5384
+    },
+    "github_repo": {
+      "repo_name": "devrivai/mVehicleshop",
+      "author": "mVehicleshop",
+      "html_url": "https://github.com/devrivai/mVehicleshop",
+      "description": "No description",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mx-spawn",
+    "resource_data": {
+      "name": "mx-spawn",
+      "rank": 288312,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5347
+    },
+    "github_repo": {
+      "repo_name": "MOXHARTZ/mx-spawn",
+      "author": "mx-spawn",
+      "html_url": "https://github.com/MOXHARTZ/mx-spawn",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "mystic_hud",
+    "resource_data": {
+      "name": "mystic_hud",
+      "rank": 288394,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -28674
+    },
+    "github_repo": {
+      "repo_name": "izmystic/mystic_hud",
+      "author": "mystic_hud",
+      "html_url": "https://github.com/izmystic/mystic_hud",
+      "description": "basic vmenu hud for fivem",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "n-grower",
+    "resource_data": {
+      "name": "n-grower",
+      "rank": 288487,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5296
+    },
+    "github_repo": {
+      "repo_name": "TheNeti/n-grower",
+      "author": "n-grower",
+      "html_url": "https://github.com/TheNeti/n-grower",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Nation-Bodycam",
+    "resource_data": {
+      "name": "Nation-Bodycam",
+      "rank": 288642,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -53591
+    },
+    "github_repo": {
+      "repo_name": "Nation101/Nation-Bodycam",
+      "author": "Nation-Bodycam",
+      "html_url": "https://github.com/Nation101/Nation-Bodycam",
+      "description": "Bodycam / GoPro style script for FiveM",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "nb_clothes-main",
+    "resource_data": {
+      "name": "nb_clothes-main",
+      "rank": 288702,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -41114
+    },
+    "github_repo": {
+      "repo_name": "KPPVIP/nb_clothes-main",
+      "author": "nb_clothes-main",
+      "html_url": "https://github.com/KPPVIP/nb_clothes-main",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "neko_alertas_defcon",
+    "resource_data": {
+      "name": "neko_alertas_defcon",
+      "rank": 289063,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -29219
+    },
+    "github_repo": {
+      "repo_name": "imkuroneko/neko_alertas_defcon",
+      "author": "neko_alertas_defcon",
+      "html_url": "https://github.com/imkuroneko/neko_alertas_defcon",
+      "description": "\ud83d\ude93 Sistema de estados de alertas policial (DEFCON) para servidores de FiveM basados en QBCore",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "neko_blackmarket",
+    "resource_data": {
+      "name": "neko_blackmarket",
+      "rank": 289064,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5084
+    },
+    "github_repo": {
+      "repo_name": "imkuroneko/neko_blackmarket",
+      "author": "neko_blackmarket",
+      "html_url": "https://github.com/imkuroneko/neko_blackmarket",
+      "description": "\ud83d\udd2b Mercado ilegal para servidor de FiveM (QBCore) basado en ox_lib, ox_inventory y qb-target",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "neko_gangs",
+    "resource_data": {
+      "name": "neko_gangs",
+      "rank": 289066,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5084
+    },
+    "github_repo": {
+      "repo_name": "imkuroneko/neko_gangs",
+      "author": "neko_gangs",
+      "html_url": "https://github.com/imkuroneko/neko_gangs",
+      "description": "\ud83e\udd77\ud83c\udffb Script para gesti\u00f3n de stashes y garages para orgs.criminales para servidores FiveM (QBCore)",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "neko_jobcenter",
+    "resource_data": {
+      "name": "neko_jobcenter",
+      "rank": 289067,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5084
+    },
+    "github_repo": {
+      "repo_name": "imkuroneko/neko_jobcenter",
+      "author": "neko_jobcenter",
+      "html_url": "https://github.com/imkuroneko/neko_jobcenter",
+      "description": "\ud83d\udcbc Sistema de postulaci\u00f3n y oficina de empleos para servidores basados en QBCore",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ngd-linecoords",
+    "resource_data": {
+      "name": "ngd-linecoords",
+      "rank": 289478,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -124062
+    },
+    "github_repo": {
+      "repo_name": "delucecc/ngd-linecoords",
+      "author": "ngd-linecoords",
+      "html_url": "https://github.com/delucecc/ngd-linecoords",
+      "description": "No description",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ninjadev_barbershop",
+    "resource_data": {
+      "name": "ninjadev_barbershop",
+      "rank": 289601,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 5010
+    },
+    "github_repo": {
+      "repo_name": "KPPVIP/ninjadev_barbershop",
+      "author": "ninjadev_barbershop",
+      "html_url": "https://github.com/KPPVIP/ninjadev_barbershop",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "NJ-Notifications",
+    "resource_data": {
+      "name": "NJ-Notifications",
+      "rank": 289706,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 183460
+    },
+    "github_repo": {
+      "repo_name": "Nightt7/NJ-Notifications",
+      "author": "NJ-Notifications",
+      "html_url": "https://github.com/Nightt7/NJ-Notifications",
+      "description": "FiveM ESX Notifications by Nightt#8899 & TusMuertos.#4903",
+      "stars": 5,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "NKHD-Plate-Switcher-V2",
+    "resource_data": {
+      "name": "NKHD-Plate-Switcher-V2",
+      "rank": 289719,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -29777
+    },
+    "github_repo": {
+      "repo_name": "Niknock/NKHD-Plate-Switcher-V2",
+      "author": "NKHD-Plate-Switcher-V2",
+      "html_url": "https://github.com/Niknock/NKHD-Plate-Switcher-V2",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "nl_chataddons",
+    "resource_data": {
+      "name": "nl_chataddons",
+      "rank": 289728,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4981
+    },
+    "github_repo": {
+      "repo_name": "Nolimithost/nl_chataddons",
+      "author": "nl_chataddons",
+      "html_url": "https://github.com/Nolimithost/nl_chataddons",
+      "description": "nl_chataddons is a lightweight FiveM chat utility that adds three handy slash-commands to your server:",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "NoMoPistolWhip",
+    "resource_data": {
+      "name": "NoMoPistolWhip",
+      "rank": 289990,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -29974
+    },
+    "github_repo": {
+      "repo_name": "sadapegithub/NoMoPistolWhip",
+      "author": "NoMoPistolWhip",
+      "html_url": "https://github.com/sadapegithub/NoMoPistolWhip",
+      "description": "No description",
+      "stars": 0,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "np-music",
+    "resource_data": {
+      "name": "np-music",
+      "rank": 290216,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4884
+    },
+    "github_repo": {
+      "repo_name": "haitham1337/np-music",
+      "author": "np-music",
+      "html_url": "https://github.com/haitham1337/np-music",
+      "description": "NoPixel 3.0 Music Script With Server Side Made on Earth by Arabs.",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "np-weathersync",
+    "resource_data": {
+      "name": "np-weathersync",
+      "rank": 290228,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4885
+    },
+    "github_repo": {
+      "repo_name": "Jlonndi/np-weathersync",
+      "author": "np-weathersync",
+      "html_url": "https://github.com/Jlonndi/np-weathersync",
+      "description": "NoPixel 3.0 Weathersync typescripted",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ns_weaponcraft",
+    "resource_data": {
+      "name": "ns_weaponcraft",
+      "rank": 290426,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4825
+    },
+    "github_repo": {
+      "repo_name": "xSnufy/ns_weaponcraft",
+      "author": "ns_weaponcraft",
+      "html_url": "https://github.com/xSnufy/ns_weaponcraft",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ns-fortnitehud",
+    "resource_data": {
+      "name": "ns-fortnitehud",
+      "rank": 290430,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4827
+    },
+    "github_repo": {
+      "repo_name": "Nexus-Fivem/ns-fortnitehud",
+      "author": "ns-fortnitehud",
+      "html_url": "https://github.com/Nexus-Fivem/ns-fortnitehud",
+      "description": "Fortnite inspired hud",
+      "stars": 15,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "nxWardrobes",
+    "resource_data": {
+      "name": "nxWardrobes",
+      "rank": 290806,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4667
+    },
+    "github_repo": {
+      "repo_name": "NexureStore/nxWardrobes",
+      "author": "nxWardrobes",
+      "html_url": "https://github.com/NexureStore/nxWardrobes",
+      "description": "No description",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Nz-SoundPlayer",
+    "resource_data": {
+      "name": "Nz-SoundPlayer",
+      "rank": 290927,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4641
+    },
+    "github_repo": {
+      "repo_name": "record-dev/Nz-SoundPlayer",
+      "author": "Nz-SoundPlayer",
+      "html_url": "https://github.com/record-dev/Nz-SoundPlayer",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "nzl_killfeed",
+    "resource_data": {
+      "name": "nzl_killfeed",
+      "rank": 290930,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4653
+    },
+    "github_repo": {
+      "repo_name": "nizhalofficial/nzl_killfeed",
+      "author": "nzl_killfeed",
+      "html_url": "https://github.com/nizhalofficial/nzl_killfeed",
+      "description": "A FiveM resource that adds a customizable killfeed to your ESX or QBCore server. Displays kill information including the killer's name, victim's name, and the weapon used, positioned at the top center of the screen.",
+      "stars": 1,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "nzl_starterpack",
+    "resource_data": {
+      "name": "nzl_starterpack",
+      "rank": 290931,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4653
+    },
+    "github_repo": {
+      "repo_name": "nizhalofficial/nzl_starterpack",
+      "author": "nzl_starterpack",
+      "html_url": "https://github.com/nizhalofficial/nzl_starterpack",
+      "description": ". This script is tailored for servers running on the QBCore or ESX frameworks and offers a range of customizable features to provide new players with essential items and a vehicle when they first join the server.",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "oekxc-chat",
+    "resource_data": {
+      "name": "oekxc-chat",
+      "rank": 291092,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -165969
+    },
+    "github_repo": {
+      "repo_name": "OEKXC-SHOP/OEKXC-CHAT",
+      "author": "OEKXC-CHAT",
+      "html_url": "https://github.com/OEKXC-SHOP/OEKXC-CHAT",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "omi-cokerun",
+    "resource_data": {
+      "name": "omi-cokerun",
+      "rank": 291362,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4677
+    },
+    "github_repo": {
+      "repo_name": "OmiJod/omi-cokerun",
+      "author": "omi-cokerun",
+      "html_url": "https://github.com/OmiJod/omi-cokerun",
+      "description": "A QBCore Coke Run Remastered By Me Has Processing as Well As the Main Coke Run",
+      "stars": 18,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "one_hud",
+    "resource_data": {
+      "name": "one_hud",
+      "rank": 291389,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4661
+    },
+    "github_repo": {
+      "repo_name": "KPPVIP/one_hud",
+      "author": "one_hud",
+      "html_url": "https://github.com/KPPVIP/one_hud",
+      "description": "No description",
+      "stars": 0,
+      "language": "HTML",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "OptimalPed",
+    "resource_data": {
+      "name": "OptimalPed",
+      "rank": 291501,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4636
+    },
+    "github_repo": {
+      "repo_name": "bobatari/OptimalPed",
+      "author": "OptimalPed",
+      "html_url": "https://github.com/bobatari/OptimalPed",
+      "description": "Script lets you change your ped to a ped listed in the config file. This is not permanent and can be used for costume parties.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "oskarsson-drug",
+    "resource_data": {
+      "name": "oskarsson-drug",
+      "rank": 291595,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4824
+    },
+    "github_repo": {
+      "repo_name": "Oskarssonn/oskarsson-drug",
+      "author": "oskarsson-drug",
+      "html_url": "https://github.com/Oskarssonn/oskarsson-drug",
+      "description": "FiveM plugin for drug harvesting",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "osm-coke",
+    "resource_data": {
+      "name": "osm-coke",
+      "rank": 291597,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4824
+    },
+    "github_repo": {
+      "repo_name": "t730/osm-coke",
+      "author": "osm-coke",
+      "html_url": "https://github.com/t730/osm-coke",
+      "description": "Normal Coke Script with an ADDED TIMER",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "osm-realisticHeists",
+    "resource_data": {
+      "name": "osm-realisticHeists",
+      "rank": 291600,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4824
+    },
+    "github_repo": {
+      "repo_name": "OsmiumOP/osm-realisticHeists",
+      "author": "osm-realisticHeists",
+      "html_url": "https://github.com/OsmiumOP/osm-realisticHeists",
+      "description": "No description",
+      "stars": 5,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Otis-KnockoutsAndDeaths",
+    "resource_data": {
+      "name": "Otis-KnockoutsAndDeaths",
+      "rank": 291633,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4811
+    },
+    "github_repo": {
+      "repo_name": "otisai/Otis-KnockoutsAndDeaths",
+      "author": "Otis-KnockoutsAndDeaths",
+      "html_url": "https://github.com/otisai/Otis-KnockoutsAndDeaths",
+      "description": "FiveM script made to improve the RP-ability (?) of being knocked out and killed.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ox_identityapp",
+    "resource_data": {
+      "name": "ox_identityapp",
+      "rank": 291769,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 449810
+    },
+    "github_repo": {
+      "repo_name": "overextended/ox_identityapp",
+      "author": "ox_identityapp",
+      "html_url": "https://github.com/overextended/ox_identityapp",
+      "description": "NPWD identity app for ox_core",
+      "stars": 13,
+      "language": "TypeScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Ox-target-teleport",
+    "resource_data": {
+      "name": "Ox-target-teleport",
+      "rank": 291809,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -51320
+    },
+    "github_repo": {
+      "repo_name": "Hipera/Ox-target-teleport",
+      "author": "Ox-target-teleport",
+      "html_url": "https://github.com/Hipera/Ox-target-teleport",
+      "description": "Basic ox target teleport you can set locations in client.lua",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "panama_autosalon",
+    "resource_data": {
+      "name": "panama_autosalon",
+      "rank": 292248,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4642
+    },
+    "github_repo": {
+      "repo_name": "KPPVIP/panama_autosalon",
+      "author": "panama_autosalon",
+      "html_url": "https://github.com/KPPVIP/panama_autosalon",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "patoche_pdm_cardealer",
+    "resource_data": {
+      "name": "patoche_pdm_cardealer",
+      "rank": 292585,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4552
+    },
+    "github_repo": {
+      "repo_name": "esx-overextended/patoche_pdm_cardealer",
+      "author": "patoche_pdm_cardealer",
+      "html_url": "https://github.com/esx-overextended/patoche_pdm_cardealer",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pd-garage-exterior",
+    "resource_data": {
+      "name": "pd-garage-exterior",
+      "rank": 292887,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4512
+    },
+    "github_repo": {
+      "repo_name": "LazyServices/pd-garage-exterior",
+      "author": "pd-garage-exterior",
+      "html_url": "https://github.com/LazyServices/pd-garage-exterior",
+      "description": "PD Garage Exterior by Lazy",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pengu_flatulence",
+    "resource_data": {
+      "name": "pengu_flatulence",
+      "rank": 293117,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4484
+    },
+    "github_repo": {
+      "repo_name": "PenguScript/pengu_flatulence",
+      "author": "pengu_flatulence",
+      "html_url": "https://github.com/PenguScript/pengu_flatulence",
+      "description": "No description",
+      "stars": 13,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "persistent-flashlight-fivem",
+    "resource_data": {
+      "name": "persistent-flashlight-fivem",
+      "rank": 293162,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -167902
+    },
+    "github_repo": {
+      "repo_name": "Exotic804/persistent-flashlight-fivem",
+      "author": "persistent-flashlight-fivem",
+      "html_url": "https://github.com/Exotic804/persistent-flashlight-fivem",
+      "description": "Makes your weapon flashlight stay on until you turn it back off.",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pex_garden",
+    "resource_data": {
+      "name": "pex_garden",
+      "rank": 293214,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4465
+    },
+    "github_repo": {
+      "repo_name": "pexdevelopment/pex_garden",
+      "author": "pex_garden",
+      "html_url": "https://github.com/pexdevelopment/pex_garden",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "phone_export",
+    "resource_data": {
+      "name": "phone_export",
+      "rank": 293337,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4444
+    },
+    "github_repo": {
+      "repo_name": "Sander2222/phone_export",
+      "author": "phone_export",
+      "html_url": "https://github.com/Sander2222/phone_export",
+      "description": "This is an export for the NPWD Phone for ESX to use it as an item",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pingu_cokerun",
+    "resource_data": {
+      "name": "pingu_cokerun",
+      "rank": 293422,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -32474
+    },
+    "github_repo": {
+      "repo_name": "Alokas123/pingu_cokerun",
+      "author": "pingu_cokerun",
+      "html_url": "https://github.com/Alokas123/pingu_cokerun",
+      "description": "Fivem mission script where your goall is to get some snow",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pixel_drugsystem",
+    "resource_data": {
+      "name": "pixel_drugsystem",
+      "rank": 293483,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4390
+    },
+    "github_repo": {
+      "repo_name": "pixel5718/pixel_drugsystem",
+      "author": "pixel_drugsystem",
+      "html_url": "https://github.com/pixel5718/pixel_drugsystem",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pixel-rental",
+    "resource_data": {
+      "name": "pixel-rental",
+      "rank": 293493,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4388
+    },
+    "github_repo": {
+      "repo_name": "Pix3loza/pixel-rental",
+      "author": "pixel-rental",
+      "html_url": "https://github.com/Pix3loza/pixel-rental",
+      "description": "Fivem ESX rental script with document ",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "plux-events",
+    "resource_data": {
+      "name": "plux-events",
+      "rank": 293712,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4337
+    },
+    "github_repo": {
+      "repo_name": "Plactrix/plux-events",
+      "author": "plux-events",
+      "html_url": "https://github.com/Plactrix/plux-events",
+      "description": "An events script for FiveM",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "pnt_atmHacking",
+    "resource_data": {
+      "name": "pnt_atmHacking",
+      "rank": 293779,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4320
+    },
+    "github_repo": {
+      "repo_name": "Puntzi/pnt_atmHacking",
+      "author": "pnt_atmHacking",
+      "html_url": "https://github.com/Puntzi/pnt_atmHacking",
+      "description": "No description",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "police-core",
+    "resource_data": {
+      "name": "police-core",
+      "rank": 294002,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4295
+    },
+    "github_repo": {
+      "repo_name": "WayZeTV/police-core",
+      "author": "police-core",
+      "html_url": "https://github.com/WayZeTV/police-core",
+      "description": "Job Police en ESX r\u00e9alis\u00e9 avec un regroupement de divers scripts",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "PoliceSimulatorV",
+    "resource_data": {
+      "name": "PoliceSimulatorV",
+      "rank": 294099,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 4285
+    },
+    "github_repo": {
+      "repo_name": "polsimdev/PoliceSimulatorV",
+      "author": "PoliceSimulatorV",
+      "html_url": "https://github.com/polsimdev/PoliceSimulatorV",
+      "description": "FiveM Server ressource inspired by LSPDFR",
+      "stars": 5,
+      "language": "C#",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "postal_maker",
+    "resource_data": {
+      "name": "postal_maker",
+      "rank": 294509,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -46075
+    },
+    "github_repo": {
+      "repo_name": "marshular/postal_maker",
+      "author": "postal_maker",
+      "html_url": "https://github.com/marshular/postal_maker",
+      "description": "This script makes postals.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Prefech_DCHolo",
+    "resource_data": {
+      "name": "Prefech_DCHolo",
+      "rank": 294756,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 463952
+    },
+    "github_repo": {
+      "repo_name": "tomiichx/Prefech_DCHolo",
+      "author": "Prefech_DCHolo",
+      "html_url": "https://github.com/tomiichx/Prefech_DCHolo",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "prism_weaponnotifY",
+    "resource_data": {
+      "name": "prism_weaponnotifY",
+      "rank": 294817,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -54070
+    },
+    "github_repo": {
+      "repo_name": "grysnx/prism_weaponnotify",
+      "author": "prism_weaponnotify",
+      "html_url": "https://github.com/grysnx/prism_weaponnotify",
+      "description": "Weapon Notifications using ox_lib",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Q-T-Freeze",
+    "resource_data": {
+      "name": "Q-T-Freeze",
+      "rank": 295361,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3923
+    },
+    "github_repo": {
+      "repo_name": "APxTony/Q-T-Freeze",
+      "author": "Q-T-Freeze",
+      "html_url": "https://github.com/APxTony/Q-T-Freeze",
+      "description": "A script for FiveM that freezes specified players.",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Qb_G-Farming",
+    "resource_data": {
+      "name": "Qb_G-Farming",
+      "rank": 295384,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -54598
+    },
+    "github_repo": {
+      "repo_name": "Gjayz/Qb_G-Farming",
+      "author": "Qb_G-Farming",
+      "html_url": "https://github.com/Gjayz/Qb_G-Farming",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-bomb",
+    "resource_data": {
+      "name": "qb-bomb",
+      "rank": 295420,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3916
+    },
+    "github_repo": {
+      "repo_name": "kel1x/qb-bomb",
+      "author": "qb-bomb",
+      "html_url": "https://github.com/kel1x/qb-bomb",
+      "description": "QBCore - Vehicle Detonator System",
+      "stars": 11,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-burgershotjob",
+    "resource_data": {
+      "name": "qb-burgershotjob",
+      "rank": 295426,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3915
+    },
+    "github_repo": {
+      "repo_name": "d-w00d/qb-burgershotjob",
+      "author": "qb-burgershotjob",
+      "html_url": "https://github.com/d-w00d/qb-burgershotjob",
+      "description": "QBCore Job for Burgershot",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-cryptostick",
+    "resource_data": {
+      "name": "qb-cryptostick",
+      "rank": 295455,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3915
+    },
+    "github_repo": {
+      "repo_name": "Jeeze9/qb-cryptostick",
+      "author": "qb-cryptostick",
+      "html_url": "https://github.com/Jeeze9/qb-cryptostick",
+      "description": "qb-cryptostick",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-customblips",
+    "resource_data": {
+      "name": "qb-customblips",
+      "rank": 295460,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -34026
+    },
+    "github_repo": {
+      "repo_name": "SagginChair/qb-customblips",
+      "author": "qb-customblips",
+      "html_url": "https://github.com/SagginChair/qb-customblips",
+      "description": "Custom blips for BTC Server",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-eye",
+    "resource_data": {
+      "name": "qb-eye",
+      "rank": 295476,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3913
+    },
+    "github_repo": {
+      "repo_name": "Sudo442/qb-eye",
+      "author": "qb-eye",
+      "html_url": "https://github.com/Sudo442/qb-eye",
+      "description": "NoPixel Eye, for the QBUS Framework",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-gangcrafting",
+    "resource_data": {
+      "name": "qb-gangcrafting",
+      "rank": 295486,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3913
+    },
+    "github_repo": {
+      "repo_name": "GuilhermeRiguitti/qb-gangcrafting",
+      "author": "qb-gangcrafting",
+      "html_url": "https://github.com/GuilhermeRiguitti/qb-gangcrafting",
+      "description": "Script gang crafting system to FiveM",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-gruppejob",
+    "resource_data": {
+      "name": "qb-gruppejob",
+      "rank": 295491,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3915
+    },
+    "github_repo": {
+      "repo_name": "oosayeroo/qb-gruppejob",
+      "author": "qb-gruppejob",
+      "html_url": "https://github.com/oosayeroo/qb-gruppejob",
+      "description": "a qb-gruppejob i made with the help of qb-truckerjob code snippets",
+      "stars": 11,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-hayesjob",
+    "resource_data": {
+      "name": "qb-hayesjob",
+      "rank": 295495,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3914
+    },
+    "github_repo": {
+      "repo_name": "james12007/qb-hayesjob",
+      "author": "qb-hayesjob",
+      "html_url": "https://github.com/james12007/qb-hayesjob",
+      "description": "Simple hayes mechanic job for qbcore framework",
+      "stars": 10,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-payphone",
+    "resource_data": {
+      "name": "qb-payphone",
+      "rank": 295565,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3905
+    },
+    "github_repo": {
+      "repo_name": "meistroburger/qb-payphone",
+      "author": "qb-payphone",
+      "html_url": "https://github.com/meistroburger/qb-payphone",
+      "description": "Fivem PayPhone script which makes any pay phone entity usable.",
+      "stars": 1,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-playerrob",
+    "resource_data": {
+      "name": "qb-playerrob",
+      "rank": 295579,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 468946
+    },
+    "github_repo": {
+      "repo_name": "ezioo78/qb-playerrob",
+      "author": "qb-playerrob",
+      "html_url": "https://github.com/ezioo78/qb-playerrob",
+      "description": "A FiveM script for QBCore that allows players to rob other players",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-popsdiner",
+    "resource_data": {
+      "name": "qb-popsdiner",
+      "rank": 295588,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3903
+    },
+    "github_repo": {
+      "repo_name": "alexFF0/qb-popsdiner",
+      "author": "qb-popsdiner",
+      "html_url": "https://github.com/alexFF0/qb-popsdiner",
+      "description": "New Job For Pops Diner ~ Gabz MLO {QBCore}",
+      "stars": 6,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-registers",
+    "resource_data": {
+      "name": "qb-registers",
+      "rank": 295599,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3904
+    },
+    "github_repo": {
+      "repo_name": "Slimeemils/qb-registers",
+      "author": "qb-registers",
+      "html_url": "https://github.com/Slimeemils/qb-registers",
+      "description": "A simple register system using qb-input and qb-menu.",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-scoreboard-1",
+    "resource_data": {
+      "name": "qb-scoreboard-1",
+      "rank": 295614,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -68564
+    },
+    "github_repo": {
+      "repo_name": "haitham1337/qb-scoreboard-1",
+      "author": "qb-scoreboard-1",
+      "html_url": "https://github.com/haitham1337/qb-scoreboard-1",
+      "description": "Qb-Scoreboard with Info Box for all your needs!",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-simplesirens",
+    "resource_data": {
+      "name": "qb-simplesirens",
+      "rank": 295622,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3895
+    },
+    "github_repo": {
+      "repo_name": "dufuspaelli/qb-simplesirens",
+      "author": "qb-simplesirens",
+      "html_url": "https://github.com/dufuspaelli/qb-simplesirens",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-sling",
+    "resource_data": {
+      "name": "qb-sling",
+      "rank": 295627,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -128843
+    },
+    "github_repo": {
+      "repo_name": "NLRPItssJxstn/qb-sling",
+      "author": "qb-sling",
+      "html_url": "https://github.com/NLRPItssJxstn/qb-sling",
+      "description": "I updated the \"https://github.com/nagsterFVZ/fjh-sling\" to new QB-Core!",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-syncedtrap",
+    "resource_data": {
+      "name": "qb-syncedtrap",
+      "rank": 295643,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3892
+    },
+    "github_repo": {
+      "repo_name": "yamieboi/qb-syncedtrap",
+      "author": "qb-syncedtrap",
+      "html_url": "https://github.com/yamieboi/qb-syncedtrap",
+      "description": "Trap Robbery Simple & Great!",
+      "stars": 5,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-tsunami-main",
+    "resource_data": {
+      "name": "qb-tsunami-main",
+      "rank": 295659,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3889
+    },
+    "github_repo": {
+      "repo_name": "LamaarK/qb-tsunami-main",
+      "author": "qb-tsunami-main",
+      "html_url": "https://github.com/LamaarK/qb-tsunami-main",
+      "description": "Edited version and updated from qb-tsunami",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qb-watercooler",
+    "resource_data": {
+      "name": "qb-watercooler",
+      "rank": 295686,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3881
+    },
+    "github_repo": {
+      "repo_name": "techygamebar/qb-watercooler",
+      "author": "qb-watercooler",
+      "html_url": "https://github.com/techygamebar/qb-watercooler",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qf-moneyevent",
+    "resource_data": {
+      "name": "qf-moneyevent",
+      "rank": 295754,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3856
+    },
+    "github_repo": {
+      "repo_name": "falszywyyy/qf-moneyevent",
+      "author": "qf-moneyevent",
+      "html_url": "https://github.com/falszywyyy/qf-moneyevent",
+      "description": "[QF] Money Event free and simple FiveM Script",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qw_skills",
+    "resource_data": {
+      "name": "qw_skills",
+      "rank": 295854,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3841
+    },
+    "github_repo": {
+      "repo_name": "qw-scripts/qw_skills",
+      "author": "qw_skills",
+      "html_url": "https://github.com/qw-scripts/qw_skills",
+      "description": "No description",
+      "stars": 12,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qw-blackmarket",
+    "resource_data": {
+      "name": "qw-blackmarket",
+      "rank": 295855,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3841
+    },
+    "github_repo": {
+      "repo_name": "qw-scripts/qw-blackmarket",
+      "author": "qw-blackmarket",
+      "html_url": "https://github.com/qw-scripts/qw-blackmarket",
+      "description": "NEW Version of Dark Market Script (Written in Svelte)",
+      "stars": 8,
+      "language": "Svelte",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "qw-towingjob",
+    "resource_data": {
+      "name": "qw-towingjob",
+      "rank": 295857,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3840
+    },
+    "github_repo": {
+      "repo_name": "D40G/qw-towingjob",
+      "author": "qw-towingjob",
+      "html_url": "https://github.com/D40G/qw-towingjob",
+      "description": "Player Owned Towing Company (QBCore)",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "R1_Crafting",
+    "resource_data": {
+      "name": "R1_Crafting",
+      "rank": 295952,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3812
+    },
+    "github_repo": {
+      "repo_name": "R1-Scriptss/R1_Crafting",
+      "author": "R1_Crafting",
+      "html_url": "https://github.com/R1-Scriptss/R1_Crafting",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "R1-DeleteVehicle",
+    "resource_data": {
+      "name": "R1-DeleteVehicle",
+      "rank": 295954,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3812
+    },
+    "github_repo": {
+      "repo_name": "R1-Scripts/R1-DeleteVehicle",
+      "author": "R1-DeleteVehicle",
+      "html_url": "https://github.com/R1-Scripts/R1-DeleteVehicle",
+      "description": "Delete Nearest Vehicle Script",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "r1-traffichack",
+    "resource_data": {
+      "name": "r1-traffichack",
+      "rank": 295955,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3813
+    },
+    "github_repo": {
+      "repo_name": "Re1ease/r1-traffichack",
+      "author": "r1-traffichack",
+      "html_url": "https://github.com/Re1ease/r1-traffichack",
+      "description": "No description",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "RA1D3R_L0GSYSTEM",
+    "resource_data": {
+      "name": "RA1D3R_L0GSYSTEM",
+      "rank": 296029,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -92207
+    },
+    "github_repo": {
+      "repo_name": "weapon53/RA1D3R_L0GSYSTEM",
+      "author": "RA1D3R_L0GSYSTEM",
+      "html_url": "https://github.com/weapon53/RA1D3R_L0GSYSTEM",
+      "description": "FiveM Server Log Sistemi",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Raccoon-Whitelist",
+    "resource_data": {
+      "name": "Raccoon-Whitelist",
+      "rank": 296062,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3826
+    },
+    "github_repo": {
+      "repo_name": "NokaAngel/Raccoon-Whitelist",
+      "author": "Raccoon-Whitelist",
+      "html_url": "https://github.com/NokaAngel/Raccoon-Whitelist",
+      "description": "An easy-to-use whitelist script, using Badger's Discord, and the Discord API to easily make your server available to whitelist.",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "RadarPatrol",
+    "resource_data": {
+      "name": "RadarPatrol",
+      "rank": 296086,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -47391
+    },
+    "github_repo": {
+      "repo_name": "Croky18/RadarPatrol",
+      "author": "RadarPatrol",
+      "html_url": "https://github.com/Croky18/RadarPatrol",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "radiant_onlypistol",
+    "resource_data": {
+      "name": "radiant_onlypistol",
+      "rank": 296096,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -90414
+    },
+    "github_repo": {
+      "repo_name": "RadiantM/radiant_onlypistol",
+      "author": "radiant_onlypistol",
+      "html_url": "https://github.com/RadiantM/radiant_onlypistol",
+      "description": "A simple only pistol system",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "RaySist-Help",
+    "resource_data": {
+      "name": "RaySist-Help",
+      "rank": 296385,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3768
+    },
+    "github_repo": {
+      "repo_name": "RaySist1/RaySist-Help",
+      "author": "RaySist-Help",
+      "html_url": "https://github.com/RaySist1/RaySist-Help",
+      "description": "No description",
+      "stars": 1,
+      "language": "HTML",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "razed-cryptocrash",
+    "resource_data": {
+      "name": "razed-cryptocrash",
+      "rank": 296392,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 183837
+    },
+    "github_repo": {
+      "repo_name": "planeklm/razed-cryptocrash",
+      "author": "razed-cryptocrash",
+      "html_url": "https://github.com/planeklm/razed-cryptocrash",
+      "description": "An advanced crypto crash simulator for qbcore.",
+      "stars": 9,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rb-dispatch",
+    "resource_data": {
+      "name": "rb-dispatch",
+      "rank": 296419,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -60963
+    },
+    "github_repo": {
+      "repo_name": "Rubinzzz/RB-Dispatch",
+      "author": "RB-Dispatch",
+      "html_url": "https://github.com/Rubinzzz/RB-Dispatch",
+      "description": "RB Dispatch",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rbProgressBar",
+    "resource_data": {
+      "name": "rbProgressBar",
+      "rank": 296450,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -34715
+    },
+    "github_repo": {
+      "repo_name": "diogosantos22/rbProgressBar",
+      "author": "rbProgressBar",
+      "html_url": "https://github.com/diogosantos22/rbProgressBar",
+      "description": "No description",
+      "stars": 2,
+      "language": "CSS",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rd-weapons",
+    "resource_data": {
+      "name": "rd-weapons",
+      "rank": 296666,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -105148
+    },
+    "github_repo": {
+      "repo_name": "red1gr/rd-weapons",
+      "author": "rd-weapons",
+      "html_url": "https://github.com/red1gr/rd-weapons",
+      "description": "THIS SCRIPT CONFIGURES WEAPON RECOIL, CAMERA SHAKE, DAMAGE MODIFIERS, CONTROL DISABLEMENTS WHILE AIMING, AND WHETHER PEDS SUFFER CRITICAL HITS (HEADSHOTS).",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rdl_barber",
+    "resource_data": {
+      "name": "rdl_barber",
+      "rank": 296712,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61222
+    },
+    "github_repo": {
+      "repo_name": "JusteRDL/rdl_barber",
+      "author": "rdl_barber",
+      "html_url": "https://github.com/JusteRDL/rdl_barber",
+      "description": "Script Barber Shop | 0.00ms",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "real-blood",
+    "resource_data": {
+      "name": "real-blood",
+      "rank": 296739,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3762
+    },
+    "github_repo": {
+      "repo_name": "rockysx27/real-blood",
+      "author": "real-blood",
+      "html_url": "https://github.com/rockysx27/real-blood",
+      "description": "FiveM Server Resource Thats enhances blood/gore effects.",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "real-dispatch",
+    "resource_data": {
+      "name": "real-dispatch",
+      "rank": 296740,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -34958
+    },
+    "github_repo": {
+      "repo_name": "Oph3Z1/real-dispatch",
+      "author": "real-dispatch",
+      "html_url": "https://github.com/Oph3Z1/real-dispatch",
+      "description": "No description",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Remove-Unnecessary-Cars-in-Traffic",
+    "resource_data": {
+      "name": "Remove-Unnecessary-Cars-in-Traffic",
+      "rank": 297055,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3703
+    },
+    "github_repo": {
+      "repo_name": "trickgodness/Remove-Unnecessary-Cars-in-Traffic",
+      "author": "Remove-Unnecessary-Cars-in-Traffic",
+      "html_url": "https://github.com/trickgodness/Remove-Unnecessary-Cars-in-Traffic",
+      "description": "Fivem Remove Unnecessary Cars in Traffic Script",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "renzu_fuel",
+    "resource_data": {
+      "name": "renzu_fuel",
+      "rank": 297108,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3687
+    },
+    "github_repo": {
+      "repo_name": "Fivem-TL/renzu_fuel",
+      "author": "renzu_fuel",
+      "html_url": "https://github.com/Fivem-TL/renzu_fuel",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Reversing-Camera",
+    "resource_data": {
+      "name": "Reversing-Camera",
+      "rank": 297378,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -56367
+    },
+    "github_repo": {
+      "repo_name": "FreeModeDesigns/Reversing-Camera",
+      "author": "Reversing-Camera",
+      "html_url": "https://github.com/FreeModeDesigns/Reversing-Camera",
+      "description": "Script made by Akalucifer for JackTheDev's 2018 Pierce Enforcer Engines",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rilex-citations",
+    "resource_data": {
+      "name": "rilex-citations",
+      "rank": 297573,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -35629
+    },
+    "github_repo": {
+      "repo_name": "RilexBTW/rilex-citations",
+      "author": "rilex-citations",
+      "html_url": "https://github.com/RilexBTW/rilex-citations",
+      "description": "citation script for tpla (very simple resource, needed something to fine nearby players)",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "riptide_reception",
+    "resource_data": {
+      "name": "riptide_reception",
+      "rank": 297598,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -35639
+    },
+    "github_repo": {
+      "repo_name": "PumaATS/riptide_reception",
+      "author": "riptide_reception",
+      "html_url": "https://github.com/PumaATS/riptide_reception",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Roda_Animations",
+    "resource_data": {
+      "name": "Roda_Animations",
+      "rank": 297976,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3468
+    },
+    "github_repo": {
+      "repo_name": "RodericAguilar/Roda_Animations",
+      "author": "Roda_Animations",
+      "html_url": "https://github.com/RodericAguilar/Roda_Animations",
+      "description": "No description",
+      "stars": 12,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "RoSA-Government",
+    "resource_data": {
+      "name": "RoSA-Government",
+      "rank": 298122,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3417
+    },
+    "github_repo": {
+      "repo_name": "Republic-of-San-Andreas/RoSA-Government",
+      "author": "RoSA-Government",
+      "html_url": "https://github.com/Republic-of-San-Andreas/RoSA-Government",
+      "description": "Basic essentials for government roleplay",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rp-chat-commands",
+    "resource_data": {
+      "name": "rp-chat-commands",
+      "rank": 298240,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3385
+    },
+    "github_repo": {
+      "repo_name": "HaroldButtbutter/Rp-Chat-Commands",
+      "author": "Rp-Chat-Commands",
+      "html_url": "https://github.com/HaroldButtbutter/Rp-Chat-Commands",
+      "description": "Basic Rp commands to use in a FiveM Server.",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rpg-scoreboard",
+    "resource_data": {
+      "name": "rpg-scoreboard",
+      "rank": 298267,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3372
+    },
+    "github_repo": {
+      "repo_name": "Haaasib/rpg-scoreboard",
+      "author": "rpg-scoreboard",
+      "html_url": "https://github.com/Haaasib/rpg-scoreboard",
+      "description": "Advanced Scoreboard For QBCore",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "RRP_Core",
+    "resource_data": {
+      "name": "RRP_Core",
+      "rank": 298377,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -49417
+    },
+    "github_repo": {
+      "repo_name": "rrpscripts/rrp_core",
+      "author": "rrp_core",
+      "html_url": "https://github.com/rrpscripts/rrp_core",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rtd_references",
+    "resource_data": {
+      "name": "rtd_references",
+      "rank": 298544,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3269
+    },
+    "github_repo": {
+      "repo_name": "RTDTonino/rtd_references",
+      "author": "rtd_references",
+      "html_url": "https://github.com/RTDTonino/rtd_references",
+      "description": "Reference System for FiveM",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Rup-Help",
+    "resource_data": {
+      "name": "Rup-Help",
+      "rank": 298661,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3239
+    },
+    "github_repo": {
+      "repo_name": "ruptz/Rup-Help",
+      "author": "Rup-Help",
+      "html_url": "https://github.com/ruptz/Rup-Help",
+      "description": "Help Message System with NUI Help Menu",
+      "stars": 7,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rwx_core",
+    "resource_data": {
+      "name": "rwx_core",
+      "rank": 298778,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -36574
+    },
+    "github_repo": {
+      "repo_name": "RWX-FW/rwx_core",
+      "author": "rwx_core",
+      "html_url": "https://github.com/RWX-FW/rwx_core",
+      "description": "No description",
+      "stars": 0,
+      "language": "TypeScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rz-clotheshop",
+    "resource_data": {
+      "name": "rz-clotheshop",
+      "rank": 298882,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3164
+    },
+    "github_repo": {
+      "repo_name": "Razzway/rz-clotheshop",
+      "author": "rz-clotheshop",
+      "html_url": "https://github.com/Razzway/rz-clotheshop",
+      "description": "PowerFull & Optimized Clotheshop in RageUI",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "rz-illegalinfo",
+    "resource_data": {
+      "name": "rz-illegalinfo",
+      "rank": 298883,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3164
+    },
+    "github_repo": {
+      "repo_name": "Razzway/rz-illegalinfo",
+      "author": "rz-illegalinfo",
+      "html_url": "https://github.com/Razzway/rz-illegalinfo",
+      "description": "Menu Renseignement ill\u00e9gal en RageUI (0.00 ms) work w/ESX Framework",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "s-atmrobbery",
+    "resource_data": {
+      "name": "s-atmrobbery",
+      "rank": 298924,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3156
+    },
+    "github_repo": {
+      "repo_name": "LefoxyAbiii/S-ATMRobbery",
+      "author": "S-ATMRobbery",
+      "html_url": "https://github.com/LefoxyAbiii/S-ATMRobbery",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "s-cartheft",
+    "resource_data": {
+      "name": "s-cartheft",
+      "rank": 298929,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3156
+    },
+    "github_repo": {
+      "repo_name": "alexdmitriew12/s-cartheft",
+      "author": "s-cartheft",
+      "html_url": "https://github.com/alexdmitriew12/s-cartheft",
+      "description": "FiveM car theft contracts for QB-Core framework.",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sandbox-k9",
+    "resource_data": {
+      "name": "sandbox-k9",
+      "rank": 299415,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 3062
+    },
+    "github_repo": {
+      "repo_name": "Boom1053/sandbox-k9",
+      "author": "sandbox-k9",
+      "html_url": "https://github.com/Boom1053/sandbox-k9",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sarmingo-rent",
+    "resource_data": {
+      "name": "sarmingo-rent",
+      "rank": 299645,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -37232
+    },
+    "github_repo": {
+      "repo_name": "Sarmingo/sarmingo-rent",
+      "author": "sarmingo-rent",
+      "html_url": "https://github.com/Sarmingo/sarmingo-rent",
+      "description": "Rent System that works with ox lib, ox inventory, esx",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sarmingo-reportsystem",
+    "resource_data": {
+      "name": "sarmingo-reportsystem",
+      "rank": 299646,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -37232
+    },
+    "github_repo": {
+      "repo_name": "Sarmingo/sarmingo-reportsystem",
+      "author": "sarmingo-reportsystem",
+      "html_url": "https://github.com/Sarmingo/sarmingo-reportsystem",
+      "description": "Report system that works with ox lib and ox inventory",
+      "stars": 8,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "scorz-garage",
+    "resource_data": {
+      "name": "scorz-garage",
+      "rank": 300052,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2957
+    },
+    "github_repo": {
+      "repo_name": "GitScorz/scorz-garage",
+      "author": "scorz-garage",
+      "html_url": "https://github.com/GitScorz/scorz-garage",
+      "description": "\ud83c\udfe0 A simple garage script for ESX Framework FiveM.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "script_trigger_cfx",
+    "resource_data": {
+      "name": "script_trigger_cfx",
+      "rank": 300123,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2920
+    },
+    "github_repo": {
+      "repo_name": "worapolburaphan/script_trigger_cfx",
+      "author": "script_trigger_cfx",
+      "html_url": "https://github.com/worapolburaphan/script_trigger_cfx",
+      "description": "This repository contains a modified version of the CFX webpack builder, designed for building Node.js scripts within a FiveM project, both for client and server side.",
+      "stars": 1,
+      "language": "JavaScript",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "scully_interactions",
+    "resource_data": {
+      "name": "scully_interactions",
+      "rank": 300234,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2838
+    },
+    "github_repo": {
+      "repo_name": "Scullyy/scully_interactions",
+      "author": "scully_interactions",
+      "html_url": "https://github.com/Scullyy/scully_interactions",
+      "description": "Allow players to use nearby scenarios.",
+      "stars": 10,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sensei_garages",
+    "resource_data": {
+      "name": "sensei_garages",
+      "rank": 300542,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 493684
+    },
+    "github_repo": {
+      "repo_name": "MauroNr1/sensei_garages",
+      "author": "sensei_garages",
+      "html_url": "https://github.com/MauroNr1/sensei_garages",
+      "description": "A garage system for ox_core",
+      "stars": 4,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sikosz_cityhall",
+    "resource_data": {
+      "name": "sikosz_cityhall",
+      "rank": 301329,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -133432
+    },
+    "github_repo": {
+      "repo_name": "Sikosz/sikosz_cityhall",
+      "author": "sikosz_cityhall",
+      "html_url": "https://github.com/Sikosz/sikosz_cityhall",
+      "description": "FiveM ESX Cityhall script where you can buy idcards or apply for jobs",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "simple-giveaway",
+    "resource_data": {
+      "name": "simple-giveaway",
+      "rank": 301401,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2455
+    },
+    "github_repo": {
+      "repo_name": "normalid-awa/simple-giveaway",
+      "author": "simple-giveaway",
+      "html_url": "https://github.com/normalid-awa/simple-giveaway",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "SimpleCharacters",
+    "resource_data": {
+      "name": "SimpleCharacters",
+      "rank": 301407,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2451
+    },
+    "github_repo": {
+      "repo_name": "aarctical/SimpleCharacters",
+      "author": "SimpleCharacters",
+      "html_url": "https://github.com/aarctical/SimpleCharacters",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "siren_system",
+    "resource_data": {
+      "name": "siren_system",
+      "rank": 301455,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -144382
+    },
+    "github_repo": {
+      "repo_name": "McBl4ck/siren_system",
+      "author": "siren_system",
+      "html_url": "https://github.com/McBl4ck/siren_system",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "six-garages",
+    "resource_data": {
+      "name": "six-garages",
+      "rank": 301480,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -144401
+    },
+    "github_repo": {
+      "repo_name": "Sixxenik/six-garages",
+      "author": "six-garages",
+      "html_url": "https://github.com/Sixxenik/six-garages",
+      "description": "Simple garages for ESX made with ox_lib",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sk_robbery",
+    "resource_data": {
+      "name": "sk_robbery",
+      "rank": 301510,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -148869
+    },
+    "github_repo": {
+      "repo_name": "Tomy139/sk_robbery",
+      "author": "sk_robbery",
+      "html_url": "https://github.com/Tomy139/sk_robbery",
+      "description": "This FiveM script allows players to rob cash registers in stores",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sk-location",
+    "resource_data": {
+      "name": "sk-location",
+      "rank": 301516,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2433
+    },
+    "github_repo": {
+      "repo_name": "SundiKay/sk-location",
+      "author": "sk-location",
+      "html_url": "https://github.com/SundiKay/sk-location",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sl_vehicleshop",
+    "resource_data": {
+      "name": "sl_vehicleshop",
+      "rank": 301733,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2397
+    },
+    "github_repo": {
+      "repo_name": "DooubleTap/sl_vehicleshop",
+      "author": "sl_vehicleshop",
+      "html_url": "https://github.com/DooubleTap/sl_vehicleshop",
+      "description": "Script for fivem to be used with keep-sharedgarage for your Emergency vehicles.",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "slacker-repairkit",
+    "resource_data": {
+      "name": "slacker-repairkit",
+      "rank": 301748,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -65875
+    },
+    "github_repo": {
+      "repo_name": "1stSlacker/slacker-repairkit",
+      "author": "slacker-repairkit",
+      "html_url": "https://github.com/1stSlacker/slacker-repairkit",
+      "description": "An advanced repair kit script for QB-Core",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "SmokeJail",
+    "resource_data": {
+      "name": "SmokeJail",
+      "rank": 302036,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2312
+    },
+    "github_repo": {
+      "repo_name": "SmokeDEV-Fivem/SmokeJail",
+      "author": "SmokeJail",
+      "html_url": "https://github.com/SmokeDEV-Fivem/SmokeJail",
+      "description": "Script Jail V1.0 | ESX-Legacy | SmokeShop",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "src-jobs",
+    "resource_data": {
+      "name": "src-jobs",
+      "rank": 302993,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2069
+    },
+    "github_repo": {
+      "repo_name": "dollar-src/src-jobs",
+      "author": "src-jobs",
+      "html_url": "https://github.com/dollar-src/src-jobs",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "ss_plates",
+    "resource_data": {
+      "name": "ss_plates",
+      "rank": 303135,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 2056
+    },
+    "github_repo": {
+      "repo_name": "skys-scripts/ss_plates",
+      "author": "ss_plates",
+      "html_url": "https://github.com/skys-scripts/ss_plates",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "stabs-pillbox-beds",
+    "resource_data": {
+      "name": "stabs-pillbox-beds",
+      "rank": 303316,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -70960
+    },
+    "github_repo": {
+      "repo_name": "CaptainStabs/stabs-pillbox-beds",
+      "author": "stabs-pillbox-beds",
+      "html_url": "https://github.com/CaptainStabs/stabs-pillbox-beds",
+      "description": "Script that allows players to lay down on beds within pillbox (based on model name). QB-core version includes ability to local heal in `v_med_bed1` bed model",
+      "stars": 3,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Staff-Clockin",
+    "resource_data": {
+      "name": "Staff-Clockin",
+      "rank": 303341,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1956
+    },
+    "github_repo": {
+      "repo_name": "Danboi01/Staff-Clockin",
+      "author": "Staff-Clockin",
+      "html_url": "https://github.com/Danboi01/Staff-Clockin",
+      "description": "Simple Clockin & Clockout command for your FiveM server!",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Startup-Survival-Event-Script",
+    "resource_data": {
+      "name": "Startup-Survival-Event-Script",
+      "rank": 303434,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -61862
+    },
+    "github_repo": {
+      "repo_name": "Arkalys59/Startup-Survival-Event-Script",
+      "author": "Startup-Survival-Event-Script",
+      "html_url": "https://github.com/Arkalys59/Startup-Survival-Event-Script",
+      "description": "No description",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "stealfuel",
+    "resource_data": {
+      "name": "stealfuel",
+      "rank": 303495,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -40042
+    },
+    "github_repo": {
+      "repo_name": "TheZestyUK/StealFuel",
+      "author": "StealFuel",
+      "html_url": "https://github.com/TheZestyUK/StealFuel",
+      "description": "Simple steal fuel script - 80% complete",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Stoic-4wd",
+    "resource_data": {
+      "name": "Stoic-4wd",
+      "rank": 303591,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1937
+    },
+    "github_repo": {
+      "repo_name": "TheStoicBear/Stoic-4WD",
+      "author": "Stoic-4WD",
+      "html_url": "https://github.com/TheStoicBear/Stoic-4WD",
+      "description": "A simple 4x4 System",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Stoic-Chat",
+    "resource_data": {
+      "name": "Stoic-Chat",
+      "rank": 303592,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -40110
+    },
+    "github_repo": {
+      "repo_name": "TheStoicBear/Stoic-Chat",
+      "author": "Stoic-Chat",
+      "html_url": "https://github.com/TheStoicBear/Stoic-Chat",
+      "description": "A ND-Framework Driven Chat resource.",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Stoic-Dart",
+    "resource_data": {
+      "name": "Stoic-Dart",
+      "rank": 303593,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1936
+    },
+    "github_repo": {
+      "repo_name": "TheStoicBear/Stoic-DART",
+      "author": "Stoic-DART",
+      "html_url": "https://github.com/TheStoicBear/Stoic-DART",
+      "description": "A Direct Automotive  Transmitter & Receiver ",
+      "stars": 7,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "StopPedLoiteringInChairs",
+    "resource_data": {
+      "name": "StopPedLoiteringInChairs",
+      "rank": 303616,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1929
+    },
+    "github_repo": {
+      "repo_name": "KimDuckUn/StopPedLoiteringInChairs",
+      "author": "StopPedLoiteringInChairs",
+      "html_url": "https://github.com/KimDuckUn/StopPedLoiteringInChairs",
+      "description": "No description",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "storm-antiadvanceddriveby",
+    "resource_data": {
+      "name": "storm-antiadvanceddriveby",
+      "rank": 303622,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -54078
+    },
+    "github_repo": {
+      "repo_name": "stormdevv1/storm-antiadvanceddriveby",
+      "author": "storm-antiadvanceddriveby",
+      "html_url": "https://github.com/stormdevv1/storm-antiadvanceddriveby",
+      "description": "FiveM Script that detects cheaters that use mods as a way to bypass weapon limitations while doing drive by.",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "stream-core",
+    "resource_data": {
+      "name": "stream-core",
+      "rank": 303694,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -40191
+    },
+    "github_repo": {
+      "repo_name": "ENC4YP7ED/stream-core",
+      "author": "stream-core",
+      "html_url": "https://github.com/ENC4YP7ED/stream-core",
+      "description": "A Multi Purpose File Streaming Ressource for FiveM",
+      "stars": 14,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "stretchermod",
+    "resource_data": {
+      "name": "stretchermod",
+      "rank": 303759,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1860
+    },
+    "github_repo": {
+      "repo_name": "Gregory-Hepicloud/stretchermod",
+      "author": "stretchermod",
+      "html_url": "https://github.com/Gregory-Hepicloud/stretchermod",
+      "description": "stretcher mod that can be used for candimods vehicle and ambulances",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "SupportCommand",
+    "resource_data": {
+      "name": "SupportCommand",
+      "rank": 304008,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1773
+    },
+    "github_repo": {
+      "repo_name": "ChaosFabiYT/SupportCommand",
+      "author": "SupportCommand",
+      "html_url": "https://github.com/ChaosFabiYT/SupportCommand",
+      "description": "A german /support script, language can be edited in client.lua",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sv-kasetki",
+    "resource_data": {
+      "name": "sv-kasetki",
+      "rank": 304115,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1740
+    },
+    "github_repo": {
+      "repo_name": "sernikovv/sv-kasetki",
+      "author": "sv-kasetki",
+      "html_url": "https://github.com/sernikovv/sv-kasetki",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "svn-carkeys",
+    "resource_data": {
+      "name": "svn-carkeys",
+      "rank": 304144,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1738
+    },
+    "github_repo": {
+      "repo_name": "sernikovv/svn-carkeys",
+      "author": "svn-carkeys",
+      "html_url": "https://github.com/sernikovv/svn-carkeys",
+      "description": "No description",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Sylent_Loadingscreen",
+    "resource_data": {
+      "name": "Sylent_Loadingscreen",
+      "rank": 304367,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1632
+    },
+    "github_repo": {
+      "repo_name": "Sylentofficial/Sylent_Loadingscreen",
+      "author": "Sylent_Loadingscreen",
+      "html_url": "https://github.com/Sylentofficial/Sylent_Loadingscreen",
+      "description": "No description",
+      "stars": 0,
+      "language": "CSS",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "sz-pizzajob",
+    "resource_data": {
+      "name": "sz-pizzajob",
+      "rank": 304412,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1609
+    },
+    "github_repo": {
+      "repo_name": "AUT0CR4T/sz-pizzajob",
+      "author": "sz-pizzajob",
+      "html_url": "https://github.com/AUT0CR4T/sz-pizzajob",
+      "description": "Pizzeria job for qbcore gabz mlo",
+      "stars": 1,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "t3_blip",
+    "resource_data": {
+      "name": "t3_blip",
+      "rank": 304440,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -40664
+    },
+    "github_repo": {
+      "repo_name": "T3codexScripts/t3_blip",
+      "author": "t3_blip",
+      "html_url": "https://github.com/T3codexScripts/t3_blip",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "takzobye_mini-inventory",
+    "resource_data": {
+      "name": "takzobye_mini-inventory",
+      "rank": 304624,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 513116
+    },
+    "github_repo": {
+      "repo_name": "UnxPboy/takzobye_mini-inventory",
+      "author": "takzobye_mini-inventory",
+      "html_url": "https://github.com/UnxPboy/takzobye_mini-inventory",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "tg_microphone",
+    "resource_data": {
+      "name": "tg_microphone",
+      "rank": 305303,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -136694
+    },
+    "github_repo": {
+      "repo_name": "Thrustgamers/tg_microphone",
+      "author": "tg_microphone",
+      "html_url": "https://github.com/Thrustgamers/tg_microphone",
+      "description": "No description",
+      "stars": 7,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "tg_weed",
+    "resource_data": {
+      "name": "tg_weed",
+      "rank": 305306,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -63647
+    },
+    "github_repo": {
+      "repo_name": "ApoloManCz/tg_weed",
+      "author": "tg_weed",
+      "html_url": "https://github.com/ApoloManCz/tg_weed",
+      "description": "TG_WEED | GROW, DEAL AND PROSPER! ",
+      "stars": 2,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "th-advokat",
+    "resource_data": {
+      "name": "th-advokat",
+      "rank": 305328,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1506
+    },
+    "github_repo": {
+      "repo_name": "TH-Scripts/th-advokat",
+      "author": "th-advokat",
+      "html_url": "https://github.com/TH-Scripts/th-advokat",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "th-bilforhandler",
+    "resource_data": {
+      "name": "th-bilforhandler",
+      "rank": 305329,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -41366
+    },
+    "github_repo": {
+      "repo_name": "TH-Scripts/th-bilforhandler",
+      "author": "th-bilforhandler",
+      "html_url": "https://github.com/TH-Scripts/th-bilforhandler",
+      "description": "No description",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "Tikoz_Shop",
+    "resource_data": {
+      "name": "Tikoz_Shop",
+      "rank": 305513,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -155646
+    },
+    "github_repo": {
+      "repo_name": "Tikozaal/Tikoz_Shop",
+      "author": "Tikoz_Shop",
+      "html_url": "https://github.com/Tikozaal/Tikoz_Shop",
+      "description": "Script de sup\u00e9rette en pMenu \u00e0 0.00ms",
+      "stars": 0,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "tIllegalshop",
+    "resource_data": {
+      "name": "tIllegalshop",
+      "rank": 305514,
+      "players": 0,
+      "servers": 2,
+      "rankChange": -148133
+    },
+    "github_repo": {
+      "repo_name": "trapzed/tIllegalshop",
+      "author": "tIllegalshop",
+      "html_url": "https://github.com/trapzed/tIllegalshop",
+      "description": "FiveM ESX Illegal Shop Script ",
+      "stars": 1,
+      "language": "Lua",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "tofdrugs",
+    "resource_data": {
+      "name": "tofdrugs",
+      "rank": 305805,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1358
+    },
+    "github_repo": {
+      "repo_name": "allyaminou/tofdrugs",
+      "author": "tofdrugs",
+      "html_url": "https://github.com/allyaminou/tofdrugs",
+      "description": "A Complete Drugs Script - ESX Legacy - qtarget - ox_lib - optionnal : ox_inventory",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  },
+  {
+    "resource_name": "TRevive-Death",
+    "resource_data": {
+      "name": "TRevive-Death",
+      "rank": 306283,
+      "players": 0,
+      "servers": 2,
+      "rankChange": 1312
+    },
+    "github_repo": {
+      "repo_name": "boostless/TRevive-Death",
+      "author": "TRevive-Death",
+      "html_url": "https://github.com/boostless/TRevive-Death",
+      "description": "A FiveM Script (Client Side) that will allow you to revive and kill yourself",
+      "stars": 0,
+      "language": "Unknown",
+      "tags": [
+        "fivem",
+        "resource"
+      ]
+    }
+  }
+]
