@@ -1,44 +1,129 @@
-# Resource Search Application
+# 🎮 FiveM Resource Hub
 
-A simple web application for searching through large datasets (up to 300,000+ entries) with pagination.
+**A comprehensive platform for discovering, reviewing, and managing FiveM server resources with an innovative recipe builder for server configurations.**
 
-## Project Structure
+🌐 **Live Demo**: [fivem-resource-hub.vercel.app](https://fivem-resource-hub.vercel.app)  
+🔗 **API**: [fivem-resource-hub-production.up.railway.app](https://fivem-resource-hub-production.up.railway.app)
 
-```
-resource_search/
-├── backend/          # Node.js + Express API server
-├── frontend/         # React + Vite frontend
-├── data/            # JSON data files
-└── README.md
-```
+## ✨ Features
 
-## Features
+### 🔍 **Resource Discovery**
+- Search through 240+ curated FiveM resources
+- Advanced filtering by framework (ESX, QB-Core, VORP)
+- Real-time search with pagination
+- GitHub integration for direct repository access
 
-- **Enhanced Search**: Case-insensitive search across resource names, descriptions, and programming languages
-- **Rich Data Display**: Shows rank, players, servers, stars, and rank changes
-- **Pagination**: 100 results per page with navigation
-- **Real-time**: Debounced search as you type
-- **GitHub Integration**: Direct links to GitHub repositories
-- **Responsive**: Mobile-friendly design
-- **Simple Setup**: Minimal configuration required
+### 👤 **User Management**
+- GitHub OAuth authentication
+- User profiles and dashboards
+- Resource claiming and ownership
+- Session management with JWT
 
-## Quick Start
+### ⭐ **Review & Rating System**
+- 5-star rating system
+- Detailed reviews with pros/cons
+- Community-driven feedback
+- Review verification system
 
-### 1. Install Dependencies
+### 🔧 **Recipe Builder**
+- Visual server configuration generator
+- Framework-specific templates
+- YAML export functionality
+- Server.cfg file generation
+- Dependency management
 
-**Backend:**
-```powershell
-cd backend
-npm install
-```
+## 🚀 **Tech Stack**
 
-**Frontend:**
-```powershell
-cd frontend
-npm install
-```
+**Frontend**: React + Vite + Axios  
+**Backend**: Node.js + Express + PostgreSQL  
+**Authentication**: GitHub OAuth + JWT  
+**Deployment**: Vercel + Railway  
+**Database**: PostgreSQL with full relational schema  
+**Security**: Helmet, Rate Limiting, CORS, Input Validation
 
-### 2. Add Your Data
+## 📊 **Project Status**
+
+✅ **Phase 1**: Resource Discovery & Authentication - **COMPLETE**  
+✅ **Phase 2**: Resource Claiming & Ownership - **COMPLETE**  
+✅ **Phase 3**: Review & Rating System - **COMPLETE**  
+✅ **Phase 4**: Recipe Builder & Configuration - **COMPLETE**  
+🎯 **Phase 5**: Advanced Features - **PLANNING**
+
+## 🛠️ **Local Development**
+
+### Prerequisites
+- Node.js 18+
+- PostgreSQL 16+
+- GitHub OAuth App
+
+### Quick Start
+
+1. **Clone & Install**
+   ```bash
+   git clone https://github.com/gononono64/fivem-resource-hub.git
+   cd fivem-resource-hub
+   ```
+
+2. **Backend Setup**
+   ```bash
+   cd backend
+   npm install
+   cp .env.example .env
+   # Edit .env with your credentials
+   npm run dev
+   ```
+
+3. **Frontend Setup**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+4. **Database Setup**
+   ```bash
+   # Create PostgreSQL database
+   createdb fivem_resource_hub
+   
+   # Run migrations
+   cd backend
+   npm run setup-production
+   ```
+
+### Environment Variables
+
+See [`DEPLOYMENT.md`](DEPLOYMENT.md) for complete environment setup guide.
+
+## 📚 **Documentation**
+
+- [`ROADMAP.md`](ROADMAP.md) - Project roadmap and next steps
+- [`DEPLOYMENT.md`](DEPLOYMENT.md) - Production deployment guide
+- **API Documentation** - Available at `/health` endpoint
+
+## 🤝 **Contributing**
+
+This project is actively developed and welcomes contributions:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 **License**
+
+MIT License - see LICENSE file for details
+
+## 🎯 **What Makes This Special**
+
+- **Production Ready**: Deployed and operational
+- **Comprehensive**: Covers entire FiveM resource lifecycle
+- **Scalable**: Built with modern, maintainable architecture
+- **Community Focused**: Designed for FiveM developer community
+- **Innovative**: Unique recipe builder for server configurations
+
+---
+
+**Built with ❤️ for the FiveM community**
 
 Replace the sample `data/entries.json` with your actual data. The format should be:
 
