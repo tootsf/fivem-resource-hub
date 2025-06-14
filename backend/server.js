@@ -277,6 +277,131 @@ app.get('/convert-import', async (req, res) => {
   }
 });
 
+// Upload pre-entries data endpoint (for large datasets)
+app.post('/upload-data', express.json({ limit: '10mb' }), async (req, res) => {
+  try {
+    console.log('📤 Receiving data upload...');
+    
+    const { data, type = 'pre-entries' } = req.body;
+    
+    if (!data || !Array.isArray(data)) {
+      return res.status(400).json({
+        success: false,
+        error: 'Invalid data format. Expected array of resources.'
+      });
+    }
+    
+    console.log(`📊 Processing ${data.length} resources from upload...`);
+    
+    // Clear existing resources
+    await pool.query('DELETE FROM resources');
+    
+    // Convert and insert uploaded data
+    let successCount = 0;
+    let errorCount = 0;
+    
+    for (let i = 0; i < data.length; i++) {
+      const entry = data[i];
+      
+      try {
+        const resourceData = {
+          name: entry.resource_name || `Resource ${i + 1}`,
+          description: entry.github_repo?.description || '',
+          github_url: entry.github_repo?.html_url || '',
+          language: entry.github_repo?.language || 'Unknown',
+          stars: entry.github_repo?.stars || 0,
+          rank: entry.resource_data?.rank || i + 1,
+          players: entry.resource_data?.players || 0,
+          servers: entry.resource_data?.servers || 0,
+          rank_change: entry.resource_data?.rankChange || 0,
+          category: determineCategory(entry),
+          framework: determineFramework(entry),
+          tags: entry.github_repo?.tags || []
+        };
+
+        await pool.query(`
+          INSERT INTO resources (
+            name, description, github_url, language, stars, rank, 
+            players, servers, rank_change, category, framework, tags
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+        `, [
+          resourceData.name, resourceData.description, resourceData.github_url,
+          resourceData.language, resourceData.stars, resourceData.rank,
+          resourceData.players, resourceData.servers, resourceData.rank_change,
+          resourceData.category, resourceData.framework, resourceData.tags
+        ]);
+
+        successCount++;
+      } catch (error) {
+        errorCount++;
+        console.error(`Error inserting resource ${entry.resource_name}:`, error.message);
+      }
+    }
+    
+    const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
+    
+    res.json({
+      success: true,
+      message: 'Data upload completed successfully!',
+      timestamp: new Date().toISOString(),
+      resources_uploaded: successCount,
+      errors: errorCount,
+      total_in_database: parseInt(resourceCount.rows[0].count)
+    });
+    
+  } catch (error) {
+    console.error('Data upload failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      message: 'Data upload failed. Check logs for details.'
+    });
+  }
+});
+
+// Helper functions for uploaded data
+function determineCategory(entry) {
+  const name = (entry.resource_name || '').toLowerCase();
+  const description = (entry.github_repo?.description || '').toLowerCase();
+  const combined = `${name} ${description}`;
+
+  const categories = {
+    'Jobs': ['job', 'police', 'mechanic', 'taxi', 'trucker', 'delivery', 'work', 'employment'],
+    'Vehicles': ['vehicle', 'car', 'bike', 'boat', 'plane', 'helicopter', 'motorcycle', 'truck'],
+    'UI': ['ui', 'hud', 'interface', 'menu', 'notification', 'display', 'gui'],
+    'Maps': ['map', 'mlo', 'interior', 'building', 'location', 'place'],
+    'Scripts': ['script', 'system', 'tool', 'utility', 'addon'],
+    'Economy': ['shop', 'store', 'economy', 'money', 'bank', 'atm', 'business'],
+    'Roleplay': ['rp', 'roleplay', 'character', 'identity', 'social'],
+    'Security': ['anticheat', 'admin', 'moderation', 'security', 'protection'],
+    'Framework': ['framework', 'core', 'base', 'foundation']
+  };
+
+  for (const [category, keywords] of Object.entries(categories)) {
+    if (keywords.some(keyword => combined.includes(keyword))) {
+      return category;
+    }
+  }
+  return 'Other';
+}
+
+function determineFramework(entry) {
+  const name = (entry.resource_name || '').toLowerCase();
+  const description = (entry.github_repo?.description || '').toLowerCase();
+  const combined = `${name} ${description}`;
+
+  if (combined.includes('esx') || combined.includes('es_extended')) {
+    return 'ESX';
+  } else if (combined.includes('qb') || combined.includes('qbcore') || combined.includes('qb-core')) {
+    return 'QB-Core';
+  } else if (combined.includes('vorp') || combined.includes('redm')) {
+    return 'VORP';
+  } else if (combined.includes('standalone') || combined.includes('independent')) {
+    return 'Standalone';
+  }
+  return 'Unknown';
+}
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err);
