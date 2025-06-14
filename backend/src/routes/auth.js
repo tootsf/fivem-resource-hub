@@ -17,10 +17,10 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
   }, async (accessToken, refreshToken, profile, done) => {
     try {
       console.log('GitHub OAuth callback received for user:', profile.username);
-      
+
       // Check if user exists
       let user = await User.findByGithubId(profile.id);
-      
+
       const userData = {
         github_id: profile.id,
         username: profile.username,
@@ -79,23 +79,23 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
   // Start GitHub OAuth flow
   router.get('/github', (req, res, next) => {
     console.log('Starting GitHub OAuth flow');
-    passport.authenticate('github', { 
-      scope: ['user:email', 'public_repo', 'read:user'] 
+    passport.authenticate('github', {
+      scope: ['user:email', 'public_repo', 'read:user']
     })(req, res, next);
   });
 
   // GitHub OAuth callback
-  router.get('/github/callback', 
+  router.get('/github/callback',
     passport.authenticate('github', { session: false }),
     (req, res) => {
       try {
         console.log('GitHub OAuth successful for user:', req.user.username);
-        
+
         // Generate JWT token
         const token = jwt.sign(
-          { 
-            userId: req.user.id, 
-            username: req.user.username 
+          {
+            userId: req.user.id,
+            username: req.user.username
           },
           process.env.JWT_SECRET,
           { expiresIn: '30d' }
@@ -123,14 +123,14 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
 } else {
   // Fallback routes when GitHub OAuth is not configured
   router.get('/github', (req, res) => {
-    res.status(503).json({ 
+    res.status(503).json({
       error: 'GitHub OAuth not configured',
       message: 'GitHub authentication is not available. Please configure GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.'
     });
   });
 
   router.get('/github/callback', (req, res) => {
-    res.status(503).json({ 
+    res.status(503).json({
       error: 'GitHub OAuth not configured',
       message: 'GitHub authentication is not available.'
     });
@@ -160,7 +160,7 @@ router.get('/me', authenticateUser, async (req, res) => {
 router.put('/profile', authenticateUser, async (req, res) => {
   try {
     const { display_name, bio } = req.body;
-    
+
     // Basic validation
     if (display_name && display_name.length > 255) {
       return res.status(400).json({
@@ -168,7 +168,7 @@ router.put('/profile', authenticateUser, async (req, res) => {
         error: 'Display name too long (max 255 characters)'
       });
     }
-    
+
     if (bio && bio.length > 1000) {
       return res.status(400).json({
         success: false,
@@ -208,8 +208,8 @@ router.put('/profile', authenticateUser, async (req, res) => {
 router.post('/logout', authenticateUser, async (req, res) => {
   try {
     // Get token from cookie or header
-    const token = req.cookies.auth_token || 
-                  (req.headers.authorization && req.headers.authorization.startsWith('Bearer ') 
+    const token = req.cookies.auth_token ||
+                  (req.headers.authorization && req.headers.authorization.startsWith('Bearer ')
                     ? req.headers.authorization.slice(7) : null);
 
     if (token) {
@@ -226,9 +226,9 @@ router.post('/logout', authenticateUser, async (req, res) => {
       path: '/'
     });
 
-    res.json({ 
-      success: true, 
-      message: 'Logged out successfully' 
+    res.json({
+      success: true,
+      message: 'Logged out successfully'
     });
   } catch (error) {
     console.error('Logout error:', error);

@@ -4,14 +4,14 @@ import { useMockAuth } from '../contexts/MockAuthContext';
 
 const ResourceClaimButton = ({ resource }) => {
   const { isAuthenticated } = useMockAuth();
-  const { 
-    claimResource, 
-    unclaimResource, 
-    isResourceClaimedByUser, 
+  const {
+    claimResource,
+    unclaimResource,
+    isResourceClaimedByUser,
     getResourceClaim,
-    loading 
+    loading
   } = useResourceClaims();
-  
+
   const [showClaimModal, setShowClaimModal] = useState(false);
   const [claimNotes, setClaimNotes] = useState('');
   const [actionLoading, setActionLoading] = useState(false);
@@ -82,7 +82,7 @@ const ResourceClaimButton = ({ resource }) => {
             {new Date(resourceClaim.claimed_at).toLocaleDateString()}
           </span>
         </div>
-        <button 
+        <button
           className="unclaim-btn"
           onClick={handleUnclaim}
           disabled={actionLoading || loading}
@@ -95,7 +95,7 @@ const ResourceClaimButton = ({ resource }) => {
 
   return (
     <>
-      <button 
+      <button
         className="claim-btn"
         onClick={() => setShowClaimModal(true)}
         disabled={actionLoading || loading}
@@ -109,14 +109,14 @@ const ResourceClaimButton = ({ resource }) => {
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Claim Resource</h3>
-              <button 
+              <button
                 className="modal-close"
                 onClick={() => setShowClaimModal(false)}
               >
                 ×
               </button>
             </div>
-            
+
             <div className="modal-body">
               <div className="resource-preview">
                 <h4>{resource.name}</h4>
@@ -157,13 +157,13 @@ const ResourceClaimButton = ({ resource }) => {
             </div>
 
             <div className="modal-footer">
-              <button 
+              <button
                 className="btn-secondary"
                 onClick={() => setShowClaimModal(false)}
               >
                 Cancel
               </button>
-              <button 
+              <button
                 className="btn-primary"
                 onClick={handleClaim}
                 disabled={actionLoading}

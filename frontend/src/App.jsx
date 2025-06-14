@@ -53,7 +53,7 @@ function AppContent() {
     try {
       setLoading(true);
       setError('');
-      
+
       const response = await axios.get('/search', {
         params: {
           q: query,
@@ -107,13 +107,13 @@ function AppContent() {
     }
   };  const renderNavigation = () => (
     <nav className="main-nav">
-      <button 
+      <button
         onClick={() => setCurrentView('browse')}
         className={currentView === 'browse' ? 'active' : ''}
       >
         Browse Resources
       </button>
-      <button 
+      <button
         onClick={() => setCurrentView('recipes')}
         className={currentView === 'recipes' || currentView === 'recipe-builder' ? 'active' : ''}
       >
@@ -121,19 +121,19 @@ function AppContent() {
       </button>
       {isAuthenticated && (
         <>
-          <button 
+          <button
             onClick={() => setCurrentView('dashboard')}
             className={currentView === 'dashboard' ? 'active' : ''}
           >
             Dashboard
           </button>
-          <button 
+          <button
             onClick={() => setCurrentView('my-resources')}
             className={currentView === 'my-resources' ? 'active' : ''}
           >
             My Resources
           </button>
-          <button 
+          <button
             onClick={() => setCurrentView('my-reviews')}
             className={currentView === 'my-reviews' ? 'active' : ''}
           >
@@ -157,7 +157,7 @@ function AppContent() {
       </div>
 
       {loading && <div className="loading">Searching...</div>}
-      
+
       {error && <div className="error">{error}</div>}
 
       {!loading && !error && (
@@ -204,7 +204,7 @@ function AppContent() {
                         })()}
                       </div>
                     </div>
-                    
+
                     <div className="resource-stats">
                       {item.stars !== undefined && <span className="stat">⭐ {item.stars}</span>}
                     </div>
@@ -213,13 +213,13 @@ function AppContent() {
                   {item.description && item.description !== "No description" && (
                     <p className="result-description">{item.description}</p>
                   )}
-                  
+
                   <div className="result-stats">
                     {item.rank && <span className="stat">Rank: #{item.rank.toLocaleString()}</span>}
                     {item.players && <span className="stat">Players: {item.players}</span>}
                     {item.servers && <span className="stat">Servers: {item.servers}</span>}
                   </div>
-                  
+
                   {item.rankChange && (
                     <div className={`rank-change ${item.rankChange > 0 ? 'positive' : 'negative'}`}>
                       {item.rankChange > 0 ? '↗' : '↘'} {Math.abs(item.rankChange).toLocaleString()}
@@ -230,7 +230,7 @@ function AppContent() {
                         View on GitHub
                       </a>
                     )}
-                    <button 
+                    <button
                       className="view-details-btn"
                       onClick={() => setSelectedResource(item)}
                     >
@@ -249,18 +249,18 @@ function AppContent() {
 
           {pagination.totalPages > 1 && (
             <div className="pagination">
-              <button 
+              <button
                 onClick={handlePrevious}
                 disabled={!pagination.hasPrevious}
               >
                 Previous
               </button>
-              
+
               <span className="page-info">
                 Page {pagination.currentPage} of {pagination.totalPages}
               </span>
-              
-              <button 
+
+              <button
                 onClick={handleNext}
                 disabled={!pagination.hasNext}
               >
@@ -285,14 +285,14 @@ function AppContent() {
             <MockLoginButton />
           </div>
         </div>
-        
+
         {renderNavigation()}
       </div>      <div className="main-content">
         {currentView === 'dashboard' && <Dashboard />}
         {currentView === 'my-resources' && <MyResourcesDashboard />}
         {currentView === 'my-reviews' && <MyReviewsDashboard />}
         {currentView === 'recipes' && (
-          <RecipeGallery 
+          <RecipeGallery
             onCreateNew={() => {
               setEditingRecipe(null);
               setCurrentView('recipe-builder');
@@ -304,7 +304,7 @@ function AppContent() {
           />
         )}
         {currentView === 'recipe-builder' && (
-          <RecipeBuilder 
+          <RecipeBuilder
             recipe={editingRecipe}
             onSave={(recipe) => {
               setCurrentView('recipes');
@@ -320,7 +320,7 @@ function AppContent() {
         {currentView === 'browse' && selectedResource && (
           <div className="resource-detail-view">
             <div className="resource-detail-header">
-              <button 
+              <button
                 className="back-btn"
                 onClick={() => setSelectedResource(null)}
               >
@@ -328,7 +328,7 @@ function AppContent() {
               </button>
               <h2>{selectedResource.name}</h2>
             </div>
-            
+
             <div className="resource-detail-content">
               <div className="resource-info-section">
                 <div className="resource-meta-detailed">
@@ -339,11 +339,11 @@ function AppContent() {
                     <span className="stars-badge">⭐ {selectedResource.stars}</span>
                   )}
                 </div>
-                
+
                 {selectedResource.description && selectedResource.description !== "No description" && (
                   <p className="resource-description">{selectedResource.description}</p>
                 )}
-                
+
                 <div className="resource-stats-detailed">
                   {selectedResource.rank && (
                     <div className="stat-item">
@@ -367,10 +367,10 @@ function AppContent() {
 
                 <div className="resource-actions-detailed">
                   {selectedResource.github_url && (
-                    <a 
-                      href={selectedResource.github_url} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={selectedResource.github_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="github-link-detailed"
                     >
                       View on GitHub

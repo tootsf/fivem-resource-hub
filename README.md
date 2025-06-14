@@ -2,7 +2,7 @@
 
 **A comprehensive platform for discovering, reviewing, and managing FiveM server resources with an innovative recipe builder for server configurations.**
 
-🌐 **Live Demo**: [fivem-resource-hub.vercel.app](https://fivem-resource-hub.vercel.app)  
+🌐 **Live Demo**: [fivem-resource-hub.vercel.app](https://fivem-resource-hub.vercel.app)
 🔗 **API**: [fivem-resource-hub-production.up.railway.app](https://fivem-resource-hub-production.up.railway.app)
 
 ## ✨ Features
@@ -34,19 +34,19 @@
 
 ## 🚀 **Tech Stack**
 
-**Frontend**: React + Vite + Axios  
-**Backend**: Node.js + Express + PostgreSQL  
-**Authentication**: GitHub OAuth + JWT  
-**Deployment**: Vercel + Railway  
-**Database**: PostgreSQL with full relational schema  
+**Frontend**: React + Vite + Axios
+**Backend**: Node.js + Express + PostgreSQL
+**Authentication**: GitHub OAuth + JWT
+**Deployment**: Vercel + Railway
+**Database**: PostgreSQL with full relational schema
 **Security**: Helmet, Rate Limiting, CORS, Input Validation
 
 ## 📊 **Project Status**
 
-✅ **Phase 1**: Resource Discovery & Authentication - **COMPLETE**  
-✅ **Phase 2**: Resource Claiming & Ownership - **COMPLETE**  
-✅ **Phase 3**: Review & Rating System - **COMPLETE**  
-✅ **Phase 4**: Recipe Builder & Configuration - **COMPLETE**  
+✅ **Phase 1**: Resource Discovery & Authentication - **COMPLETE**
+✅ **Phase 2**: Resource Claiming & Ownership - **COMPLETE**
+✅ **Phase 3**: Review & Rating System - **COMPLETE**
+✅ **Phase 4**: Recipe Builder & Configuration - **COMPLETE**
 🎯 **Phase 5**: Advanced Features - **PLANNING**
 
 ## 🛠️ **Local Development**
@@ -84,7 +84,7 @@
    ```bash
    # Create PostgreSQL database
    createdb fivem_resource_hub
-   
+
    # Run migrations
    cd backend
    npm run setup-production
@@ -211,7 +211,7 @@ Your JSON file should contain an array of objects with the following structure:
 
 **Optional fields:**
 - `rank`, `players`, `servers`, `rankChange`: Numeric statistics
-- `description`, `language`: Additional searchable text fields  
+- `description`, `language`: Additional searchable text fields
 - `stars`: GitHub stars count
 - `github_url`: Link to GitHub repository
 

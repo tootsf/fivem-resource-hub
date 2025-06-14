@@ -13,20 +13,20 @@ const MockLoginButton = () => {
   if (user) {
     return (
       <div className="user-menu">
-        <button 
+        <button
           className="user-profile-btn"
           onClick={() => setShowDropdown(!showDropdown)}
         >
-          <img 
-            src={user.avatar_url} 
-            alt={user.username} 
-            className="user-avatar" 
+          <img
+            src={user.avatar_url}
+            alt={user.username}
+            className="user-avatar"
           />
           <span className="user-name">{user.display_name || user.username}</span>
           {isMockMode && <span className="mock-badge">DEMO</span>}
           <span className="dropdown-arrow">▼</span>
         </button>
-        
+
         {showDropdown && (
           <div className="user-dropdown">
             <div className="dropdown-header">
@@ -37,51 +37,51 @@ const MockLoginButton = () => {
                 {isMockMode && <div className="dropdown-mock">Demo Mode</div>}
               </div>
             </div>
-            
+
             <div className="dropdown-divider"></div>
-            
-            <button 
+
+            <button
               onClick={() => {
                 setShowDropdown(false);
                 // This would navigate to dashboard in a real app
                 // For now, we'll trigger a view change
-              }} 
+              }}
               className="dropdown-item"
             >
               <span className="dropdown-icon">📊</span>
               Dashboard
             </button>
-            
-            <button 
+
+            <button
               onClick={() => {
                 setShowDropdown(false);
                 // Navigate to profile
-              }} 
+              }}
               className="dropdown-item"
             >
               <span className="dropdown-icon">👤</span>
               Profile
             </button>
-            
-            <button 
+
+            <button
               onClick={() => {
                 setShowDropdown(false);
                 // Navigate to my resources
-              }} 
+              }}
               className="dropdown-item"
             >
               <span className="dropdown-icon">📦</span>
               My Resources
             </button>
-            
+
             {isMockMode && (
               <>
                 <div className="dropdown-divider"></div>
-                <button 
+                <button
                   onClick={() => {
                     setShowDropdown(false);
                     setShowUserSelect(true);
-                  }} 
+                  }}
                   className="dropdown-item"
                 >
                   <span className="dropdown-icon">🔄</span>
@@ -89,9 +89,9 @@ const MockLoginButton = () => {
                 </button>
               </>
             )}
-            
+
             <div className="dropdown-divider"></div>
-            
+
             <button onClick={logout} className="dropdown-item logout-btn">
               <span className="dropdown-icon">🚪</span>
               Logout
@@ -104,7 +104,7 @@ const MockLoginButton = () => {
             <div className="modal-content" onClick={e => e.stopPropagation()}>
               <div className="modal-header">
                 <h3>Switch Demo User</h3>
-                <button 
+                <button
                   className="modal-close"
                   onClick={() => setShowUserSelect(false)}
                 >
@@ -144,8 +144,8 @@ const MockLoginButton = () => {
 
   return (
     <div className="login-options">
-      <button 
-        onClick={() => setShowUserSelect(true)} 
+      <button
+        onClick={() => setShowUserSelect(true)}
         className="demo-login-btn"
       >
         <span className="demo-icon">🎭</span>
@@ -157,7 +157,7 @@ const MockLoginButton = () => {
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Demo Login</h3>
-              <button 
+              <button
                 className="modal-close"
                 onClick={() => setShowUserSelect(false)}
               >

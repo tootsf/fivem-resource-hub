@@ -6,7 +6,7 @@ import StarRating from './StarRating';
 const ReviewForm = ({ resource, onSuccess, onCancel }) => {
   const { isAuthenticated } = useMockAuth();
   const { addReview, loading } = useReviews();
-  
+
   const [formData, setFormData] = useState({
     rating: 0,
     title: '',
@@ -149,7 +149,7 @@ const ReviewForm = ({ resource, onSuccess, onCancel }) => {
             Overall Rating *
             {errors.rating && <span className="error-text">{errors.rating}</span>}
           </label>
-          <StarRating 
+          <StarRating
             rating={formData.rating}
             onRatingChange={handleRatingChange}
             size="large"

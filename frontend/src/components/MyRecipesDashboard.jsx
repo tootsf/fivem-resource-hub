@@ -4,13 +4,13 @@ import { useRecipes } from '../contexts/RecipeContext';
 
 const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
   const { user, loading: authLoading } = useMockAuth();
-  const { 
-    getUserRecipes, 
-    deleteRecipe, 
+  const {
+    getUserRecipes,
+    deleteRecipe,
     loading: recipeLoading,
     downloadRecipe
   } = useRecipes();
-  
+
   const [filter, setFilter] = useState('all'); // all, public, private
   const [sortBy, setSortBy] = useState('newest'); // newest, oldest, popular, downloads
 
@@ -30,7 +30,7 @@ const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
   }
 
   const myRecipes = getUserRecipes();
-  
+
   const filteredRecipes = myRecipes.filter(recipe => {
     if (filter === 'public') return recipe.is_public;
     if (filter === 'private') return !recipe.is_public;
@@ -66,7 +66,7 @@ const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
   const handleDownload = async (recipe) => {
     try {
       await downloadRecipe(recipe.id);
-      
+
       // Generate and download the config file
       const config = generateServerConfig(recipe);
       const blob = new Blob([config], { type: 'text/plain' });
@@ -98,7 +98,7 @@ const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
           <h1>My Recipes</h1>
           <p>Create and manage your FiveM server configuration recipes</p>
         </div>
-        
+
         <button onClick={onCreateNew} className="btn-primary">
           + Create New Recipe
         </button>
@@ -151,19 +151,19 @@ const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
       {myRecipes.length > 0 && (
         <div className="recipe-controls">
           <div className="recipe-filters">
-            <button 
+            <button
               className={filter === 'all' ? 'filter-btn active' : 'filter-btn'}
               onClick={() => setFilter('all')}
             >
               All ({stats.total})
             </button>
-            <button 
+            <button
               className={filter === 'public' ? 'filter-btn active' : 'filter-btn'}
               onClick={() => setFilter('public')}
             >
               Public ({stats.public})
             </button>
-            <button 
+            <button
               className={filter === 'private' ? 'filter-btn active' : 'filter-btn'}
               onClick={() => setFilter('private')}
             >
@@ -192,7 +192,7 @@ const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
         <div className="empty-state">
           <h3>No recipes found</h3>
           <p>
-            {filter === 'all' 
+            {filter === 'all'
               ? "You haven't created any recipes yet. Click 'Create New Recipe' to get started!"
               : `No ${filter} recipes found.`
             }
@@ -271,28 +271,28 @@ const MyRecipeCard = ({ recipe, onEdit, onDelete, onDownload, loading }) => {
         </div>
 
         <div className="recipe-actions">
-          <button 
+          <button
             onClick={() => onEdit(recipe)}
             className="btn-icon"
             title="Edit recipe"
           >
             ✏️
           </button>
-          <button 
+          <button
             onClick={() => onDownload(recipe)}
             className="btn-icon"
             title="Download server.cfg"
           >
             📥
           </button>
-          <button 
+          <button
             onClick={() => setShowDetails(!showDetails)}
             className="btn-icon"
             title={showDetails ? 'Hide details' : 'Show details'}
           >
             {showDetails ? '▲' : '▼'}
           </button>
-          <button 
+          <button
             onClick={() => onDelete(recipe.id)}
             className="btn-icon danger"
             title="Delete recipe"

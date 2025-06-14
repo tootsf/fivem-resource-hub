@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
       const response = await axios.get('/auth/me');
-      
+
       if (response.data.success) {
         setUser(response.data.data.user);
       } else {
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
   const updateProfile = async (profileData) => {
     try {
       const response = await axios.put('/auth/profile', profileData);
-      
+
       if (response.data.success) {
         setUser(response.data.data.user);
         return { success: true };

@@ -48,7 +48,7 @@ const ResourceReviews = ({ resource }) => {
     <div className="resource-reviews">
       <div className="reviews-header">
         <h3>Reviews & Ratings</h3>
-        
+
         {/* Overall Rating Summary */}
         <div className="rating-summary">
           <div className="rating-overview">
@@ -59,7 +59,7 @@ const ResourceReviews = ({ resource }) => {
                 {rating.count} review{rating.count !== 1 ? 's' : ''}
               </span>
             </div>
-            
+
             {/* Rating Distribution */}
             {reviews.length > 0 && (
               <div className="rating-distribution">
@@ -67,8 +67,8 @@ const ResourceReviews = ({ resource }) => {
                   <div key={star} className="rating-row">
                     <span className="star-label">{star}★</span>
                     <div className="rating-bar">
-                      <div 
-                        className="rating-fill" 
+                      <div
+                        className="rating-fill"
                         style={{ width: `${percentage}%` }}
                       ></div>
                     </div>
@@ -90,7 +90,7 @@ const ResourceReviews = ({ resource }) => {
                 <p>✓ You've already reviewed this resource</p>
               </div>
             ) : (
-              <button 
+              <button
                 className="write-review-btn"
                 onClick={() => setShowReviewForm(true)}
               >
@@ -104,7 +104,7 @@ const ResourceReviews = ({ resource }) => {
       {/* Review Form */}
       {showReviewForm && (
         <div className="review-form-container">
-          <ReviewForm 
+          <ReviewForm
             resource={resource}
             onSuccess={handleReviewSuccess}
             onCancel={() => setShowReviewForm(false)}
@@ -143,7 +143,7 @@ const ResourceReviews = ({ resource }) => {
             <h4>No reviews yet</h4>
             <p>Be the first to share your experience with this resource!</p>
             {isAuthenticated && !userHasReviewed && (
-              <button 
+              <button
                 className="write-first-review-btn"
                 onClick={() => setShowReviewForm(true)}
               >

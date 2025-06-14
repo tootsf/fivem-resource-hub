@@ -33,7 +33,7 @@ const MyReviewsDashboard = () => {
     return review.rating === rating;
   });
 
-  const sortedReviews = [...filteredReviews].sort((a, b) => 
+  const sortedReviews = [...filteredReviews].sort((a, b) =>
     new Date(b.created_at) - new Date(a.created_at)
   );
 
@@ -76,7 +76,7 @@ const MyReviewsDashboard = () => {
             {[5, 4, 3, 2, 1].map(rating => {
               const count = myReviews.filter(review => review.rating === rating).length;
               const percentage = (count / myReviews.length) * 100;
-              
+
               return (
                 <div key={rating} className="rating-breakdown-item">
                   <div className="rating-breakdown-header">
@@ -84,7 +84,7 @@ const MyReviewsDashboard = () => {
                     <span className="rating-breakdown-count">({count})</span>
                   </div>
                   <div className="rating-breakdown-bar">
-                    <div 
+                    <div
                       className="rating-breakdown-fill"
                       style={{ width: `${percentage}%` }}
                     ></div>
@@ -99,7 +99,7 @@ const MyReviewsDashboard = () => {
 
       {/* Filters */}
       <div className="review-filters">
-        <button 
+        <button
           className={filter === 'all' ? 'filter-btn active' : 'filter-btn'}
           onClick={() => setFilter('all')}
         >
@@ -108,9 +108,9 @@ const MyReviewsDashboard = () => {
         {[5, 4, 3, 2, 1].map(rating => {
           const count = myReviews.filter(review => review.rating === rating).length;
           if (count === 0) return null;
-          
+
           return (
-            <button 
+            <button
               key={rating}
               className={filter === `${rating}-star` ? 'filter-btn active' : 'filter-btn'}
               onClick={() => setFilter(`${rating}-star`)}
@@ -126,7 +126,7 @@ const MyReviewsDashboard = () => {
         <div className="empty-state">
           <h3>No reviews found</h3>
           <p>
-            {filter === 'all' 
+            {filter === 'all'
               ? "You haven't written any reviews yet. Browse resources and share your experiences!"
               : `No reviews with ${filter.replace('-', ' ')}.`
             }
@@ -137,22 +137,22 @@ const MyReviewsDashboard = () => {
           <div className="reviews-header">
             <h3>Your Reviews ({sortedReviews.length})</h3>
           </div>
-          
+
           <div className="my-reviews-container">
             {sortedReviews.map((review) => (
               <div key={review.id} className="my-review-item">
                 <div className="my-review-resource">
                   <h4>Review for: {getResourceNameFromUrl(review.resource_url)}</h4>
-                  <a 
-                    href={review.resource_url} 
-                    target="_blank" 
+                  <a
+                    href={review.resource_url}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="resource-link"
                   >
                     View Resource →
                   </a>
                 </div>
-                
+
                 <ReviewCard review={review} />
               </div>
             ))}

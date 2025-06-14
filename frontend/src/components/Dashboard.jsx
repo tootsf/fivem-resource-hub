@@ -85,7 +85,7 @@ const Dashboard = () => {
           </div>
           <div className="card-content">
             <p className="empty-state">
-              You haven't claimed any resources yet. 
+              You haven't claimed any resources yet.
               <a href="/browse">Browse resources</a> to get started.
             </p>
           </div>
@@ -97,7 +97,7 @@ const Dashboard = () => {
           </div>
           <div className="card-content">
             <p className="empty-state">
-              You haven't created any recipes yet. 
+              You haven't created any recipes yet.
               <a href="/recipe-builder">Create your first recipe</a>.
             </p>
           </div>

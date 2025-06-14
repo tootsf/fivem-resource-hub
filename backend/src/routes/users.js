@@ -9,9 +9,9 @@ const router = express.Router();
 router.get('/:username', optionalAuth, async (req, res) => {
   try {
     const { username } = req.params;
-    
+
     const user = await User.getPublicProfile(username);
-    
+
     if (!user) {
       return res.status(404).json({
         success: false,
@@ -38,7 +38,7 @@ router.get('/:username', optionalAuth, async (req, res) => {
 router.get('/profile/me', authenticateUser, async (req, res) => {
   try {
     const userProfile = await User.getProfile(req.user.id);
-    
+
     res.json({
       success: true,
       data: {
@@ -55,7 +55,7 @@ router.get('/profile/me', authenticateUser, async (req, res) => {
 });
 
 // Update current user's profile
-router.put('/profile/me', 
+router.put('/profile/me',
   authenticateUser,
   [
     body('display_name')
@@ -115,7 +115,7 @@ router.get('/:username/resources', async (req, res) => {
   try {
     const { username } = req.params;
     const { page = 1, limit = 20 } = req.query;
-    
+
     const user = await User.findByUsername(username);
     if (!user) {
       return res.status(404).json({
@@ -152,7 +152,7 @@ router.get('/:username/recipes', async (req, res) => {
   try {
     const { username } = req.params;
     const { page = 1, limit = 20 } = req.query;
-    
+
     const user = await User.findByUsername(username);
     if (!user) {
       return res.status(404).json({

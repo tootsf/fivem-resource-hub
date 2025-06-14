@@ -4,14 +4,14 @@ import { useResourceClaims } from '../contexts/ResourceClaimContext';
 
 const MyResourcesDashboard = () => {
   const { user, loading: authLoading } = useMockAuth();
-  const { 
-    getUserClaimedResources, 
-    getClaimStats, 
+  const {
+    getUserClaimedResources,
+    getClaimStats,
     updateResourceClaim,
     unclaimResource,
-    loading: claimLoading 
+    loading: claimLoading
   } = useResourceClaims();
-  
+
   const [selectedResource, setSelectedResource] = useState(null);
   const [editingNotes, setEditingNotes] = useState(false);
   const [notes, setNotes] = useState('');
@@ -99,25 +99,25 @@ const MyResourcesDashboard = () => {
 
       {/* Filters */}
       <div className="resource-filters">
-        <button 
+        <button
           className={filter === 'all' ? 'filter-btn active' : 'filter-btn'}
           onClick={() => setFilter('all')}
         >
           All ({stats.total})
         </button>
-        <button 
+        <button
           className={filter === 'pending' ? 'filter-btn active' : 'filter-btn'}
           onClick={() => setFilter('pending')}
         >
           Pending ({stats.pending})
         </button>
-        <button 
+        <button
           className={filter === 'verified' ? 'filter-btn active' : 'filter-btn'}
           onClick={() => setFilter('verified')}
         >
           Verified ({stats.verified})
         </button>
-        <button 
+        <button
           className={filter === 'disputed' ? 'filter-btn active' : 'filter-btn'}
           onClick={() => setFilter('disputed')}
         >
@@ -130,7 +130,7 @@ const MyResourcesDashboard = () => {
         <div className="empty-state">
           <h3>No resources found</h3>
           <p>
-            {filter === 'all' 
+            {filter === 'all'
               ? "You haven't claimed any resources yet. Browse resources to get started!"
               : `No resources with status "${filter}".`
             }
@@ -155,9 +155,9 @@ const MyResourcesDashboard = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="resource-actions">
-                  <button 
+                  <button
                     className="btn-icon"
                     onClick={() => {
                       setSelectedResource(resource);
@@ -168,7 +168,7 @@ const MyResourcesDashboard = () => {
                   >
                     ✏️
                   </button>
-                  <button 
+                  <button
                     className="btn-icon"
                     onClick={() => handleUnclaim(resource.github_url)}
                     title="Unclaim resource"
@@ -193,9 +193,9 @@ const MyResourcesDashboard = () => {
                 <div className="claim-date">
                   Claimed on {new Date(resource.claimed_at).toLocaleDateString()}
                 </div>
-                
+
                 <div className="status-controls">
-                  <select 
+                  <select
                     value={resource.claim_status}
                     onChange={(e) => handleStatusChange(resource.github_url, e.target.value)}
                     className="status-select"
@@ -207,9 +207,9 @@ const MyResourcesDashboard = () => {
                 </div>
 
                 {resource.github_url && (
-                  <a 
-                    href={resource.github_url} 
-                    target="_blank" 
+                  <a
+                    href={resource.github_url}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="github-link"
                   >
@@ -228,14 +228,14 @@ const MyResourcesDashboard = () => {
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Edit Notes: {selectedResource.name}</h3>
-              <button 
+              <button
                 className="modal-close"
                 onClick={() => setEditingNotes(false)}
               >
                 ×
               </button>
             </div>
-            
+
             <div className="modal-body">
               <label htmlFor="resource-notes">
                 Your notes about this resource:
@@ -250,13 +250,13 @@ const MyResourcesDashboard = () => {
             </div>
 
             <div className="modal-footer">
-              <button 
+              <button
                 className="btn-secondary"
                 onClick={() => setEditingNotes(false)}
               >
                 Cancel
               </button>
-              <button 
+              <button
                 className="btn-primary"
                 onClick={() => handleUpdateNotes(selectedResource.github_url)}
                 disabled={claimLoading}

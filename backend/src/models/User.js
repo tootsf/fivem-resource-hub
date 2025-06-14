@@ -56,8 +56,8 @@ class User {
     } = userData;
 
     const result = await query(`
-      UPDATE users 
-      SET username = $2, display_name = $3, email = $4, avatar_url = $5, 
+      UPDATE users
+      SET username = $2, display_name = $3, email = $4, avatar_url = $5,
           github_url = $6, bio = $7, updated_at = CURRENT_TIMESTAMP
       WHERE id = $1 AND is_active = true
       RETURNING *
@@ -70,7 +70,7 @@ class User {
     const { display_name, bio } = profileData;
 
     const result = await query(`
-      UPDATE users 
+      UPDATE users
       SET display_name = $2, bio = $3, updated_at = CURRENT_TIMESTAMP
       WHERE id = $1 AND is_active = true
       RETURNING *
@@ -89,7 +89,7 @@ class User {
 
   static async getProfile(userId) {
     const result = await query(`
-      SELECT 
+      SELECT
         u.*,
         COUNT(DISTINCT r.id) as claimed_resources_count,
         COUNT(DISTINCT rec.id) as recipes_count
@@ -105,7 +105,7 @@ class User {
 
   static async getPublicProfile(username) {
     const result = await query(`
-      SELECT 
+      SELECT
         u.id,
         u.username,
         u.display_name,

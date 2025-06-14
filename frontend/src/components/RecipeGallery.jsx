@@ -4,10 +4,10 @@ import { useMockAuth } from '../contexts/MockAuthContext';
 
 const RecipeGallery = ({ onCreateNew, onEditRecipe }) => {
   const { user, isAuthenticated } = useMockAuth();
-  const { 
-    getPublicRecipes, 
-    getFeaturedRecipes, 
-    getRecipesByCategory, 
+  const {
+    getPublicRecipes,
+    getFeaturedRecipes,
+    getRecipesByCategory,
     getRecipesByFramework,
     searchRecipes,
     likeRecipe,
@@ -70,7 +70,7 @@ const RecipeGallery = ({ onCreateNew, onEditRecipe }) => {
   const handleDownload = async (recipe) => {
     try {
       await downloadRecipe(recipe.id);
-      
+
       // Generate and download the config file
       const config = generateServerConfig(recipe);
       const blob = new Blob([config], { type: 'text/plain' });
@@ -97,7 +97,7 @@ const RecipeGallery = ({ onCreateNew, onEditRecipe }) => {
           <h1>Recipe Gallery</h1>
           <p>Discover and download ready-to-use FiveM server configurations</p>
         </div>
-        
+
         {isAuthenticated && (
           <button onClick={onCreateNew} className="btn-primary">
             + Create New Recipe
@@ -182,7 +182,7 @@ const RecipeGallery = ({ onCreateNew, onEditRecipe }) => {
       <div className="gallery-results">
         <div className="results-header">
           <h3>
-            {searchQuery ? `Search results for "${searchQuery}"` : 'All Recipes'} 
+            {searchQuery ? `Search results for "${searchQuery}"` : 'All Recipes'}
             ({filteredRecipes.length})
           </h3>
         </div>
@@ -205,7 +205,7 @@ const RecipeGallery = ({ onCreateNew, onEditRecipe }) => {
           <div className="no-results">
             <h4>No recipes found</h4>
             <p>
-              {searchQuery 
+              {searchQuery
                 ? `No recipes match "${searchQuery}". Try different keywords.`
                 : 'No recipes available with the selected filters.'
               }
@@ -229,7 +229,7 @@ const FeaturedRecipeCard = ({ recipe, isLiked, onLike, onDownload, onEdit, curre
   return (
     <div className="featured-recipe-card">
       <div className="featured-badge">Featured</div>
-      
+
       <div className="recipe-header">
         <h3>{recipe.name}</h3>
         <div className="recipe-meta">
@@ -270,7 +270,7 @@ const FeaturedRecipeCard = ({ recipe, isLiked, onLike, onDownload, onEdit, curre
         >
           ❤️ {recipe.like_count}
         </button>
-        
+
         <button
           onClick={() => onDownload(recipe)}
           className="download-btn"
@@ -348,7 +348,7 @@ const RecipeCard = ({ recipe, isLiked, onLike, onDownload, onEdit, currentUser }
           >
             ❤️
           </button>
-          
+
           <button
             onClick={() => onDownload(recipe)}
             className="download-btn-small"

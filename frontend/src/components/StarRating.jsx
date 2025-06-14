@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-const StarRating = ({ 
-  rating, 
-  onRatingChange, 
-  readonly = false, 
+const StarRating = ({
+  rating,
+  onRatingChange,
+  readonly = false,
   size = 'medium',
-  showValue = true 
+  showValue = true
 }) => {
   const [hover, setHover] = useState(0);
-  
+
   const sizeClasses = {
     small: 'star-rating-small',
     medium: 'star-rating-medium',

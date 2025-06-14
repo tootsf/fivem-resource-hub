@@ -5,7 +5,7 @@ import { useMockAuth } from '../contexts/MockAuthContext';
 const RecipeBuilder = ({ recipe: initialRecipe, onSave, onCancel }) => {
   const { isAuthenticated } = useMockAuth();
   const { saveRecipe, loading } = useRecipes();
-  
+
   const [recipe, setRecipe] = useState(initialRecipe || {
     name: '',
     description: '',
@@ -99,15 +99,15 @@ const RecipeBuilder = ({ recipe: initialRecipe, onSave, onCancel }) => {
   const moveResource = (index, direction) => {
     const newResources = [...recipe.resources];
     const targetIndex = direction === 'up' ? index - 1 : index + 1;
-    
+
     if (targetIndex >= 0 && targetIndex < newResources.length) {
       [newResources[index], newResources[targetIndex]] = [newResources[targetIndex], newResources[index]];
-      
+
       // Update load_order
       newResources.forEach((resource, i) => {
         resource.load_order = i + 1;
       });
-      
+
       setRecipe(prev => ({ ...prev, resources: newResources }));
     }
   };
@@ -193,8 +193,8 @@ const RecipeBuilder = ({ recipe: initialRecipe, onSave, onCancel }) => {
           <button onClick={onCancel} className="btn-secondary">
             Cancel
           </button>
-          <button 
-            onClick={handleSave} 
+          <button
+            onClick={handleSave}
             disabled={loading}
             className="btn-primary"
           >
@@ -204,25 +204,25 @@ const RecipeBuilder = ({ recipe: initialRecipe, onSave, onCancel }) => {
       </div>
 
       <div className="recipe-builder-tabs">
-        <button 
+        <button
           className={activeTab === 'basic' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveTab('basic')}
         >
           Basic Info
         </button>
-        <button 
+        <button
           className={activeTab === 'resources' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveTab('resources')}
         >
           Resources ({recipe.resources.length})
         </button>
-        <button 
+        <button
           className={activeTab === 'config' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveTab('config')}
         >
           Configuration
         </button>
-        <button 
+        <button
           className={activeTab === 'preview' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveTab('preview')}
         >
@@ -232,7 +232,7 @@ const RecipeBuilder = ({ recipe: initialRecipe, onSave, onCancel }) => {
 
       <div className="recipe-builder-content">
         {activeTab === 'basic' && (
-          <BasicInfoTab 
+          <BasicInfoTab
             recipe={recipe}
             errors={errors}
             onInputChange={handleInputChange}
@@ -368,7 +368,7 @@ const BasicInfoTab = ({ recipe, errors, onInputChange, onAddTag, onRemoveTag }) 
             {recipe.tags.map(tag => (
               <span key={tag} className="tag">
                 {tag}
-                <button 
+                <button
                   type="button"
                   onClick={() => onRemoveTag(tag)}
                   className="tag-remove"
@@ -386,7 +386,7 @@ const BasicInfoTab = ({ recipe, errors, onInputChange, onAddTag, onRemoveTag }) 
               onKeyPress={handleKeyPress}
               placeholder="Add a tag..."
             />
-            <button 
+            <button
               type="button"
               onClick={handleAddTag}
               className="btn-small"
@@ -400,7 +400,7 @@ const BasicInfoTab = ({ recipe, errors, onInputChange, onAddTag, onRemoveTag }) 
   );
 };
 
-// Resources Tab Component  
+// Resources Tab Component
 const ResourcesTab = ({ resources, errors, onAddResource, onUpdateResource, onRemoveResource, onMoveResource }) => {
   return (
     <div className="resources-tab">
@@ -458,9 +458,9 @@ const ResourceEditor = ({ resource, index, errors, onUpdate, onRemove, onMove, c
           />
           {resource.required && <span className="required-badge">Required</span>}
         </div>
-        
+
         <div className="resource-controls">
-          <button 
+          <button
             onClick={() => onMove(index, 'up')}
             disabled={!canMoveUp}
             className="btn-icon"
@@ -468,7 +468,7 @@ const ResourceEditor = ({ resource, index, errors, onUpdate, onRemove, onMove, c
           >
             ↑
           </button>
-          <button 
+          <button
             onClick={() => onMove(index, 'down')}
             disabled={!canMoveDown}
             className="btn-icon"
@@ -476,14 +476,14 @@ const ResourceEditor = ({ resource, index, errors, onUpdate, onRemove, onMove, c
           >
             ↓
           </button>
-          <button 
+          <button
             onClick={() => setCollapsed(!collapsed)}
             className="btn-icon"
             title={collapsed ? 'Expand' : 'Collapse'}
           >
             {collapsed ? '▼' : '▲'}
           </button>
-          <button 
+          <button
             onClick={() => onRemove(index)}
             className="btn-icon danger"
             title="Remove"
@@ -565,7 +565,7 @@ const ConfigurationTab = ({ recipe, onNestedChange, onFrameworkConfigChange }) =
     <div className="configuration-tab">
       <div className="config-section">
         <h3>Server Configuration</h3>
-        
+
         <div className="form-group">
           <label>Maximum Players</label>
           <input
@@ -580,16 +580,16 @@ const ConfigurationTab = ({ recipe, onNestedChange, onFrameworkConfigChange }) =
 
       <div className="config-section">
         <h3>{recipe.framework.toUpperCase()} Framework Configuration</h3>
-        
+
         {recipe.framework === 'esx' && (
-          <ESXConfigSection 
+          <ESXConfigSection
             config={recipe.server_config.framework_config}
             onChange={onFrameworkConfigChange}
           />
         )}
 
         {recipe.framework === 'qbcore' && (
-          <QBConfigSection 
+          <QBConfigSection
             config={recipe.server_config.framework_config}
             onChange={onFrameworkConfigChange}
           />
@@ -604,7 +604,7 @@ const ConfigurationTab = ({ recipe, onNestedChange, onFrameworkConfigChange }) =
 
       <div className="config-section">
         <h3>Database Configuration</h3>
-        
+
         <div className="form-group">
           <label>Database Type</label>
           <select
@@ -703,7 +703,7 @@ const QBConfigSection = ({ config, onChange }) => {
 // Preview Tab Component
 const PreviewTab = ({ recipe }) => {
   const { generateYAML } = useRecipes();
-  
+
   const handleDownload = () => {
     const config = generateYAML(recipe);
     const blob = new Blob([config], { type: 'text/plain' });

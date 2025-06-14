@@ -270,12 +270,12 @@ export const RecipeProvider = ({ children }) => {
 
     // Get current likes from localStorage
     const likedRecipes = JSON.parse(localStorage.getItem(`likedRecipes_${user.id}`) || '[]');
-    
+
     if (likedRecipes.includes(recipeId)) {
       // Already liked, remove like
       const newLikes = likedRecipes.filter(id => id !== recipeId);
       localStorage.setItem(`likedRecipes_${user.id}`, JSON.stringify(newLikes));
-      
+
       setRecipes(prev =>
         prev.map(recipe =>
           recipe.id === recipeId
@@ -287,7 +287,7 @@ export const RecipeProvider = ({ children }) => {
       // Add like
       likedRecipes.push(recipeId);
       localStorage.setItem(`likedRecipes_${user.id}`, JSON.stringify(likedRecipes));
-      
+
       setRecipes(prev =>
         prev.map(recipe =>
           recipe.id === recipeId

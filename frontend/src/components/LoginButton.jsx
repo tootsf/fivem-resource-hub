@@ -12,19 +12,19 @@ const LoginButton = () => {
   if (user) {
     return (
       <div className="user-menu">
-        <button 
+        <button
           className="user-profile-btn"
           onClick={() => setShowDropdown(!showDropdown)}
         >
-          <img 
-            src={user.avatar_url} 
-            alt={user.username} 
-            className="user-avatar" 
+          <img
+            src={user.avatar_url}
+            alt={user.username}
+            className="user-avatar"
           />
           <span className="user-name">{user.display_name || user.username}</span>
           <span className="dropdown-arrow">▼</span>
         </button>
-        
+
         {showDropdown && (
           <div className="user-dropdown">
             <div className="dropdown-header">
@@ -34,26 +34,26 @@ const LoginButton = () => {
                 <div className="dropdown-username">@{user.username}</div>
               </div>
             </div>
-            
+
             <div className="dropdown-divider"></div>
-            
+
             <a href="/dashboard" className="dropdown-item">
               <span className="dropdown-icon">📊</span>
               Dashboard
             </a>
-            
+
             <a href="/profile" className="dropdown-item">
               <span className="dropdown-icon">👤</span>
               Profile
             </a>
-            
+
             <a href="/my-recipes" className="dropdown-item">
               <span className="dropdown-icon">📋</span>
               My Recipes
             </a>
-            
+
             <div className="dropdown-divider"></div>
-            
+
             <button onClick={logout} className="dropdown-item logout-btn">
               <span className="dropdown-icon">🚪</span>
               Logout

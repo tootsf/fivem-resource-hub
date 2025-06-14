@@ -99,7 +99,7 @@ export const MockAuthProvider = ({ children }) => {
 
     setUser(updatedUser);
     localStorage.setItem('mockUser', JSON.stringify(updatedUser));
-    
+
     return { success: true };
   };
 

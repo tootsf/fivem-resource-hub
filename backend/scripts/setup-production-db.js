@@ -5,7 +5,7 @@ const path = require('path');
 // Database setup for Railway deployment
 async function setupProductionDatabase() {
   console.log('🚀 Setting up FiveM Resource Hub Database...');
-  
+
   // Use Railway's DATABASE_URL
   const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -27,7 +27,7 @@ async function setupProductionDatabase() {
 
 async function createTables(pool) {
   console.log('📊 Creating database tables...');
-  
+
   // Resources table (for your 240 FiveM resources)
   await pool.query(`
     CREATE TABLE IF NOT EXISTS resources (
@@ -96,7 +96,7 @@ async function createTables(pool) {
 
 async function seedResourceData(pool) {
   console.log('📦 Importing FiveM resource data...');
-  
+
   // Check if resources already exist
   const existingCount = await pool.query('SELECT COUNT(*) FROM resources');
   if (parseInt(existingCount.rows[0].count) > 0) {
@@ -121,7 +121,7 @@ async function seedResourceData(pool) {
     try {
       await pool.query(`
         INSERT INTO resources (
-          name, description, github_url, language, stars, rank, 
+          name, description, github_url, language, stars, rank,
           players, servers, rank_change, category, framework
         ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
         ON CONFLICT (github_url) DO NOTHING
@@ -143,13 +143,13 @@ async function seedResourceData(pool) {
       console.error(`Error importing resource ${entry.id}:`, error.message);
     }
   }
-  
+
   console.log(`✅ Imported ${imported} resources successfully!`);
 }
 
 async function createSampleData(pool) {
   console.log('🎲 Creating sample FiveM resources...');
-  
+
   const sampleResources = [
     {
       name: 'ESX Core',
@@ -185,7 +185,7 @@ async function createSampleData(pool) {
       ON CONFLICT (github_url) DO NOTHING
     `, [
       resource.name,
-      resource.description, 
+      resource.description,
       resource.github_url,
       resource.language,
       resource.category,

@@ -3039,56 +3039,56 @@ body {
     gap: 15px;
     align-items: stretch;
   }
-  
+
   .recipe-builder-tabs {
     overflow-x: auto;
     white-space: nowrap;
   }
-  
+
   .tab-btn {
     flex-shrink: 0;
   }
-  
+
   .gallery-filters {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .search-input {
     min-width: 100%;
   }
-  
+
   .featured-recipes {
     grid-template-columns: 1fr;
   }
-  
+
   .recipes-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .resource-details .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .basic-info-tab .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .resource-header {
     flex-direction: column;
     gap: 10px;
     align-items: stretch;
   }
-  
+
   .resource-info {
     justify-content: space-between;
   }
-  
+
   .recipe-controls {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .recipe-filters {
     flex-wrap: wrap;
   }

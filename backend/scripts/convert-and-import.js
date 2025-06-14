@@ -6,7 +6,7 @@ require('dotenv').config();
 // Convert pre-entries.json to SQL database
 async function convertAndInsertResources() {
   console.log('🔄 Converting pre-entries.json to SQL database...');
-  
+
   // Use Railway's DATABASE_URL or local development URL
   const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -20,10 +20,10 @@ async function convertAndInsertResources() {
       path.join(process.cwd(), 'data/pre-entries.json'),
       path.join(process.cwd(), '../data/pre-entries.json')
     ];
-    
+
     let dataPath = null;
     let preEntries = null;
-    
+
     console.log('📂 Searching for pre-entries.json...');
     for (const testPath of possiblePaths) {
       console.log(`   Checking: ${testPath}`);
@@ -33,7 +33,7 @@ async function convertAndInsertResources() {
         break;
       }
     }
-    
+
     if (!dataPath) {
       console.log('📂 pre-entries.json not found, creating sample data instead...');
       preEntries = createSampleData();
@@ -42,7 +42,7 @@ async function convertAndInsertResources() {
       const rawData = fs.readFileSync(dataPath, 'utf8');
       preEntries = JSON.parse(rawData);
     }
-    
+
     console.log(`📊 Found ${preEntries.length} resources to convert`);
 
     // Clear existing resources (optional - remove this if you want to keep existing data)
@@ -52,12 +52,12 @@ async function convertAndInsertResources() {
     // Convert and insert each resource
     let successCount = 0;
     let errorCount = 0;
-    
+
     console.log('🚀 Starting conversion and insertion...');
-    
+
     for (let i = 0; i < preEntries.length; i++) {
       const entry = preEntries[i];
-      
+
       try {
         // Extract data from pre-entry format
         const resourceData = {
@@ -78,7 +78,7 @@ async function convertAndInsertResources() {
         // Insert into database
         await pool.query(`
           INSERT INTO resources (
-            name, description, github_url, language, stars, rank, 
+            name, description, github_url, language, stars, rank,
             players, servers, rank_change, category, framework, tags
           ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
         `, [
@@ -97,16 +97,16 @@ async function convertAndInsertResources() {
         ]);
 
         successCount++;
-        
+
         // Progress indicator
         if (i % 1000 === 0) {
           console.log(`📈 Progress: ${i}/${preEntries.length} (${Math.round((i/preEntries.length)*100)}%)`);
         }
-        
+
       } catch (error) {
         errorCount++;
         console.error(`❌ Error inserting resource ${entry.resource_name}:`, error.message);
-        
+
         // Continue with next resource instead of stopping
         continue;
       }
@@ -132,7 +132,7 @@ async function convertAndInsertResources() {
 // Create sample data when pre-entries.json is not available
 function createSampleData() {
   console.log('🎲 Creating expanded sample FiveM resources...');
-  
+
   const sampleResources = [
     {
       resource_name: "esx_policejob",
@@ -165,7 +165,7 @@ function createSampleData() {
       resource_data: { name: "esx_vehicleshop", rank: 3, players: 1000, servers: 180, rankChange: -1 },
       github_repo: {
         repo_name: "esx-framework/esx_vehicleshop",
-        author: "ESX Framework", 
+        author: "ESX Framework",
         html_url: "https://github.com/esx-framework/esx_vehicleshop",
         description: "Vehicle dealership system for ESX servers",
         stars: 95,
@@ -179,7 +179,7 @@ function createSampleData() {
       github_repo: {
         repo_name: "qbcore-framework/qb-vehicleshop",
         author: "QBCore Framework",
-        html_url: "https://github.com/qbcore-framework/qb-vehicleshop", 
+        html_url: "https://github.com/qbcore-framework/qb-vehicleshop",
         description: "Modern vehicle shop with financing options for QBCore",
         stars: 80,
         language: "Lua",
@@ -221,7 +221,7 @@ function createSampleData() {
         html_url: "https://github.com/VORPCORE/vorp_inventory",
         description: "RedM inventory system for VORP framework",
         stars: 45,
-        language: "Lua", 
+        language: "Lua",
         tags: ["redm", "vorp", "inventory", "roleplay"]
       }
     },

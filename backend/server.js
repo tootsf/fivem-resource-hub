@@ -96,17 +96,17 @@ app.get('/api/resources', async (req, res) => {
 
     let query = 'SELECT * FROM resources';
     let params = [];
-    
+
     if (search) {
       query += ' WHERE name ILIKE $1 OR description ILIKE $1';
       params.push(`%${search}%`);
     }
-    
+
     query += ` ORDER BY stars DESC LIMIT $${params.length + 1} OFFSET $${params.length + 2}`;
     params.push(limit, offset);
 
     const result = await pool.query(query, params);
-    
+
     // Get total count
     let countQuery = 'SELECT COUNT(*) FROM resources';
     let countParams = [];
@@ -114,7 +114,7 @@ app.get('/api/resources', async (req, res) => {
       countQuery += ' WHERE name ILIKE $1 OR description ILIKE $1';
       countParams.push(`%${search}%`);
     }
-    
+
     const countResult = await pool.query(countQuery, countParams);
     const total = parseInt(countResult.rows[0].count);
 
@@ -179,11 +179,11 @@ app.get('/health', async (req, res) => {
   try {
     // Test basic database connection
     await pool.query('SELECT 1');
-    
+
     let resourceCount = 0;
     let userCount = 0;
     let tablesExist = true;
-    
+
     try {
       // Check if tables exist and count records
       const resourceResult = await pool.query('SELECT COUNT(*) FROM resources');
@@ -195,9 +195,9 @@ app.get('/health', async (req, res) => {
       tablesExist = false;
       console.log('Database tables not yet created:', tableError.message);
     }
-    
-    res.json({ 
-      status: 'healthy', 
+
+    res.json({
+      status: 'healthy',
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV,
       database: 'connected',
@@ -207,8 +207,8 @@ app.get('/health', async (req, res) => {
       setupRequired: !tablesExist
     });
   } catch (error) {
-    res.status(500).json({ 
-      status: 'unhealthy', 
+    res.status(500).json({
+      status: 'unhealthy',
       error: error.message,
       database: 'disconnected'
     });
@@ -219,16 +219,16 @@ app.get('/health', async (req, res) => {
 app.get('/setup-database', async (req, res) => {
   try {
     console.log('🚀 Starting database setup...');
-    
+
     // Import the setup function
     const { setupProductionDatabase } = require('./scripts/setup-production-db');
-    
+
     await setupProductionDatabase();
-    
+
     // Check results
     const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
     const userCount = await pool.query('SELECT COUNT(*) FROM users');
-    
+
     res.json({
       success: true,
       message: 'Database setup completed successfully!',
@@ -251,15 +251,15 @@ app.get('/setup-database', async (req, res) => {
 app.get('/convert-import', async (req, res) => {
   try {
     console.log('🔄 Starting pre-entries conversion...');
-    
+
     // Import the conversion function
     const { convertAndInsertResources } = require('./scripts/convert-and-import');
-    
+
     await convertAndInsertResources();
-    
+
     // Check results
     const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
-    
+
     res.json({
       success: true,
       message: 'Pre-entries conversion completed successfully!',
@@ -281,28 +281,28 @@ app.get('/convert-import', async (req, res) => {
 app.post('/upload-data', express.json({ limit: '10mb' }), async (req, res) => {
   try {
     console.log('📤 Receiving data upload...');
-    
+
     const { data, type = 'pre-entries' } = req.body;
-    
+
     if (!data || !Array.isArray(data)) {
       return res.status(400).json({
         success: false,
         error: 'Invalid data format. Expected array of resources.'
       });
     }
-    
+
     console.log(`📊 Processing ${data.length} resources from upload...`);
-    
+
     // Clear existing resources
     await pool.query('DELETE FROM resources');
-    
+
     // Convert and insert uploaded data
     let successCount = 0;
     let errorCount = 0;
-    
+
     for (let i = 0; i < data.length; i++) {
       const entry = data[i];
-      
+
       try {
         const resourceData = {
           name: entry.resource_name || `Resource ${i + 1}`,
@@ -321,7 +321,7 @@ app.post('/upload-data', express.json({ limit: '10mb' }), async (req, res) => {
 
         await pool.query(`
           INSERT INTO resources (
-            name, description, github_url, language, stars, rank, 
+            name, description, github_url, language, stars, rank,
             players, servers, rank_change, category, framework, tags
           ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
         `, [
@@ -337,9 +337,9 @@ app.post('/upload-data', express.json({ limit: '10mb' }), async (req, res) => {
         console.error(`Error inserting resource ${entry.resource_name}:`, error.message);
       }
     }
-    
+
     const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
-    
+
     res.json({
       success: true,
       message: 'Data upload completed successfully!',
@@ -348,7 +348,7 @@ app.post('/upload-data', express.json({ limit: '10mb' }), async (req, res) => {
       errors: errorCount,
       total_in_database: parseInt(resourceCount.rows[0].count)
     });
-    
+
   } catch (error) {
     console.error('Data upload failed:', error);
     res.status(500).json({

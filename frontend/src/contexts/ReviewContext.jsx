@@ -216,12 +216,12 @@ export const ReviewProvider = ({ children }) => {
 
     // Get current helpful votes from localStorage
     const helpfulVotes = JSON.parse(localStorage.getItem(`helpfulVotes_${user.id}`) || '[]');
-    
+
     if (helpfulVotes.includes(reviewId)) {
       // Already voted, remove vote
       const newVotes = helpfulVotes.filter(id => id !== reviewId);
       localStorage.setItem(`helpfulVotes_${user.id}`, JSON.stringify(newVotes));
-      
+
       setReviews(prev =>
         prev.map(review =>
           review.id === reviewId
@@ -233,7 +233,7 @@ export const ReviewProvider = ({ children }) => {
       // Add vote
       helpfulVotes.push(reviewId);
       localStorage.setItem(`helpfulVotes_${user.id}`, JSON.stringify(helpfulVotes));
-      
+
       setReviews(prev =>
         prev.map(review =>
           review.id === reviewId
@@ -287,7 +287,7 @@ export const ReviewProvider = ({ children }) => {
   };
 
   const hasUserReviewed = (resourceUrl, userId = user?.id) => {
-    return reviews.some(review => 
+    return reviews.some(review =>
       review.resource_url === resourceUrl && review.user_id === userId
     );
   };
@@ -300,12 +300,12 @@ export const ReviewProvider = ({ children }) => {
   const getReviewStats = () => {
     const userReviews = getUserReviews();
     const totalHelpful = userReviews.reduce((sum, review) => sum + review.helpful_count, 0);
-    
+
     return {
       total: userReviews.length,
       totalHelpful,
-      averageRating: userReviews.length > 0 
-        ? userReviews.reduce((sum, review) => sum + review.rating, 0) / userReviews.length 
+      averageRating: userReviews.length > 0
+        ? userReviews.reduce((sum, review) => sum + review.rating, 0) / userReviews.length
         : 0
     };
   };

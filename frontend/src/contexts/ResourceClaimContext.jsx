@@ -93,7 +93,7 @@ export const ResourceClaimProvider = ({ children }) => {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
 
-      setClaimedResources(prev => 
+      setClaimedResources(prev =>
         prev.filter(r => r.github_url !== resourceUrl)
       );
 
@@ -118,8 +118,8 @@ export const ResourceClaimProvider = ({ children }) => {
       await new Promise(resolve => setTimeout(resolve, 600));
 
       setClaimedResources(prev =>
-        prev.map(r => 
-          r.github_url === resourceUrl 
+        prev.map(r =>
+          r.github_url === resourceUrl
             ? { ...r, ...updates, updated_at: new Date().toISOString() }
             : r
         )
@@ -139,7 +139,7 @@ export const ResourceClaimProvider = ({ children }) => {
   };
 
   const isResourceClaimedByUser = (resourceUrl, userId = user?.id) => {
-    return claimedResources.some(r => 
+    return claimedResources.some(r =>
       r.github_url === resourceUrl && r.claimed_by === userId
     );
   };

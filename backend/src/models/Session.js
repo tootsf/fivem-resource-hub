@@ -14,7 +14,7 @@ class Session {
     } = sessionData;
 
     const session_token = this.generateToken();
-    
+
     // Encrypt the GitHub access token before storing
     const encrypted_token = this.encrypt(github_access_token);
 
@@ -29,7 +29,7 @@ class Session {
 
   static async findByToken(token) {
     const result = await query(`
-      SELECT s.*, u.* 
+      SELECT s.*, u.*
       FROM user_sessions s
       JOIN users u ON s.user_id = u.id
       WHERE s.session_token = $1 AND s.expires_at > CURRENT_TIMESTAMP AND u.is_active = true
@@ -74,7 +74,7 @@ class Session {
       'SELECT github_access_token FROM user_sessions WHERE user_id = $1 AND expires_at > CURRENT_TIMESTAMP ORDER BY created_at DESC LIMIT 1',
       [userId]
     );
-    
+
     if (result.rows[0]?.github_access_token) {
       return this.decrypt(result.rows[0].github_access_token);
     }
@@ -86,17 +86,17 @@ class Session {
     if (!process.env.ENCRYPTION_KEY) {
       throw new Error('ENCRYPTION_KEY environment variable is required');
     }
-    
+
     const algorithm = 'aes-256-gcm';
     const key = Buffer.from(process.env.ENCRYPTION_KEY, 'hex');
     const iv = crypto.randomBytes(16);
-    
+
     const cipher = crypto.createCipher(algorithm, key);
     let encrypted = cipher.update(text, 'utf8', 'hex');
     encrypted += cipher.final('hex');
-    
+
     const authTag = cipher.getAuthTag();
-    
+
     return iv.toString('hex') + ':' + authTag.toString('hex') + ':' + encrypted;
   }
 
@@ -107,18 +107,18 @@ class Session {
 
     const algorithm = 'aes-256-gcm';
     const key = Buffer.from(process.env.ENCRYPTION_KEY, 'hex');
-    
+
     const parts = encryptedData.split(':');
     const iv = Buffer.from(parts[0], 'hex');
     const authTag = Buffer.from(parts[1], 'hex');
     const encrypted = parts[2];
-    
+
     const decipher = crypto.createDecipher(algorithm, key);
     decipher.setAuthTag(authTag);
-    
+
     let decrypted = decipher.update(encrypted, 'hex', 'utf8');
     decrypted += decipher.final('utf8');
-    
+
     return decrypted;
   }
 }

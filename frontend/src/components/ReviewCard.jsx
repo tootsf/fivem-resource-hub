@@ -53,7 +53,7 @@ const ReviewCard = ({ review }) => {
   };
 
   const shouldTruncate = review.content.length > 300;
-  const displayContent = shouldTruncate && !showFullContent 
+  const displayContent = shouldTruncate && !showFullContent
     ? review.content.slice(0, 300) + '...'
     : review.content;
 
@@ -61,9 +61,9 @@ const ReviewCard = ({ review }) => {
     <div className="review-card">
       <div className="review-header">
         <div className="reviewer-info">
-          <img 
-            src={review.avatar_url} 
-            alt={review.display_name} 
+          <img
+            src={review.avatar_url}
+            alt={review.display_name}
             className="reviewer-avatar"
           />
           <div className="reviewer-details">
@@ -81,11 +81,11 @@ const ReviewCard = ({ review }) => {
 
       <div className="review-content">
         <h4 className="review-title">{review.title}</h4>
-        
+
         <div className="review-text">
           <p>{displayContent}</p>
           {shouldTruncate && (
-            <button 
+            <button
               className="read-more-btn"
               onClick={() => setShowFullContent(!showFullContent)}
             >
@@ -107,7 +107,7 @@ const ReviewCard = ({ review }) => {
                 </ul>
               </div>
             )}
-            
+
             {review.cons?.length > 0 && (
               <div className="cons">
                 <h5>👎 Cons</h5>
@@ -162,7 +162,7 @@ const ReviewCard = ({ review }) => {
       </div>
 
       <div className="review-actions">
-        <button 
+        <button
           className={`helpful-btn ${hasVotedHelpful ? 'voted' : ''}`}
           onClick={handleHelpful}
           disabled={isOwnReview}
@@ -171,7 +171,7 @@ const ReviewCard = ({ review }) => {
         </button>
 
         {!isOwnReview && (
-          <button 
+          <button
             className="report-btn"
             onClick={() => setShowReportModal(true)}
           >
@@ -180,7 +180,7 @@ const ReviewCard = ({ review }) => {
         )}
 
         {isOwnReview && (
-          <button 
+          <button
             className="delete-btn"
             onClick={handleDelete}
           >
@@ -201,36 +201,36 @@ const ReviewCard = ({ review }) => {
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Report Review</h3>
-              <button 
+              <button
                 className="modal-close"
                 onClick={() => setShowReportModal(false)}
               >
                 ×
               </button>
             </div>
-            
+
             <div className="modal-body">
               <p>Why are you reporting this review?</p>
               <div className="report-reasons">
-                <button 
+                <button
                   className="report-reason"
                   onClick={() => handleReport('spam')}
                 >
                   Spam or fake review
                 </button>
-                <button 
+                <button
                   className="report-reason"
                   onClick={() => handleReport('inappropriate')}
                 >
                   Inappropriate content
                 </button>
-                <button 
+                <button
                   className="report-reason"
                   onClick={() => handleReport('misleading')}
                 >
                   Misleading information
                 </button>
-                <button 
+                <button
                   className="report-reason"
                   onClick={() => handleReport('other')}
                 >
