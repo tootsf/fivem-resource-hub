@@ -200,24 +200,34 @@ app.get('/health', async (req, res) => {
   }
 });
 
-// Setup database endpoint (for production deployment)
-app.post('/setup-database', async (req, res) => {
+// Database setup endpoint for production deployment
+app.get('/setup-database', async (req, res) => {
   try {
     console.log('🚀 Starting database setup...');
+    
+    // Import the setup function
     const { setupProductionDatabase } = require('./scripts/setup-production-db');
+    
     await setupProductionDatabase();
     
+    // Check results
+    const resourceCount = await pool.query('SELECT COUNT(*) FROM resources');
+    const userCount = await pool.query('SELECT COUNT(*) FROM users');
+    
     res.json({
-      status: 'success',
-      message: 'Database setup completed successfully',
-      timestamp: new Date().toISOString()
+      success: true,
+      message: 'Database setup completed successfully!',
+      timestamp: new Date().toISOString(),
+      tables_created: ['resources', 'users', 'reviews'],
+      resources_imported: parseInt(resourceCount.rows[0].count),
+      users_created: parseInt(userCount.rows[0].count)
     });
   } catch (error) {
     console.error('Database setup failed:', error);
     res.status(500).json({
-      status: 'error',
-      message: 'Database setup failed',
-      error: error.message
+      success: false,
+      error: error.message,
+      message: 'Database setup failed. Check logs for details.'
     });
   }
 });
