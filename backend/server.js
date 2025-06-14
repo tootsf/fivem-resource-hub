@@ -42,9 +42,9 @@ const authLimiter = rateLimit({
   message: 'Too many authentication attempts, please try again later.'
 });
 
-// CORS configuration
+// CORS configuration - temporarily allow all origins for debugging
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: true, // Allow all origins temporarily
   credentials: true,
   optionsSuccessStatus: 200
 }));
@@ -144,19 +144,19 @@ app.get('/search', async (req, res) => {
     let query = 'SELECT * FROM resources';
     let countQuery = 'SELECT COUNT(*) FROM resources';
     let params = [];
-    
+
     if (q) {
       query += ` WHERE name ILIKE $1 OR description ILIKE $1 OR language ILIKE $1`;
       countQuery += ` WHERE name ILIKE $1 OR description ILIKE $1 OR language ILIKE $1`;
       params = [`%${q}%`];
     }
-    
+
     query += ` ORDER BY rank ASC LIMIT ${pageSize} OFFSET ${offset}`;
 
     // Get total count for pagination
     const countResult = await pool.query(countQuery, params);
     const totalMatches = parseInt(countResult.rows[0].count);
-    
+
     // Get results
     const result = await pool.query(query, params);
     const results = result.rows;
