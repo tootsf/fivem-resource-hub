@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { API_CONFIG } from './config/api';
-import { MockAuthProvider, useMockAuth } from './contexts/MockAuthContext';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ResourceClaimProvider } from './contexts/ResourceClaimContext';
 import { ReviewProvider, useReviews } from './contexts/ReviewContext';
 import { RecipeProvider } from './contexts/RecipeContext';
-import MockLoginButton from './components/MockLoginButton';
+import LoginButton from './components/LoginButton';
 import Dashboard from './components/Dashboard';
 import MyResourcesDashboard from './components/MyResourcesDashboard';
 import MyReviewsDashboard from './components/MyReviewsDashboard';
@@ -35,7 +35,7 @@ function AppContent() {
   const [selectedResource, setSelectedResource] = useState(null); // For detailed view
   const [editingRecipe, setEditingRecipe] = useState(null); // For recipe editing
 
-  const { user, isAuthenticated } = useMockAuth();
+  const { user, isAuthenticated } = useAuth();
   const { getResourceRating } = useReviews();
 
   // Check URL for dashboard redirect after login
@@ -282,7 +282,7 @@ function AppContent() {
             <p>Discover, review, and organize FiveM resources</p>
           </div>
             <div className="header-right">
-            <MockLoginButton />
+            <LoginButton />
           </div>
         </div>
 
@@ -391,7 +391,7 @@ function AppContent() {
 
 function App() {
   return (
-    <MockAuthProvider>
+    <AuthProvider>
       <ResourceClaimProvider>
         <ReviewProvider>
           <RecipeProvider>
@@ -399,7 +399,7 @@ function App() {
           </RecipeProvider>
         </ReviewProvider>
       </ResourceClaimProvider>
-    </MockAuthProvider>
+    </AuthProvider>
   );
 }
 
