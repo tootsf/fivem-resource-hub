@@ -1,9 +1,8 @@
 const { query } = require('../database');
 
-class User {
-  static async findByGithubId(githubId) {
+class User {  static async findByGithubId(githubId) {
     const result = await query(
-      'SELECT * FROM users WHERE github_id = $1 AND is_active = true',
+      'SELECT * FROM users WHERE github_id = $1',
       [githubId]
     );
     return result.rows[0] || null;
@@ -11,7 +10,7 @@ class User {
 
   static async findById(id) {
     const result = await query(
-      'SELECT * FROM users WHERE id = $1 AND is_active = true',
+      'SELECT * FROM users WHERE id = $1',
       [id]
     );
     return result.rows[0] || null;
@@ -19,7 +18,7 @@ class User {
 
   static async findByUsername(username) {
     const result = await query(
-      'SELECT * FROM users WHERE username = $1 AND is_active = true',
+      'SELECT * FROM users WHERE username = $1',
       [username]
     );
     return result.rows[0] || null;
@@ -53,13 +52,11 @@ class User {
       avatar_url,
       github_url,
       bio
-    } = userData;
-
-    const result = await query(`
+    } = userData;    const result = await query(`
       UPDATE users
       SET username = $2, display_name = $3, email = $4, avatar_url = $5,
           github_url = $6, bio = $7, updated_at = CURRENT_TIMESTAMP
-      WHERE id = $1 AND is_active = true
+      WHERE id = $1
       RETURNING *
     `, [id, username, display_name, email, avatar_url, github_url, bio]);
 
@@ -67,25 +64,14 @@ class User {
   }
 
   static async updateProfile(id, profileData) {
-    const { display_name, bio } = profileData;
-
-    const result = await query(`
+    const { display_name, bio } = profileData;    const result = await query(`
       UPDATE users
       SET display_name = $2, bio = $3, updated_at = CURRENT_TIMESTAMP
-      WHERE id = $1 AND is_active = true
+      WHERE id = $1
       RETURNING *
     `, [id, display_name, bio]);
 
-    return result.rows[0] || null;
-  }
-
-  static async deactivate(id) {
-    const result = await query(
-      'UPDATE users SET is_active = false WHERE id = $1 RETURNING *',
-      [id]
-    );
-    return result.rows[0] || null;
-  }
+    return result.rows[0] || null;  }
 
   static async getProfile(userId) {
     const result = await query(`
@@ -95,8 +81,7 @@ class User {
         COUNT(DISTINCT rec.id) as recipes_count
       FROM users u
       LEFT JOIN resources r ON r.claimed_by = u.id
-      LEFT JOIN recipes rec ON rec.user_id = u.id
-      WHERE u.id = $1 AND u.is_active = true
+      LEFT JOIN recipes rec ON rec.user_id = u.id      WHERE u.id = $1
       GROUP BY u.id
     `, [userId]);
 
@@ -117,8 +102,7 @@ class User {
         COUNT(DISTINCT rec.id) as public_recipes_count
       FROM users u
       LEFT JOIN resources r ON r.claimed_by = u.id
-      LEFT JOIN recipes rec ON rec.user_id = u.id AND rec.is_public = true
-      WHERE u.username = $1 AND u.is_active = true
+      LEFT JOIN recipes rec ON rec.user_id = u.id AND rec.is_public = true      WHERE u.username = $1
       GROUP BY u.id
     `, [username]);
 
