@@ -23,7 +23,6 @@ class User {  static async findByGithubId(githubId) {
     );
     return result.rows[0] || null;
   }
-
   static async create(userData) {
     const {
       github_id,
@@ -31,34 +30,33 @@ class User {  static async findByGithubId(githubId) {
       display_name,
       email,
       avatar_url,
-      github_url,
       bio
     } = userData;
 
     const result = await query(`
-      INSERT INTO users (github_id, username, display_name, email, avatar_url, github_url, bio)
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      INSERT INTO users (github_id, username, display_name, email, avatar_url, bio)
+      VALUES ($1, $2, $3, $4, $5, $6)
       RETURNING *
-    `, [github_id, username, display_name, email, avatar_url, github_url, bio]);
+    `, [github_id, username, display_name, email, avatar_url, bio]);
 
     return result.rows[0];
   }
 
-  static async update(id, userData) {
-    const {
+  static async update(id, userData) {    const {
       username,
       display_name,
       email,
       avatar_url,
-      github_url,
       bio
-    } = userData;    const result = await query(`
+    } = userData;
+
+    const result = await query(`
       UPDATE users
       SET username = $2, display_name = $3, email = $4, avatar_url = $5,
-          github_url = $6, bio = $7, updated_at = CURRENT_TIMESTAMP
+          bio = $6, updated_at = CURRENT_TIMESTAMP
       WHERE id = $1
       RETURNING *
-    `, [id, username, display_name, email, avatar_url, github_url, bio]);
+    `, [id, username, display_name, email, avatar_url, bio]);
 
     return result.rows[0] || null;
   }
