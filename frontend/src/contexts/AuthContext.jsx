@@ -24,11 +24,18 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     checkAuthStatus();
   }, []);
-
   const checkAuthStatus = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('/auth/me');
+      
+      // Get token from localStorage as fallback for cross-domain cookies
+      const token = localStorage.getItem('auth_token');
+      const headers = {};
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
+      
+      const response = await axios.get('/auth/me', { headers });
 
       if (response.data.success) {
         setUser(response.data.data.user);
@@ -45,15 +52,18 @@ export const AuthProvider = ({ children }) => {
   const login = () => {
     window.location.href = `${API_CONFIG.BASE_URL}/auth/github`;
   };
-
   const logout = async () => {
     try {
       await axios.post('/auth/logout');
       setUser(null);
       setError(null);
+      // Clear token from localStorage
+      localStorage.removeItem('auth_token');
     } catch (error) {
       console.error('Logout error:', error);
       setError('Failed to logout');
+      // Clear token even if logout request fails
+      localStorage.removeItem('auth_token');
     }
   };
 

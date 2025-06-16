@@ -37,11 +37,15 @@ function AppContent() {
 
   const { user, isAuthenticated } = useAuth();
   const { getResourceRating } = useReviews();
-
   // Check URL for dashboard redirect after login
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('login') === 'success') {
+      const token = urlParams.get('token');
+      if (token) {
+        // Store token in localStorage as fallback for cross-domain cookies
+        localStorage.setItem('auth_token', token);
+      }
       setCurrentView('dashboard');
       // Clean up URL
       window.history.replaceState({}, document.title, window.location.pathname);

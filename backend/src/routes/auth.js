@@ -103,19 +103,17 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
           },
           process.env.JWT_SECRET,
           { expiresIn: '30d' }
-        );
-
-        // Set HTTP-only cookie
+        );        // Set HTTP-only cookie (might not work cross-domain)
         res.cookie('auth_token', token, {
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production',
-          sameSite: 'lax',
+          sameSite: 'none', // Allow cross-site cookies
           maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
           path: '/'
         });
 
-        // Redirect to frontend dashboard
-        const redirectUrl = `${process.env.FRONTEND_URL}/dashboard?login=success`;
+        // Redirect to frontend dashboard with token in URL (fallback)
+        const redirectUrl = `${process.env.FRONTEND_URL}/dashboard?login=success&token=${token}`;
         console.log('Redirecting to:', redirectUrl);
         res.redirect(redirectUrl);
       } catch (error) {
