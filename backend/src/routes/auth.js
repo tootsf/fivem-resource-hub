@@ -38,15 +38,19 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
       // Create new user
       user = await User.create(userData);
       console.log('Created new user:', user.username);
-    }
-
-    // Create or update session with GitHub access token
+    }    // Create or update session with GitHub access token
     const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
-    await Session.create({
-      user_id: user.id,
-      github_access_token: accessToken,
-      expires_at: expiresAt
-    });
+    try {
+      await Session.create({
+        user_id: user.id,
+        github_access_token: accessToken,
+        expires_at: expiresAt
+      });
+      console.log('Session created successfully for user:', user.username);
+    } catch (sessionError) {
+      console.error('Session creation failed (but continuing):', sessionError);
+      // Continue without session - the JWT token will handle auth
+    }
 
     return done(null, user);
   } catch (error) {
