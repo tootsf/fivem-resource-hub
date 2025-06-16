@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_CONFIG } from '../config/api';
 
 const AuthContext = createContext();
 
@@ -11,8 +12,8 @@ export const useAuth = () => {
   return context;
 };
 
-// Configure axios defaults
-axios.defaults.baseURL = 'http://localhost:3001';
+// Configure axios defaults to use the correct API URL
+axios.defaults.baseURL = API_CONFIG.BASE_URL;
 axios.defaults.withCredentials = true;
 
 export const AuthProvider = ({ children }) => {
@@ -41,9 +42,8 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
   const login = () => {
-    window.location.href = 'http://localhost:3001/auth/github';
+    window.location.href = `${API_CONFIG.BASE_URL}/auth/github`;
   };
 
   const logout = async () => {
