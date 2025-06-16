@@ -1,5 +1,4 @@
 const { query } = require('../database');
-const axios = require('axios');
 
 class Resource {
   static async findById(id) {
