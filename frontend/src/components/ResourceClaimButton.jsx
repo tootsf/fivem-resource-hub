@@ -29,7 +29,7 @@ const ResourceClaimButton = ({ resource }) => {
 
   // Check if user owns this repository
   const repoOwner = getGitHubOwner(resource.github_url);
-  const isOwner = isAuthenticated && user && repoOwner && 
+  const isOwner = isAuthenticated && user && repoOwner &&
                  repoOwner.toLowerCase() === user.username.toLowerCase();
 
   useEffect(() => {
@@ -158,7 +158,7 @@ const ResourceClaimButton = ({ resource }) => {
                   ✅ <strong>Ownership Verified:</strong> You are the owner of this GitHub repository.
                 </p>
               </div>
-              
+
               <div className="resource-preview">
                 <h4>{resource.name}</h4>
                 <p>{resource.description}</p>

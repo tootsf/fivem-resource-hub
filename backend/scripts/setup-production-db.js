@@ -56,7 +56,7 @@ async function createTables(pool) {
 
   // Add claimed_by column if it doesn't exist (for existing databases)
   await pool.query(`
-    ALTER TABLE resources 
+    ALTER TABLE resources
     ADD COLUMN IF NOT EXISTS claimed_by INTEGER REFERENCES users(id) ON DELETE SET NULL;
   `);
 

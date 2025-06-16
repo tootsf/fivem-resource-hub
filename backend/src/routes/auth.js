@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Session = require('../models/Session');
 const { authenticateUser } = require('../middleware/auth');
+const { query } = require('../database');
 
 const router = express.Router();
 
@@ -80,11 +81,17 @@ passport.deserializeUser(async (id, done) => {
 
 // GitHub OAuth routes - only if configured
 if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
-  // Start GitHub OAuth flow
+  // Start GitHub OAuth flow with minimal permissions
+  // Scopes explained:
+  // - read:user: Access to public profile information (username, display name, avatar)
+  // We DO NOT request:
+  // - user:email: Private email access (not needed)
+  // - public_repo: Repository write access (not needed - we only check ownership via URL)
+  // - repo: Private repository access (not needed)
   router.get('/github', (req, res, next) => {
-    console.log('Starting GitHub OAuth flow');
+    console.log('Starting GitHub OAuth flow with minimal permissions');
     passport.authenticate('github', {
-      scope: ['user:email', 'public_repo', 'read:user']
+      scope: ['read:user']  // Only read public profile information
     })(req, res, next);
   });
 
@@ -237,6 +244,44 @@ router.post('/logout', authenticateUser, async (req, res) => {
     res.status(500).json({
       success: false,
       error: 'Logout failed'
+    });
+  }
+});
+
+// Delete user account (authenticated users only)
+router.delete('/account', authenticateUser, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    console.log('Deleting account for user:', req.user.username);
+
+    // Delete user's claimed resources (unclaim them)
+    await query('UPDATE resources SET claimed_by = NULL WHERE claimed_by = $1', [userId]);
+    
+    // Delete user's sessions
+    await Session.deleteByUserId(userId);
+    
+    // Delete the user account
+    await User.delete(userId);
+
+    // Clear the authentication cookie
+    res.clearCookie('auth_token', {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'none',
+      path: '/'
+    });
+
+    console.log('Account deleted successfully for user:', req.user.username);
+
+    res.json({
+      success: true,
+      message: 'Account deleted successfully'
+    });
+  } catch (error) {
+    console.error('Delete account error:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to delete account'
     });
   }
 });

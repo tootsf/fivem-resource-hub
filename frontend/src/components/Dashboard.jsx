@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useResourceClaims } from '../contexts/ResourceClaimContext';
 import { useReviews } from '../contexts/ReviewContext';
 import { useRecipes } from '../contexts/RecipeContext';
 
 const Dashboard = () => {
-  const { user, loading } = useAuth();
+  const { user, loading, logout, deleteAccount } = useAuth();
+  const [isDeleting, setIsDeleting] = useState(false);
   const { getUserClaimedResources, getClaimStats } = useResourceClaims();
   const { getReviewStats } = useReviews();
   const { getUserRecipes } = useRecipes();
@@ -34,6 +35,20 @@ const Dashboard = () => {
     totalHelpfulVotes: reviewStats.totalHelpful,
     totalRecipeDownloads: userRecipes.reduce((sum, recipe) => sum + recipe.download_count, 0),
     totalRecipeLikes: userRecipes.reduce((sum, recipe) => sum + recipe.like_count, 0)
+  };
+
+  const handleDeleteAccount = async () => {
+    setIsDeleting(true);
+    try {
+      const result = await deleteAccount();
+      if (!result.success && !result.cancelled) {
+        alert('Failed to delete account: ' + (result.error || 'Unknown error'));
+      }
+    } catch (error) {
+      alert('Error deleting account: ' + error.message);
+    } finally {
+      setIsDeleting(false);
+    }
   };
 
   return (
@@ -145,9 +160,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="dashboard-actions">
+      </div>      <div className="dashboard-actions">
         <a href="/browse" className="action-btn primary">
           Browse Resources
         </a>
@@ -157,6 +170,46 @@ const Dashboard = () => {
         <a href="/profile" className="action-btn tertiary">
           Edit Profile
         </a>
+      </div>
+
+      <div className="dashboard-card profile-management">
+        <div className="card-header">
+          <h3>Account Management</h3>
+        </div>
+        <div className="profile-section">
+          <div className="user-info">
+            <img src={user.avatar_url} alt="Avatar" className="user-avatar" />
+            <div>
+              <h4>{user.display_name || user.username}</h4>
+              <p>@{user.username}</p>
+              <p>Member since {new Date(user.created_at).toLocaleDateString()}</p>
+            </div>
+          </div>
+          
+          <div className="account-actions">
+            <button 
+              className="action-btn secondary"
+              onClick={logout}
+              title="Sign out and refresh the page"
+            >
+              🚪 Logout
+            </button>
+            
+            <button 
+              className="action-btn danger"
+              onClick={handleDeleteAccount}
+              disabled={isDeleting}
+              title="Permanently delete your account (for testing OAuth permissions)"
+            >
+              {isDeleting ? '🗑️ Deleting...' : '🗑️ Delete Account'}
+            </button>
+          </div>
+          
+          <div className="account-note">
+            <p><strong>Note:</strong> Delete account is useful for testing GitHub OAuth permissions. 
+            After deletion, you can sign in again to see the permission request.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

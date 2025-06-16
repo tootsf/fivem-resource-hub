@@ -21,12 +21,14 @@
 
 ### **High Priority - Core Features**
 
-#### 1. **Resource Claiming System**
-- [ ] Add `claimed_by` column to resources table
-- [ ] Create claim/unclaim endpoints in backend
-- [ ] Add "Claim Resource" buttons in frontend
-- [ ] Show claimed resources in user dashboard
-- [ ] Prevent multiple claims of same resource
+#### 1. **Resource Claiming System** ✅ **COMPLETED**
+- [x] Add `claimed_by` column to resources table
+- [x] Create claim/unclaim endpoints in backend
+- [x] Add "Claim Resource" buttons in frontend
+- [x] Show claimed resources in user dashboard
+- [x] Prevent multiple claims of same resource
+- [x] **GitHub Ownership Verification** - Only repository owners can claim
+- [x] **Smart UI** - Different buttons for owners vs non-owners
 
 #### 2. **Resource Reviews & Ratings**
 - [ ] Create reviews table in database

@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     const { q, page = 1 } = req.query;
     const pageNum = parseInt(page);
-    
+
     const results = await Resource.search(q, pageNum, 100);
     res.json(results);
   } catch (error) {
@@ -50,7 +50,7 @@ router.post('/:id/claim', authenticateUser, async (req, res) => {  try {
     const userGithubUsername = req.user.username; // GitHub username from OAuth
 
     const resource = await Resource.claimResource(resourceId, userId, userGithubUsername);
-    
+
     res.json({
       success: true,
       message: 'Resource claimed successfully',
@@ -58,7 +58,7 @@ router.post('/:id/claim', authenticateUser, async (req, res) => {  try {
     });
   } catch (error) {
     console.error('Claim resource error:', error);
-    
+
     if (error.message === 'Resource not found') {
       return res.status(404).json({
         success: false,
@@ -71,21 +71,21 @@ router.post('/:id/claim', authenticateUser, async (req, res) => {  try {
         error: error.message
       });
     }
-    
+
     if (error.message.includes('You can only claim resources that you own on GitHub')) {
       return res.status(403).json({
         success: false,
         error: error.message
       });
     }
-    
+
     if (error.message.includes('cannot verify ownership')) {
       return res.status(400).json({
         success: false,
         error: error.message
       });
     }
-    
+
     res.status(500).json({
       success: false,
       error: 'Failed to claim resource'
@@ -100,7 +100,7 @@ router.post('/:id/unclaim', authenticateUser, async (req, res) => {
     const userId = req.user.id;
 
     const resource = await Resource.unclaimResource(resourceId, userId);
-    
+
     res.json({
       success: true,
       message: 'Resource unclaimed successfully',
@@ -108,21 +108,21 @@ router.post('/:id/unclaim', authenticateUser, async (req, res) => {
     });
   } catch (error) {
     console.error('Unclaim resource error:', error);
-    
+
     if (error.message === 'Resource not found') {
       return res.status(404).json({
         success: false,
         error: error.message
       });
     }
-    
+
     if (error.message === 'You can only unclaim resources you have claimed') {
       return res.status(403).json({
         success: false,
         error: error.message
       });
     }
-    
+
     res.status(500).json({
       success: false,
       error: 'Failed to unclaim resource'
@@ -135,7 +135,7 @@ router.get('/user/claimed', authenticateUser, async (req, res) => {
   try {
     const userId = req.user.id;
     const claimedResources = await Resource.getClaimedByUser(userId);
-    
+
     res.json({
       success: true,
       data: claimedResources
@@ -173,7 +173,7 @@ router.get('/:id/can-claim', authenticateUser, async (req, res) => {
     const userGithubUsername = req.user.username;
 
     const result = await Resource.canUserClaimResource(resourceId, userGithubUsername);
-    
+
     res.json({
       success: true,
       data: result
@@ -183,6 +183,49 @@ router.get('/:id/can-claim', authenticateUser, async (req, res) => {
     res.status(500).json({
       success: false,
       error: 'Failed to check claim eligibility'
+    });
+  }
+});
+
+// Test endpoint to check ownership verification (for development)
+router.get('/test/ownership/:id', authenticateUser, async (req, res) => {
+  try {
+    const resourceId = parseInt(req.params.id);
+    const userGithubUsername = req.user.username;
+
+    const resource = await Resource.findById(resourceId);
+    if (!resource) {
+      return res.status(404).json({ error: 'Resource not found' });
+    }
+
+    const canClaim = await Resource.canUserClaimResource(resourceId, userGithubUsername);
+    const isOwner = await Resource.verifyGitHubOwnership(resource.github_url, userGithubUsername);
+
+    res.json({
+      success: true,
+      data: {
+        resource: {
+          id: resource.id,
+          name: resource.name,
+          github_url: resource.github_url,
+          claimed_by: resource.claimed_by
+        },
+        user: {
+          id: req.user.id,
+          username: userGithubUsername
+        },
+        verification: {
+          isOwner,
+          canClaim,
+          repoOwner: resource.github_url?.match(/github\.com\/([^\/]+)/)?.[1] || 'unknown'
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Ownership test error:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to test ownership'
     });
   }
 });

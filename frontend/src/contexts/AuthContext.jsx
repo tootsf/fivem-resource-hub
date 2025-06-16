@@ -51,19 +51,55 @@ export const AuthProvider = ({ children }) => {
   };
   const login = () => {
     window.location.href = `${API_CONFIG.BASE_URL}/auth/github`;
-  };
-  const logout = async () => {
+  };  const logout = async () => {
     try {
       await axios.post('/auth/logout');
       setUser(null);
       setError(null);
       // Clear token from localStorage
       localStorage.removeItem('auth_token');
+      // Refresh the page to reset the entire app state
+      window.location.reload();
     } catch (error) {
       console.error('Logout error:', error);
       setError('Failed to logout');
       // Clear token even if logout request fails
       localStorage.removeItem('auth_token');
+      // Still refresh on error to clear state
+      window.location.reload();
+    }
+  };
+
+  const deleteAccount = async () => {
+    if (!window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+      return { success: false, cancelled: true };
+    }
+
+    try {
+      const token = localStorage.getItem('auth_token');
+      const headers = {};
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
+
+      const response = await axios.delete('/auth/account', { headers });
+      
+      if (response.data.success) {
+        // Clear everything and reload
+        setUser(null);
+        setError(null);
+        localStorage.removeItem('auth_token');
+        alert('Account deleted successfully');
+        window.location.reload();
+        return { success: true };
+      } else {
+        return { success: false, error: response.data.error };
+      }
+    } catch (error) {
+      console.error('Delete account error:', error);
+      const errorMessage = error.response?.data?.error || 'Failed to delete account';
+      setError(errorMessage);
+      return { success: false, error: errorMessage };
     }
   };
 
@@ -83,7 +119,6 @@ export const AuthProvider = ({ children }) => {
       return { success: false, error: errorMessage };
     }
   };
-
   const value = {
     user,
     loading,
@@ -91,6 +126,7 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     updateProfile,
+    deleteAccount,
     checkAuthStatus,
     isAuthenticated: !!user
   };

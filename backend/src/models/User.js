@@ -94,6 +94,13 @@ class User {  static async findByGithubId(githubId) {
 
     return result.rows[0] || null;
   }
+  static async delete(userId) {
+    const result = await query(
+      'DELETE FROM users WHERE id = $1 RETURNING *',
+      [userId]
+    );
+    return result.rows[0] || null;
+  }
 }
 
 module.exports = User;

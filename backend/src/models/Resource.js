@@ -12,23 +12,23 @@ class Resource {
 
   static async search(searchQuery, page = 1, pageSize = 100) {
     const offset = (page - 1) * pageSize;
-    
+
     let whereClause = '';
     let queryParams = [];
-    
+
     if (searchQuery && searchQuery.trim()) {
       whereClause = `WHERE name ILIKE $1 OR description ILIKE $1 OR language ILIKE $1`;
       queryParams = [`%${searchQuery.trim()}%`];
     }
-    
+
     // Get total count
     const countQuery = `SELECT COUNT(*) FROM resources ${whereClause}`;
     const countResult = await query(countQuery, queryParams);
     const totalMatches = parseInt(countResult.rows[0].count);
-    
+
     // Get results with user info for claimed resources
     const searchQuery2 = `
-      SELECT 
+      SELECT
         r.*,
         u.username as claimed_by_username,
         u.display_name as claimed_by_display_name
@@ -38,10 +38,10 @@ class Resource {
       ORDER BY r.stars DESC, r.name ASC
       LIMIT $${queryParams.length + 1} OFFSET $${queryParams.length + 2}
     `;
-    
+
     const searchParams = [...queryParams, pageSize, offset];
     const result = await query(searchQuery2, searchParams);
-    
+
     return {
       results: result.rows,
       pagination: {
@@ -115,7 +115,7 @@ class Resource {
 
   static async getClaimStats() {
     const result = await query(`
-      SELECT 
+      SELECT
         COUNT(*) as total_resources,
         COUNT(claimed_by) as claimed_resources,
         COUNT(DISTINCT claimed_by) as unique_claimers
@@ -154,9 +154,9 @@ class Resource {
       if (!match) {
         return false;
       }
-      
+
       const [, owner, repo] = match;
-      
+
       // Simple check: if the GitHub username matches the repo owner
       return owner.toLowerCase() === userGithubUsername.toLowerCase();
     } catch (error) {

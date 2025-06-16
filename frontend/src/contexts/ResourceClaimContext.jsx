@@ -34,7 +34,7 @@ export const ResourceClaimProvider = ({ children }) => {
       if (token) {
         headers.Authorization = `Bearer ${token}`;
       }
-      
+
       const response = await axios.get('/api/resources/user/claimed', { headers });
       if (response.data.success) {
         setClaimedResources(response.data.data);
@@ -61,7 +61,7 @@ export const ResourceClaimProvider = ({ children }) => {
       }
 
       const response = await axios.post(`/api/resources/${resource.id}/claim`, {}, { headers });
-      
+
       if (response.data.success) {
         // Add the claimed resource to our state
         const claimedResource = {
@@ -70,7 +70,7 @@ export const ResourceClaimProvider = ({ children }) => {
           claimed_by_username: user.username,
           claimed_by_display_name: user.display_name
         };
-        
+
         setClaimedResources(prev => {
           const filtered = prev.filter(r => r.id !== resource.id);
           return [...filtered, claimedResource];
@@ -104,10 +104,10 @@ export const ResourceClaimProvider = ({ children }) => {
       }
 
       const response = await axios.post(`/api/resources/${resourceId}/unclaim`, {}, { headers });
-      
+
       if (response.data.success) {
         // Remove the resource from our state
-        setClaimedResources(prev => 
+        setClaimedResources(prev =>
           prev.filter(r => r.id !== resourceId)
         );
         return { success: true };
