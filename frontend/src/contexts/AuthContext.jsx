@@ -27,14 +27,14 @@ export const AuthProvider = ({ children }) => {
   const checkAuthStatus = async () => {
     try {
       setLoading(true);
-      
+
       // Get token from localStorage as fallback for cross-domain cookies
       const token = localStorage.getItem('auth_token');
       const headers = {};
       if (token) {
         headers.Authorization = `Bearer ${token}`;
       }
-      
+
       const response = await axios.get('/auth/me', { headers });
 
       if (response.data.success) {

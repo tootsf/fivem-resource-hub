@@ -73,7 +73,7 @@ class User {  static async findByGithubId(githubId) {
   static async getProfile(userId) {
     const result = await query(`
       SELECT *
-      FROM users 
+      FROM users
       WHERE id = $1
     `, [userId]);
 
