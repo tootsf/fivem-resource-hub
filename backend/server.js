@@ -339,48 +339,54 @@ app.post('/upload-data', express.json({ limit: '10mb' }), async (req, res) => {
   }
 });
 
-// Helper functions for uploaded data
-function determineCategory(entry) {
-  const name = (entry.resource_name || '').toLowerCase();
-  const description = (entry.github_repo?.description || '').toLowerCase();
-  const combined = `${name} ${description}`;
+// Database migration: Add claimed_by column
+app.get('/migrate-claimed-by', async (req, res) => {
+  try {
+    console.log('🔧 Adding claimed_by column to resources table...');
 
-  const categories = {
-    'Jobs': ['job', 'police', 'mechanic', 'taxi', 'trucker', 'delivery', 'work', 'employment'],
-    'Vehicles': ['vehicle', 'car', 'bike', 'boat', 'plane', 'helicopter', 'motorcycle', 'truck'],
-    'UI': ['ui', 'hud', 'interface', 'menu', 'notification', 'display', 'gui'],
-    'Maps': ['map', 'mlo', 'interior', 'building', 'location', 'place'],
-    'Scripts': ['script', 'system', 'tool', 'utility', 'addon'],
-    'Economy': ['shop', 'store', 'economy', 'money', 'bank', 'atm', 'business'],
-    'Roleplay': ['rp', 'roleplay', 'character', 'identity', 'social'],
-    'Security': ['anticheat', 'admin', 'moderation', 'security', 'protection'],
-    'Framework': ['framework', 'core', 'base', 'foundation']
-  };
+    // Check if column already exists
+    const columnCheck = await pool.query(`
+      SELECT column_name 
+      FROM information_schema.columns 
+      WHERE table_name = 'resources' AND column_name = 'claimed_by'
+    `);
 
-  for (const [category, keywords] of Object.entries(categories)) {
-    if (keywords.some(keyword => combined.includes(keyword))) {
-      return category;
+    if (columnCheck.rows.length > 0) {
+      return res.json({
+        success: true,
+        message: 'claimed_by column already exists',
+        timestamp: new Date().toISOString()
+      });
     }
-  }
-  return 'Other';
-}
 
-function determineFramework(entry) {
-  const name = (entry.resource_name || '').toLowerCase();
-  const description = (entry.github_repo?.description || '').toLowerCase();
-  const combined = `${name} ${description}`;
+    // Add the column
+    await pool.query(`
+      ALTER TABLE resources 
+      ADD COLUMN claimed_by INTEGER REFERENCES users(id) ON DELETE SET NULL
+    `);
 
-  if (combined.includes('esx') || combined.includes('es_extended')) {
-    return 'ESX';
-  } else if (combined.includes('qb') || combined.includes('qbcore') || combined.includes('qb-core')) {
-    return 'QB-Core';
-  } else if (combined.includes('vorp') || combined.includes('redm')) {
-    return 'VORP';
-  } else if (combined.includes('standalone') || combined.includes('independent')) {
-    return 'Standalone';
+    // Add index for performance
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_resources_claimed_by ON resources(claimed_by)
+    `);
+
+    console.log('✅ Successfully added claimed_by column and index');
+
+    res.json({
+      success: true,
+      message: 'claimed_by column added successfully',
+      timestamp: new Date().toISOString()
+    });
+
+  } catch (error) {
+    console.error('❌ Migration failed:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Migration failed: ' + error.message,
+      timestamp: new Date().toISOString()
+    });
   }
-  return 'Unknown';
-}
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
