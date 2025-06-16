@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useReviews } from '../contexts/ReviewContext';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import StarRating from './StarRating';
 
 const ReviewForm = ({ resource, onSuccess, onCancel }) => {
-  const { isAuthenticated } = useMockAuth();
+  const { isAuthenticated } = useAuth();
   const { addReview, loading } = useReviews();
 
   const [formData, setFormData] = useState({
@@ -346,3 +346,4 @@ const ReviewForm = ({ resource, onSuccess, onCancel }) => {
 };
 
 export default ReviewForm;
+

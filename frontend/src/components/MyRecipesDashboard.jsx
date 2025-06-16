@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { useRecipes } from '../contexts/RecipeContext';
 
 const MyRecipesDashboard = ({ onCreateNew, onEditRecipe }) => {
-  const { user, loading: authLoading } = useMockAuth();
+  const { user, loading: authLoading } = useAuth();
   const {
     getUserRecipes,
     deleteRecipe,
@@ -454,3 +454,4 @@ set mysql_connection_string "mysql://user:password@localhost:3306/database"`;
 };
 
 export default MyRecipesDashboard;
+

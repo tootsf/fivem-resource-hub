@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useReviews } from '../contexts/ReviewContext';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import StarRating from './StarRating';
 
 const ReviewCard = ({ review }) => {
-  const { user } = useMockAuth();
+  const { user } = useAuth();
   const { markHelpful, reportReview, deleteReview, getUserHelpfulVotes } = useReviews();
   const [showFullContent, setShowFullContent] = useState(false);
   const [showReportModal, setShowReportModal] = useState(false);
@@ -246,3 +246,4 @@ const ReviewCard = ({ review }) => {
 };
 
 export default ReviewCard;
+

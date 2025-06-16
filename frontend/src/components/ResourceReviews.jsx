@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useReviews } from '../contexts/ReviewContext';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import StarRating from './StarRating';
 import ReviewCard from './ReviewCard';
 import ReviewForm from './ReviewForm';
 
 const ResourceReviews = ({ resource }) => {
-  const { isAuthenticated } = useMockAuth();
+  const { isAuthenticated } = useAuth();
   const { getResourceReviews, getResourceRating, hasUserReviewed } = useReviews();
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [sortBy, setSortBy] = useState('newest'); // newest, oldest, rating-high, rating-low, helpful
@@ -158,3 +158,4 @@ const ResourceReviews = ({ resource }) => {
 };
 
 export default ResourceReviews;
+

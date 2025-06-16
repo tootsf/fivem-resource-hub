@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useMockAuth } from './MockAuthContext';
+import { useAuth } from './AuthContext';
 
 const ResourceClaimContext = createContext();
 
@@ -12,7 +12,7 @@ export const useResourceClaims = () => {
 };
 
 export const ResourceClaimProvider = ({ children }) => {
-  const { user, isAuthenticated } = useMockAuth();
+  const { user, isAuthenticated } = useAuth();
   const [claimedResources, setClaimedResources] = useState([]);
   const [loading, setLoading] = useState(false);
 

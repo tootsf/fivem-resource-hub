@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useRecipes, RECIPE_CATEGORIES, FRAMEWORKS } from '../contexts/RecipeContext';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 
 const RecipeGallery = ({ onCreateNew, onEditRecipe }) => {
-  const { user, isAuthenticated } = useMockAuth();
+  const { user, isAuthenticated } = useAuth();
   const {
     getPublicRecipes,
     getFeaturedRecipes,
@@ -441,3 +441,4 @@ set mysql_connection_string "mysql://user:password@localhost:3306/database"`;
 };
 
 export default RecipeGallery;
+

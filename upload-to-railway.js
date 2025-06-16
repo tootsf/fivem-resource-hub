@@ -5,7 +5,7 @@ const axios = require('axios');
 // Upload pre-entries.json to Railway database
 async function uploadDataToRailway() {
   console.log('📤 Uploading pre-entries.json to Railway...');
-  
+
   // Try multiple possible paths for the data file
   const possiblePaths = [
     path.join(__dirname, 'data/pre-entries.json'),
@@ -13,9 +13,9 @@ async function uploadDataToRailway() {
     path.join(process.cwd(), 'data/pre-entries.json'),
     'data/pre-entries.json'
   ];
-  
+
   let dataPath = null;
-  
+
   console.log('📂 Searching for pre-entries.json...');
   for (const testPath of possiblePaths) {
     console.log(`   Checking: ${testPath}`);
@@ -25,14 +25,14 @@ async function uploadDataToRailway() {
       break;
     }
   }
-  
+
   if (!dataPath) {
     console.error('❌ pre-entries.json not found in any expected location');
     console.log('Expected locations checked:');
     possiblePaths.forEach(p => console.log(`   - ${p}`));
     return;
   }
-  
+
   const railwayUrl = 'https://fivem-resource-hub-production.up.railway.app/upload-data';
 
   try {

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { useResourceClaims } from '../contexts/ResourceClaimContext';
 
 const MyResourcesDashboard = () => {
-  const { user, loading: authLoading } = useMockAuth();
+  const { user, loading: authLoading } = useAuth();
   const {
     getUserClaimedResources,
     getClaimStats,
@@ -272,3 +272,4 @@ const MyResourcesDashboard = () => {
 };
 
 export default MyResourcesDashboard;
+

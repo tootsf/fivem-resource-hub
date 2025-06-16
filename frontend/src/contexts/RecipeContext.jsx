@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useMockAuth } from './MockAuthContext';
+import { useAuth } from './AuthContext';
 
 const RecipeContext = createContext();
 
@@ -137,7 +137,7 @@ const SAMPLE_RECIPES = [
 ];
 
 export const RecipeProvider = ({ children }) => {
-  const { user, isAuthenticated } = useMockAuth();
+  const { user, isAuthenticated } = useAuth();
   const [recipes, setRecipes] = useState([]);
   const [currentRecipe, setCurrentRecipe] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -449,3 +449,4 @@ const generateDatabaseConfig = (recipe) => {
 # Required tables: ${(dbConfig.required_tables || []).join(', ')}
 set mysql_connection_string "mysql://user:password@localhost:3306/database"`;
 };
+

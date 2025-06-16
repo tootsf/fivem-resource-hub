@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 
 const MockLoginButton = () => {
-  const { user, login, logout, loading, mockUsers, isMockMode } = useMockAuth();
+  const { user, login, logout, loading, mockUsers, isMockMode } = useAuth();
   const [showUserSelect, setShowUserSelect] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -197,3 +197,4 @@ const MockLoginButton = () => {
 };
 
 export default MockLoginButton;
+

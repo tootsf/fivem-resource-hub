@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRecipes, RECIPE_CATEGORIES, FRAMEWORKS } from '../contexts/RecipeContext';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 
 const RecipeBuilder = ({ recipe: initialRecipe, onSave, onCancel }) => {
-  const { isAuthenticated } = useMockAuth();
+  const { isAuthenticated } = useAuth();
   const { saveRecipe, loading } = useRecipes();
 
   const [recipe, setRecipe] = useState(initialRecipe || {
@@ -761,3 +761,4 @@ const PreviewTab = ({ recipe }) => {
 };
 
 export default RecipeBuilder;
+

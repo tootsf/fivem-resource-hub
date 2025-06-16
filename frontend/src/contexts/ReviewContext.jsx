@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useMockAuth } from './MockAuthContext';
+import { useAuth } from './AuthContext';
 
 const ReviewContext = createContext();
 
@@ -97,7 +97,7 @@ const INITIAL_REVIEWS = [
 ];
 
 export const ReviewProvider = ({ children }) => {
-  const { user, isAuthenticated } = useMockAuth();
+  const { user, isAuthenticated } = useAuth();
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
 

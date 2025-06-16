@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useResourceClaims } from '../contexts/ResourceClaimContext';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 
 const ResourceClaimButton = ({ resource }) => {
-  const { isAuthenticated } = useMockAuth();
+  const { isAuthenticated } = useAuth();
   const {
     claimResource,
     unclaimResource,
@@ -179,3 +179,4 @@ const ResourceClaimButton = ({ resource }) => {
 };
 
 export default ResourceClaimButton;
+

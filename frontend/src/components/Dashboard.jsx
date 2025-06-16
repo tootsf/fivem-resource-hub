@@ -1,11 +1,11 @@
 import React from 'react';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { useResourceClaims } from '../contexts/ResourceClaimContext';
 import { useReviews } from '../contexts/ReviewContext';
 import { useRecipes } from '../contexts/RecipeContext';
 
 const Dashboard = () => {
-  const { user, loading } = useMockAuth();
+  const { user, loading } = useAuth();
   const { getUserClaimedResources, getClaimStats } = useResourceClaims();
   const { getReviewStats } = useReviews();
   const { getUserRecipes } = useRecipes();
@@ -163,3 +163,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

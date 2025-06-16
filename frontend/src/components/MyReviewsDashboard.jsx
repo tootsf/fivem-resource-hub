@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useMockAuth } from '../contexts/MockAuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { useReviews } from '../contexts/ReviewContext';
 import StarRating from './StarRating';
 import ReviewCard from './ReviewCard';
 
 const MyReviewsDashboard = () => {
-  const { user, loading: authLoading } = useMockAuth();
+  const { user, loading: authLoading } = useAuth();
   const { getUserReviews, getReviewStats } = useReviews();
   const [filter, setFilter] = useState('all'); // all, 5-star, 4-star, etc.
 
@@ -199,3 +199,4 @@ const getResourceNameFromUrl = (url) => {
 };
 
 export default MyReviewsDashboard;
+
