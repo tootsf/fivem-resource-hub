@@ -1,4 +1,5 @@
 const { query } = require('../database');
+const axios = require('axios');
 
 class Resource {
   static async findById(id) {
@@ -53,8 +54,7 @@ class Resource {
       }
     };
   }
-
-  static async claimResource(resourceId, userId) {
+  static async claimResource(resourceId, userId, userGithubUsername) {
     // Check if resource exists
     const resource = await this.findById(resourceId);
     if (!resource) {
@@ -64,6 +64,16 @@ class Resource {
     // Check if already claimed
     if (resource.claimed_by) {
       throw new Error('Resource is already claimed by another user');
+    }
+
+    // Verify GitHub ownership
+    if (!resource.github_url) {
+      throw new Error('Resource has no GitHub URL - cannot verify ownership');
+    }
+
+    const isOwner = await this.verifyGitHubOwnership(resource.github_url, userGithubUsername);
+    if (!isOwner) {
+      throw new Error('You can only claim resources that you own on GitHub. This resource belongs to a different GitHub user.');
     }
 
     // Claim the resource
@@ -112,6 +122,47 @@ class Resource {
       FROM resources
     `);
     return result.rows[0];
+  }
+
+  static async canUserClaimResource(resourceId, userGithubUsername) {
+    const resource = await this.findById(resourceId);
+    if (!resource) {
+      return { canClaim: false, reason: 'Resource not found' };
+    }
+
+    if (resource.claimed_by) {
+      return { canClaim: false, reason: 'Already claimed by another user' };
+    }
+
+    if (!resource.github_url) {
+      return { canClaim: false, reason: 'No GitHub URL available' };
+    }
+
+    const isOwner = await this.verifyGitHubOwnership(resource.github_url, userGithubUsername);
+    if (!isOwner) {
+      return { canClaim: false, reason: 'Not the GitHub repository owner' };
+    }
+
+    return { canClaim: true, reason: 'Can claim - you own this repository' };
+  }
+
+  // Helper function to check GitHub repository ownership
+  static async verifyGitHubOwnership(githubUrl, userGithubUsername) {
+    try {
+      // Extract owner and repo from GitHub URL
+      const match = githubUrl.match(/github\.com\/([^\/]+)\/([^\/]+)/);
+      if (!match) {
+        return false;
+      }
+      
+      const [, owner, repo] = match;
+      
+      // Simple check: if the GitHub username matches the repo owner
+      return owner.toLowerCase() === userGithubUsername.toLowerCase();
+    } catch (error) {
+      console.error('Error verifying GitHub ownership:', error);
+      return false;
+    }
   }
 }
 

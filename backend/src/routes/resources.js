@@ -44,12 +44,12 @@ router.get('/:id', async (req, res) => {
 });
 
 // Claim a resource (authenticated users only)
-router.post('/:id/claim', authenticateUser, async (req, res) => {
-  try {
+router.post('/:id/claim', authenticateUser, async (req, res) => {  try {
     const resourceId = parseInt(req.params.id);
     const userId = req.user.id;
+    const userGithubUsername = req.user.username; // GitHub username from OAuth
 
-    const resource = await Resource.claimResource(resourceId, userId);
+    const resource = await Resource.claimResource(resourceId, userId, userGithubUsername);
     
     res.json({
       success: true,
@@ -65,8 +65,21 @@ router.post('/:id/claim', authenticateUser, async (req, res) => {
         error: error.message
       });
     }
+      if (error.message === 'Resource is already claimed by another user') {
+      return res.status(400).json({
+        success: false,
+        error: error.message
+      });
+    }
     
-    if (error.message === 'Resource is already claimed by another user') {
+    if (error.message.includes('You can only claim resources that you own on GitHub')) {
+      return res.status(403).json({
+        success: false,
+        error: error.message
+      });
+    }
+    
+    if (error.message.includes('cannot verify ownership')) {
       return res.status(400).json({
         success: false,
         error: error.message
@@ -149,6 +162,27 @@ router.get('/stats/claims', async (req, res) => {
     res.status(500).json({
       success: false,
       error: 'Failed to get claim statistics'
+    });
+  }
+});
+
+// Check if user can claim a resource (authenticated users only)
+router.get('/:id/can-claim', authenticateUser, async (req, res) => {
+  try {
+    const resourceId = parseInt(req.params.id);
+    const userGithubUsername = req.user.username;
+
+    const result = await Resource.canUserClaimResource(resourceId, userGithubUsername);
+    
+    res.json({
+      success: true,
+      data: result
+    });
+  } catch (error) {
+    console.error('Check claim eligibility error:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to check claim eligibility'
     });
   }
 });

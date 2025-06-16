@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import axios from 'axios';
 import { useAuth } from './AuthContext';
 
 const ResourceClaimContext = createContext();
@@ -16,29 +17,34 @@ export const ResourceClaimProvider = ({ children }) => {
   const [claimedResources, setClaimedResources] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Load claimed resources from localStorage
+  // Load claimed resources from API when user logs in
   useEffect(() => {
     if (isAuthenticated && user) {
-      const saved = localStorage.getItem(`claimedResources_${user.id}`);
-      if (saved) {
-        try {
-          setClaimedResources(JSON.parse(saved));
-        } catch (error) {
-          console.error('Error loading claimed resources:', error);
-          setClaimedResources([]);
-        }
-      }
+      loadClaimedResources();
     } else {
       setClaimedResources([]);
     }
   }, [isAuthenticated, user]);
 
-  // Save to localStorage whenever claimedResources changes
-  useEffect(() => {
-    if (user) {
-      localStorage.setItem(`claimedResources_${user.id}`, JSON.stringify(claimedResources));
+  const loadClaimedResources = async () => {
+    try {
+      setLoading(true);
+      const token = localStorage.getItem('auth_token');
+      const headers = {};
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
+      
+      const response = await axios.get('/api/resources/user/claimed', { headers });
+      if (response.data.success) {
+        setClaimedResources(response.data.data);
+      }
+    } catch (error) {
+      console.error('Error loading claimed resources:', error);
+    } finally {
+      setLoading(false);
     }
-  }, [claimedResources, user]);
+  };
 
   const claimResource = async (resource) => {
     if (!isAuthenticated || !user) {
@@ -48,41 +54,42 @@ export const ResourceClaimProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 800));
+      const token = localStorage.getItem('auth_token');
+      const headers = {};
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
 
-      const claimedResource = {
-        ...resource,
-        claimed_by: user.id,
-        claimed_by_user: {
-          id: user.id,
-          username: user.username,
-          display_name: user.display_name,
-          avatar_url: user.avatar_url
-        },
-        claimed_at: new Date().toISOString(),
-        verified: false,
-        claim_status: 'pending', // pending, verified, disputed
-        notes: '',
-        tags: resource.tags || []
-      };
+      const response = await axios.post(`/api/resources/${resource.id}/claim`, {}, { headers });
+      
+      if (response.data.success) {
+        // Add the claimed resource to our state
+        const claimedResource = {
+          ...resource,
+          claimed_by: user.id,
+          claimed_by_username: user.username,
+          claimed_by_display_name: user.display_name
+        };
+        
+        setClaimedResources(prev => {
+          const filtered = prev.filter(r => r.id !== resource.id);
+          return [...filtered, claimedResource];
+        });
 
-      setClaimedResources(prev => {
-        // Remove if already claimed, then add new claim
-        const filtered = prev.filter(r => r.github_url !== resource.github_url);
-        return [...filtered, claimedResource];
-      });
-
-      return { success: true, resource: claimedResource };
+        return { success: true, resource: claimedResource };
+      } else {
+        return { success: false, error: response.data.error };
+      }
     } catch (error) {
       console.error('Error claiming resource:', error);
-      return { success: false, error: error.message };
+      const errorMessage = error.response?.data?.error || error.message;
+      return { success: false, error: errorMessage };
     } finally {
       setLoading(false);
     }
   };
 
-  const unclaimResource = async (resourceUrl) => {
+  const unclaimResource = async (resourceId) => {
     if (!isAuthenticated || !user) {
       throw new Error('Must be authenticated to unclaim resources');
     }
@@ -90,75 +97,49 @@ export const ResourceClaimProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500));
+      const token = localStorage.getItem('auth_token');
+      const headers = {};
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
 
-      setClaimedResources(prev =>
-        prev.filter(r => r.github_url !== resourceUrl)
-      );
-
-      return { success: true };
+      const response = await axios.post(`/api/resources/${resourceId}/unclaim`, {}, { headers });
+      
+      if (response.data.success) {
+        // Remove the resource from our state
+        setClaimedResources(prev => 
+          prev.filter(r => r.id !== resourceId)
+        );
+        return { success: true };
+      } else {
+        return { success: false, error: response.data.error };
+      }
     } catch (error) {
       console.error('Error unclaiming resource:', error);
-      return { success: false, error: error.message };
+      const errorMessage = error.response?.data?.error || error.message;
+      return { success: false, error: errorMessage };
     } finally {
       setLoading(false);
     }
   };
 
-  const updateResourceClaim = async (resourceUrl, updates) => {
-    if (!isAuthenticated || !user) {
-      throw new Error('Must be authenticated to update resource claims');
-    }
-
-    setLoading(true);
-
-    try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 600));
-
-      setClaimedResources(prev =>
-        prev.map(r =>
-          r.github_url === resourceUrl
-            ? { ...r, ...updates, updated_at: new Date().toISOString() }
-            : r
-        )
-      );
-
-      return { success: true };
-    } catch (error) {
-      console.error('Error updating resource claim:', error);
-      return { success: false, error: error.message };
-    } finally {
-      setLoading(false);
-    }
+  const isResourceClaimedByUser = (resourceId) => {
+    return claimedResources.some(r => r.id === resourceId && r.claimed_by === user?.id);
   };
 
-  const isResourceClaimed = (resourceUrl) => {
-    return claimedResources.some(r => r.github_url === resourceUrl);
+  const getResourceClaim = (resourceId) => {
+    return claimedResources.find(r => r.id === resourceId);
   };
 
-  const isResourceClaimedByUser = (resourceUrl, userId = user?.id) => {
-    return claimedResources.some(r =>
-      r.github_url === resourceUrl && r.claimed_by === userId
-    );
-  };
-
-  const getResourceClaim = (resourceUrl) => {
-    return claimedResources.find(r => r.github_url === resourceUrl);
-  };
-
-  const getUserClaimedResources = (userId = user?.id) => {
-    return claimedResources.filter(r => r.claimed_by === userId);
+  const getUserClaimedResources = () => {
+    return claimedResources.filter(r => r.claimed_by === user?.id);
   };
 
   const getClaimStats = () => {
     const userClaims = getUserClaimedResources();
     return {
       total: userClaims.length,
-      pending: userClaims.filter(r => r.claim_status === 'pending').length,
-      verified: userClaims.filter(r => r.claim_status === 'verified').length,
-      disputed: userClaims.filter(r => r.claim_status === 'disputed').length
+      totalResources: claimedResources.length
     };
   };
 
@@ -167,13 +148,13 @@ export const ResourceClaimProvider = ({ children }) => {
     loading,
     claimResource,
     unclaimResource,
-    updateResourceClaim,
-    isResourceClaimed,
     isResourceClaimedByUser,
     getResourceClaim,
     getUserClaimedResources,
-    getClaimStats
+    getClaimStats,
+    refreshClaimedResources: loadClaimedResources
   };
+
   return (
     <ResourceClaimContext.Provider value={value}>
       {children}
