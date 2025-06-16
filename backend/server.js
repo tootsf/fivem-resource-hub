@@ -16,6 +16,7 @@ const { pool } = require('./src/database');
 // Import routes
 const authRoutes = require('./src/routes/auth');
 const userRoutes = require('./src/routes/users');
+const resourceRoutes = require('./src/routes/resources');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -104,53 +105,7 @@ function loadData() {
 // Routes
 app.use('/auth', authLimiter, authRoutes);
 app.use('/api/users', userRoutes);
-
-// Simple resources API for testing
-app.get('/api/resources', async (req, res) => {
-  try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 20;
-    const offset = (page - 1) * limit;
-    const search = req.query.q || '';
-
-    let query = 'SELECT * FROM resources';
-    let params = [];
-
-    if (search) {
-      query += ' WHERE name ILIKE $1 OR description ILIKE $1';
-      params.push(`%${search}%`);
-    }
-
-    query += ` ORDER BY stars DESC LIMIT $${params.length + 1} OFFSET $${params.length + 2}`;
-    params.push(limit, offset);
-
-    const result = await pool.query(query, params);
-
-    // Get total count
-    let countQuery = 'SELECT COUNT(*) FROM resources';
-    let countParams = [];
-    if (search) {
-      countQuery += ' WHERE name ILIKE $1 OR description ILIKE $1';
-      countParams.push(`%${search}%`);
-    }
-
-    const countResult = await pool.query(countQuery, countParams);
-    const total = parseInt(countResult.rows[0].count);
-
-    res.json({
-      resources: result.rows,
-      pagination: {
-        page,
-        limit,
-        total,
-        pages: Math.ceil(total / limit)
-      }
-    });
-  } catch (error) {
-    console.error('Resources API error:', error);
-    res.status(500).json({ error: 'Failed to fetch resources' });
-  }
-});
+app.use('/api/resources', resourceRoutes);
 
 // Keep your existing search endpoint for backwards compatibility
 app.get('/search', async (req, res) => {

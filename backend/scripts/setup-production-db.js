@@ -44,12 +44,20 @@ async function createTables(pool) {
       category VARCHAR(100),
       framework VARCHAR(100),
       tags TEXT[],
+      claimed_by INTEGER,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     CREATE INDEX IF NOT EXISTS idx_resources_name ON resources(name);
     CREATE INDEX IF NOT EXISTS idx_resources_category ON resources(category);
     CREATE INDEX IF NOT EXISTS idx_resources_framework ON resources(framework);
+    CREATE INDEX IF NOT EXISTS idx_resources_claimed_by ON resources(claimed_by);
+  `);
+
+  // Add claimed_by column if it doesn't exist (for existing databases)
+  await pool.query(`
+    ALTER TABLE resources 
+    ADD COLUMN IF NOT EXISTS claimed_by INTEGER REFERENCES users(id) ON DELETE SET NULL;
   `);
 
   // Users table (for future GitHub OAuth)

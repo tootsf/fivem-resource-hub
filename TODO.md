@@ -4,7 +4,7 @@
 
 ### Core Infrastructure
 - [x] **GitHub OAuth Authentication** - Users can sign in with GitHub
-- [x] **Resource Database** - 2,786+ FiveM resources stored in PostgreSQL  
+- [x] **Resource Database** - 2,786+ FiveM resources stored in PostgreSQL
 - [x] **Resource Search** - Fast text-based search across all resources
 - [x] **Modern UI** - Clean, responsive React frontend
 - [x] **Production Deployment** - Railway (backend) + Vercel (frontend)
@@ -21,7 +21,7 @@
 
 ### **High Priority - Core Features**
 
-#### 1. **Resource Claiming System** 
+#### 1. **Resource Claiming System**
 - [ ] Add `claimed_by` column to resources table
 - [ ] Create claim/unclaim endpoints in backend
 - [ ] Add "Claim Resource" buttons in frontend
@@ -115,12 +115,12 @@
 
 **Next Logical Steps:**
 1. **Resource Claiming** - Let users claim ownership of resources
-2. **Review System** - Allow users to rate and review resources  
+2. **Review System** - Allow users to rate and review resources
 3. **Resource Details** - Create detailed pages for each resource
 
 **Estimated Development Time:**
 - Resource Claiming: ~1-2 days
-- Review System: ~2-3 days  
+- Review System: ~2-3 days
 - Resource Details: ~1-2 days
 
 ---
@@ -129,7 +129,7 @@
 
 **Goal:** Create the ultimate FiveM resource discovery and management platform where developers can:
 - Discover high-quality resources easily
-- Share reviews and experiences  
+- Share reviews and experiences
 - Build and share resource collections
 - Connect with the FiveM development community
 

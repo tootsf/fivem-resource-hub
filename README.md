@@ -2,7 +2,7 @@
 
 **A comprehensive platform for discovering, reviewing, and organizing FiveM server resources with GitHub authentication.**
 
-🌐 **Live Demo**: [fivem-resource-hub.vercel.app](https://fivem-resource-hub.vercel.app)  
+🌐 **Live Demo**: [fivem-resource-hub.vercel.app](https://fivem-resource-hub.vercel.app)
 🔗 **API**: [fivem-resource-hub-production.up.railway.app](https://fivem-resource-hub-production.up.railway.app)
 
 ---
@@ -15,7 +15,7 @@
 - **GitHub Integration** - Direct links to resource repositories
 - **Clean UI** - Modern, responsive React frontend
 
-### 👤 **Authentication & Profiles** 
+### 👤 **Authentication & Profiles**
 - **GitHub OAuth** - Secure login with GitHub accounts
 - **User Dashboard** - Personalized dashboard for authenticated users
 - **Cross-Domain Auth** - JWT authentication between Railway backend and Vercel frontend
@@ -32,7 +32,7 @@
 - **Modern CSS** with responsive design
 - **Deployed on Vercel**
 
-### **Backend**  
+### **Backend**
 - **Node.js** with Express framework
 - **PostgreSQL** database with connection pooling
 - **Passport.js** for GitHub OAuth
@@ -58,7 +58,7 @@
 - **User Dashboard** - Authenticated user experience
 - **Production Deployment** - Live on Railway + Vercel
 
-### **🔧 In Development** 
+### **🔧 In Development**
 See [TODO.md](./TODO.md) for detailed roadmap:
 - **Resource Claiming** - Let users claim resource ownership
 - **Review System** - Star ratings and user reviews
@@ -93,7 +93,7 @@ See [TODO.md](./TODO.md) for detailed roadmap:
    npm run dev
    ```
 
-3. **Setup Frontend** 
+3. **Setup Frontend**
    ```bash
    cd frontend
    npm install
@@ -124,7 +124,7 @@ See [TODO.md](./TODO.md) for detailed roadmap:
    ```
 
 ---
-
+<!--
 ## 🤝 Contributing
 
 This is an active project welcoming contributions! See [TODO.md](./TODO.md) for current development priorities.
@@ -135,12 +135,7 @@ This is an active project welcoming contributions! See [TODO.md](./TODO.md) for 
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
----
-
-## 📄 License
-
-MIT License - See LICENSE file for details.
-
+--- -->
 ---
 
 ## 🎯 Project Vision
