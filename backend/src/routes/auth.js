@@ -298,4 +298,25 @@ router.get('/health', (req, res) => {
   });
 });
 
+// Database migration endpoint (for development/admin use)
+router.get('/migrate/add-claimed-by', async (req, res) => {
+  try {
+    const addClaimedByColumn = require('../../scripts/add-claimed-by-column');
+    await addClaimedByColumn();
+    
+    res.json({
+      success: true,
+      message: 'Migration completed successfully',
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('Migration endpoint error:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Migration failed: ' + error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
+});
+
 module.exports = router;
