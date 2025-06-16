@@ -70,38 +70,26 @@ class User {  static async findByGithubId(githubId) {
     `, [id, display_name, bio]);
 
     return result.rows[0] || null;  }
-
   static async getProfile(userId) {
     const result = await query(`
-      SELECT
-        u.*,
-        COUNT(DISTINCT r.id) as claimed_resources_count,
-        COUNT(DISTINCT rec.id) as recipes_count
-      FROM users u
-      LEFT JOIN resources r ON r.claimed_by = u.id
-      LEFT JOIN recipes rec ON rec.user_id = u.id      WHERE u.id = $1
-      GROUP BY u.id
+      SELECT *
+      FROM users 
+      WHERE id = $1
     `, [userId]);
 
     return result.rows[0] || null;
   }
-
   static async getPublicProfile(username) {
     const result = await query(`
       SELECT
-        u.id,
-        u.username,
-        u.display_name,
-        u.avatar_url,
-        u.github_url,
-        u.bio,
-        u.created_at,
-        COUNT(DISTINCT r.id) as claimed_resources_count,
-        COUNT(DISTINCT rec.id) as public_recipes_count
-      FROM users u
-      LEFT JOIN resources r ON r.claimed_by = u.id
-      LEFT JOIN recipes rec ON rec.user_id = u.id AND rec.is_public = true      WHERE u.username = $1
-      GROUP BY u.id
+        id,
+        username,
+        display_name,
+        avatar_url,
+        bio,
+        created_at
+      FROM users
+      WHERE username = $1
     `, [username]);
 
     return result.rows[0] || null;
